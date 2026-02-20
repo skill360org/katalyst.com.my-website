@@ -30,7 +30,11 @@
 - `npm run images:optimize` → convert PNG/JPG images to optimized WebP files.
 
 ## Validation commands
-- `npm run test` checks HTML SEO baseline and clean-link rules.
+- `npm run test` checks HTML SEO baseline, clean-link rules, and JS unit tests.
+- `npm run test:html` checks HTML SEO baseline and clean-link rules per page.
+- `npm run test:links` checks that all internal hrefs resolve to known pages.
+- `npm run test:unit` runs Vitest unit tests for JS utilities.
+- `npm run test:e2e` runs Playwright end-to-end smoke tests (requires a production build).
 - `npm run format` formats HTML/CSS/JS/JSON files with Prettier.
 
 ## Security and hosting notes

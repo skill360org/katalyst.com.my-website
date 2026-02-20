@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@playwright/test": "^1.58.2",
     "@tailwindcss/postcss": "^4.1.18",
     "autoprefixer": "^10.4.23",
     "cssnano": "^7.1.1",
@@ -12,15 +13,19 @@
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.18",
     "vite": "^7.3.1",
-    "vite-plugin-handlebars": "^2.0.0"
+    "vite-plugin-handlebars": "^2.0.0",
+    "vitest": "^4.0.18"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "format": "prettier --write \"*.html\" \"assets/js/**/*.js\" \"assets/css/**/*.css\" \"*.{json,mjs,js}\" \"scripts/**/*.mjs\"",
     "images:optimize": "node scripts/optimize-images.mjs",
-    "test": "npm run test:html",
+    "test": "npm run test:html && npm run test:links && npm run test:unit",
     "test:html": "node scripts/check-html.mjs",
+    "test:links": "node scripts/check-links.mjs",
+    "test:unit": "vitest run",
+    "test:e2e": "playwright test",
     "sync:layout": "node scripts/sync-layout.mjs"
   },
   "keywords": [],

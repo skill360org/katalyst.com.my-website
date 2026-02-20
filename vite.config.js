@@ -34,4 +34,8 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
+  test: {
+    environment: "node",
+    include: ["assets/js/**/*.test.js"],
+  },
 });

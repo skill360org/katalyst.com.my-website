@@ -1,15 +1,10 @@
+import { normalizePath, isActivePath as isActivePathUtil } from "./nav-utils.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const hasGsap = typeof gsap !== "undefined";
   if (hasGsap && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
   }
-
-  const normalizePath = (path) => {
-    if (!path) return "/";
-    const cleanPath = path.split("?")[0].split("#")[0];
-    const withoutHtml = cleanPath.replace(/\.html$/, "");
-    return withoutHtml.replace(/\/$/, "") || "/";
-  };
 
   const pathName = normalizePath(window.location.pathname);
   const searchParams = new URLSearchParams(window.location.search);
@@ -19,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     formSuccessMessage.classList.remove("hidden");
   }
 
-  const isActivePath = (href) => normalizePath(href) === pathName;
+  const isActivePath = (href) => isActivePathUtil(href, pathName);
 
   document
     .querySelectorAll(
