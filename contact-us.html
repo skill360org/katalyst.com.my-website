@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <div data-site-header></div>
+    {{> header}}
 
     <section class="w-full h-full pb-[55px] sm:pb-[90px]">
       <div
@@ -459,11 +459,7 @@
     </section>
 
     <!------------------ Footer ------------------>
-    <div
-      data-site-footer
-      data-footer-class="relative bg-white"
-      data-footer-card-class="bg-white/10 px-6 sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8 sm:pb-[54px] shadow-[20px_4px_44px_0px_#0000000D]"
-    ></div>
+    {{> footer footerClass="relative bg-white" footerCardClass="bg-white/10 px-6 sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8 sm:pb-[54px] shadow-[20px_4px_44px_0px_#0000000D]"}}
 
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>

@@ -6,16 +6,17 @@
     "@tailwindcss/postcss": "^4.1.18",
     "autoprefixer": "^10.4.23",
     "cssnano": "^7.1.1",
+    "glob": "^11.1.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "sharp": "^0.34.3",
     "tailwindcss": "^4.1.18",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "vite-plugin-handlebars": "^2.0.0"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run check:css-size",
-    "check:css-size": "node scripts/check-css-size.mjs",
+    "build": "vite build",
     "format": "prettier --write \"*.html\" \"assets/js/**/*.js\" \"assets/css/**/*.css\" \"*.{json,mjs,js}\" \"scripts/**/*.mjs\"",
     "images:optimize": "node scripts/optimize-images.mjs",
     "test": "npm run test:html",

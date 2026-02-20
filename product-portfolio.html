@@ -28,7 +28,7 @@
       id="cursor"
       class="hidden lg:block fixed z-[1] w-36 h-36 bg-purple rounded-full blur-3xl pointer-events-none opacity-0"
     ></div>
-    <div data-site-header></div>
+    {{> header}}
 
     <section class="relative w-full">
       <div class="relative">
@@ -433,11 +433,7 @@
     </section>
 
     <!------------------ Footer ------------------>
-    <div
-      data-site-footer
-      data-footer-class="bg-sky pt-[56px]"
-      data-footer-card-class="bg-white/10 px-6 sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8 sm:pb-[54px]"
-    ></div>
+    {{> footer footerClass="bg-sky pt-[56px]" footerCardClass="bg-white/10 px-6 sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8 sm:pb-[54px]"}}
 
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
