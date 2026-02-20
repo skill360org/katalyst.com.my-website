@@ -5,224 +5,224 @@
 
 /* Theme variables */
 @theme {
-    --font-dm-sans: "DM Sans", sans-serif;
-    --font-inter: "Inter", sans-serif;
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-inter: "Inter", sans-serif;
 
-    --color-black: #0c0630;
-    --color-black-soft: #181818;
-    --color-white: #FFFFFF;
+  --color-black: #0c0630;
+  --color-black-soft: #181818;
+  --color-white: #ffffff;
 
-    --color-purple: #a92cec;
-    --color-lavender: #fbf8fd;
-    --color-soft-lavender: #f7f6ff;
-    --color-surface-lavender: #eeeefd;
-    --color-gradient-light-indigo: #f1f2fc;
-    --color-alice-blue: #f6faff;
+  --color-purple: #a92cec;
+  --color-lavender: #fbf8fd;
+  --color-soft-lavender: #f7f6ff;
+  --color-surface-lavender: #eeeefd;
+  --color-gradient-light-indigo: #f1f2fc;
+  --color-alice-blue: #f6faff;
 
-    --color-bg-blue: #f3fafe;
-    --color-blue-gray: #90a3c1;
-    --color-mist-blue: #EEF0FF;
+  --color-bg-blue: #f3fafe;
+  --color-blue-gray: #90a3c1;
+  --color-mist-blue: #eef0ff;
 
-    --color-sky: #f2fbff;
-    --color-surface-sky: #d0eef9;
+  --color-sky: #f2fbff;
+  --color-surface-sky: #d0eef9;
 
-    --color-periwinkle-light: #f6f7ff;
+  --color-periwinkle-light: #f6f7ff;
 
-    --color-teal: #10d3ad;
-    --color-mint-green: #19B998;
-    --color-teal-light: #effeff;
+  --color-teal: #10d3ad;
+  --color-mint-green: #19b998;
+  --color-teal-light: #effeff;
 
-    --color-border-soft: #e0e8f3;
-    --color-border-neutral: #d4d4d4;
+  --color-border-soft: #e0e8f3;
+  --color-border-neutral: #d4d4d4;
 
-    --color-ice-blue: #edf8ff;
-    --color-ice-white: #fafdff;
-    --color-periwinkle-soft: #e4e4ff;
-    --color-sky-mist: #daf9ff;
-    --color-rose-pop: #FF90D8;
-    --color-lilac: #d18fef;
-    --color-pink-blush: #f9bae3;
-    --color-sky-indigo: #96b3eb;
-    --color-cloud-sky: #D9EEFA;
-    --color-indigo-soft: #8381f9;
-    --color-lavender-light: #f3deff;
+  --color-ice-blue: #edf8ff;
+  --color-ice-white: #fafdff;
+  --color-periwinkle-soft: #e4e4ff;
+  --color-sky-mist: #daf9ff;
+  --color-rose-pop: #ff90d8;
+  --color-lilac: #d18fef;
+  --color-pink-blush: #f9bae3;
+  --color-sky-indigo: #96b3eb;
+  --color-cloud-sky: #d9eefa;
+  --color-indigo-soft: #8381f9;
+  --color-lavender-light: #f3deff;
 }
 
 /* Components */
 @layer components {
-    /* -------Cards------- */
-    .hero-card {
-        @apply relative z-[60] mx-auto w-full h-fit max-w-[1271px] rounded-[20px] border-t-4 border-l-[3px] bg-white/10 border-white backdrop-blur-[36px] shadow-[20px_4px_44px_0px_#0000000D];
-    }
+  /* -------Cards------- */
+  .hero-card {
+    @apply relative z-[60] mx-auto w-full h-fit max-w-[1271px] rounded-[20px] border-t-4 border-l-[3px] bg-white/10 border-white backdrop-blur-[36px] shadow-[20px_4px_44px_0px_#0000000D];
+  }
 
-    .section-card {
-        @apply rounded-[20px] bg-white/40 border-t-[3px] border-l-[3px] border-white backdrop-blur-[36px] shadow-[20px_4px_44px_0px_#00000005];
-    }
+  .section-card {
+    @apply rounded-[20px] bg-white/40 border-t-[3px] border-l-[3px] border-white backdrop-blur-[36px] shadow-[20px_4px_44px_0px_#00000005];
+  }
 
-    /* -----------Fonts and Text Styles------ */
-    .heading-main {
-        @apply font-dm-sans font-semibold text-[35px] md:text-[40px] lg:text-[58px] leading-[100%] md:leading-[35px] lg:leading-[53px] tracking-[1%] text-white;
-    }
+  /* -----------Fonts and Text Styles------ */
+  .heading-main {
+    @apply font-dm-sans font-semibold text-[35px] md:text-[40px] lg:text-[58px] leading-[100%] md:leading-[35px] lg:leading-[53px] tracking-[1%] text-white;
+  }
 
-    .heading-1 {
-        @apply font-dm-sans font-semibold text-[35px] md:text-[40px] lg:text-[50px] leading-[40px] md:leading-[50px] lg:leading-[62px] tracking-[1%] text-center text-black;
-    }
+  .heading-1 {
+    @apply font-dm-sans font-semibold text-[35px] md:text-[40px] lg:text-[50px] leading-[40px] md:leading-[50px] lg:leading-[62px] tracking-[1%] text-center text-black;
+  }
 
-    .heading-2 {
-        @apply font-dm-sans font-semibold text-[28px] md:text-[36px] leading-[40px] md:leading-[48px] tracking-[1%] text-center text-black;
-    }
+  .heading-2 {
+    @apply font-dm-sans font-semibold text-[28px] md:text-[36px] leading-[40px] md:leading-[48px] tracking-[1%] text-center text-black;
+  }
 
-    .heading-3 {
-        @apply font-dm-sans font-medium text-[20px] md:text-[24px] tracking-[1%] leading-[35px] md:leading-[53px] text-black;
-    }
+  .heading-3 {
+    @apply font-dm-sans font-medium text-[20px] md:text-[24px] tracking-[1%] leading-[35px] md:leading-[53px] text-black;
+  }
 
-    .heading-4 {
-        @apply font-dm-sans font-medium text-[22px] leading-7 text-black;
-    }
+  .heading-4 {
+    @apply font-dm-sans font-medium text-[22px] leading-7 text-black;
+  }
 
-    .heading-5 {
-        @apply font-inter font-medium text-base sm:text-[18px] leading-[28px] text-black;
-    }
+  .heading-5 {
+    @apply font-inter font-medium text-base sm:text-[18px] leading-[28px] text-black;
+  }
 
-    .description {
-        @apply font-inter font-normal text-sm md:text-base leading-[28px] text-black/70;
-    }
+  .description {
+    @apply font-inter font-normal text-sm md:text-base leading-[28px] text-black/70;
+  }
 
-    .description-1 {
-        @apply font-inter font-normal text-sm leading-[28px] text-black/70;
-    }
+  .description-1 {
+    @apply font-inter font-normal text-sm leading-[28px] text-black/70;
+  }
 
-    .nav-link.active {
-        @apply bg-white !text-purple;
-    }
+  .nav-link.active {
+    @apply bg-white !text-purple;
+  }
 
-    .mobile-nav-link.active {
-        @apply !text-purple;
-    }
-    .menu-link {
-        @apply hover:text-[#0BA3DB];
-    }
-    .menu-link.active {
-        @apply text-purple;
-    }
+  .mobile-nav-link.active {
+    @apply !text-purple;
+  }
+  .menu-link {
+    @apply hover:text-[#0BA3DB];
+  }
+  .menu-link.active {
+    @apply text-purple;
+  }
 
-    .btn-primary {
-        @apply px-4 font-inter font-medium sm:px-6 py-2 sm:py-3.5 bg-black rounded-[60px] text-sm sm:text-base text-white leading-[100%] hover:bg-purple transition-all duration-300;
-    }
+  .btn-primary {
+    @apply px-4 font-inter font-medium sm:px-6 py-2 sm:py-3.5 bg-black rounded-[60px] text-sm sm:text-base text-white leading-[100%] hover:bg-purple transition-all duration-300;
+  }
 
-    .btn-primary-outline {
-        @apply px-4 font-medium sm:px-6.5 py-2 sm:py-3.5 rounded-[60px] text-black text-sm sm:text-base outline outline-black leading-[100%] hover:bg-black hover:text-white transition-all duration-300;
-    }
+  .btn-primary-outline {
+    @apply px-4 font-medium sm:px-6.5 py-2 sm:py-3.5 rounded-[60px] text-black text-sm sm:text-base outline outline-black leading-[100%] hover:bg-black hover:text-white transition-all duration-300;
+  }
 
-    .step {
-        @apply relative px-3.5 py-1.5 md:px-6 md:py-5 rounded-[50px] md:rounded-l-none md:rounded-r-[10px] bg-white md:bg-transparent cursor-pointer border border-transparent md:border-0;
-    }
+  .step {
+    @apply relative px-3.5 py-1.5 md:px-6 md:py-5 rounded-[50px] md:rounded-l-none md:rounded-r-[10px] bg-white md:bg-transparent cursor-pointer border border-transparent md:border-0;
+  }
 
-    .step-label {
-        @apply md:mb-2.5 font-inter font-normal text-sm md:text-base md:leading-[20px] text-nowrap text-black/60;
-    }
+  .step-label {
+    @apply md:mb-2.5 font-inter font-normal text-sm md:text-base md:leading-[20px] text-nowrap text-black/60;
+  }
 
-    .step-title {
-        @apply font-inter font-medium text-base leading-[20px] text-black/60 text-nowrap lg:text-wrap hidden md:block;
-    }
+  .step-title {
+    @apply font-inter font-medium text-base leading-[20px] text-black/60 text-nowrap lg:text-wrap hidden md:block;
+  }
 
-    .step-title2 {
-        @apply font-inter font-medium text-base leading-[20px] text-black/60 text-nowrap lg:text-wrap block;
-    }
+  .step-title2 {
+    @apply font-inter font-medium text-base leading-[20px] text-black/60 text-nowrap lg:text-wrap block;
+  }
 
-    .step.active {
-        @apply bg-white border-purple;
-    }
+  .step.active {
+    @apply bg-white border-purple;
+  }
 
-    .step.active::before {
-        content: "";
-        @apply absolute left-0 top-0 h-full w-[2px] bg-purple hidden md:block;
-    }
+  .step.active::before {
+    content: "";
+    @apply absolute left-0 top-0 h-full w-[2px] bg-purple hidden md:block;
+  }
 
-    .step.active .step-label {
-        @apply text-purple;
-    }
+  .step.active .step-label {
+    @apply text-purple;
+  }
 
-    .step.active .step-title,
-    .step.active .step-title2 {
-        @apply text-black;
-    }
-    .input-group {
-        @apply relative w-full;
-    }
-    /* -------- Input------- */
-    .input-group input {
-        @apply w-full px-4 py-3 font-inter text-sm font-normal text-black leading-[26px] rounded-[16px] outline outline-border-soft placeholder:text-blue-gray focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent;
-    }
-    .input-group label {
-        @apply block mb-[3px] font-dm-sans font-semibold leading-[26px] text-base text-black;
-    }
+  .step.active .step-title,
+  .step.active .step-title2 {
+    @apply text-black;
+  }
+  .input-group {
+    @apply relative w-full;
+  }
+  /* -------- Input------- */
+  .input-group input {
+    @apply w-full px-4 py-3 font-inter text-sm font-normal text-black leading-[26px] rounded-[16px] outline outline-border-soft placeholder:text-blue-gray focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent;
+  }
+  .input-group label {
+    @apply block mb-[3px] font-dm-sans font-semibold leading-[26px] text-base text-black;
+  }
 
-    /* --------- textarea ------- */
-    .input-group textarea {
-        @apply w-full px-4 pt-3 pb-3 min-h-[88px] font-inter text-sm font-normal text-black leading-[26px] rounded-[16px] outline outline-border-soft placeholder:text-blue-gray focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent;
-    }
+  /* --------- textarea ------- */
+  .input-group textarea {
+    @apply w-full px-4 pt-3 pb-3 min-h-[88px] font-inter text-sm font-normal text-black leading-[26px] rounded-[16px] outline outline-border-soft placeholder:text-blue-gray focus:outline-none focus:ring-2 focus:ring-purple focus:border-transparent;
+  }
 
-    /* ------------ Selecter --------- */
-    .native-select {
-        @apply absolute opacity-0 pointer-events-none;
-    }
+  /* ------------ Selecter --------- */
+  .native-select {
+    @apply absolute opacity-0 pointer-events-none;
+  }
 
-    .custom-select {
-        @apply relative;
-    }
+  .custom-select {
+    @apply relative;
+  }
 
-    .select-trigger {
-        @apply w-full px-4 py-3 font-inter text-sm text-black leading-[26px] rounded-[16px] outline outline-border-soft flex items-center justify-between cursor-pointer focus:ring-2 focus:ring-purple;
-    }
+  .select-trigger {
+    @apply w-full px-4 py-3 font-inter text-sm text-black leading-[26px] rounded-[16px] outline outline-border-soft flex items-center justify-between cursor-pointer focus:ring-2 focus:ring-purple;
+  }
 
-    .select-arrow {
-        @apply transition-transform duration-300;
-    }
+  .select-arrow {
+    @apply transition-transform duration-300;
+  }
 
-    .custom-select.open .select-arrow {
-        @apply rotate-180;
-    }
+  .custom-select.open .select-arrow {
+    @apply rotate-180;
+  }
 
-    .select-dropdown {
-        -webkit-overflow-scrolling: touch;
-        @apply absolute left-0 mt-2 w-full bg-white rounded-[16px] max-h-[250px] overflow-y-auto outline outline-border-soft shadow-[0_10px_30px_rgba(0,0,0,0.1)] hidden z-50;
-    }
+  .select-dropdown {
+    -webkit-overflow-scrolling: touch;
+    @apply absolute left-0 mt-2 w-full bg-white rounded-[16px] max-h-[250px] overflow-y-auto outline outline-border-soft shadow-[0_10px_30px_rgba(0,0,0,0.1)] hidden z-50;
+  }
 
-    .custom-select.open .select-dropdown {
-        @apply block;
-    }
+  .custom-select.open .select-dropdown {
+    @apply block;
+  }
 
-    .select-dropdown li {
-        @apply px-4 py-3 cursor-pointer hover:bg-purple/10 rounded-[12px];
-    }
+  .select-dropdown li {
+    @apply px-4 py-3 cursor-pointer hover:bg-purple/10 rounded-[12px];
+  }
 
-    .select-dropdown li.active {
-        @apply font-medium text-purple-700 bg-purple-100;
-    }
+  .select-dropdown li.active {
+    @apply font-medium text-purple-700 bg-purple-100;
+  }
 }
 
 @layer base {
-    button {
-        @apply cursor-pointer;
-    }
+  button {
+    @apply cursor-pointer;
+  }
 
-    a {
-        @apply no-underline text-inherit;
-    }
+  a {
+    @apply no-underline text-inherit;
+  }
 
-    p {
-        @apply font-inter text-sm font-normal leading-[24px] text-black/70;
-    }
+  p {
+    @apply font-inter text-sm font-normal leading-[24px] text-black/70;
+  }
 }
 
 @layer utilities {
-    .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-    }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 
-    .scrollbar-hide {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

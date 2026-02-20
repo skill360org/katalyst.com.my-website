@@ -1,1031 +1,1623 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Katalyst AI – Performance Management Agent</title>
-    <meta property="og:url" content="https://yourdomain.com/Performance-Management-Agent.html" />
-    <link rel="icon" type="image/webp" href="assets/images/favicon.webp">
-    <link rel="stylesheet" href="assets/css/output.css">
-</head>
+    <meta
+      name="description"
+      content="Katalyst AI – Performance Management Agent | Katalyst AI helps enterprise teams make better workforce decisions with AI-powered talent intelligence."
+    />
+    <meta name="robots" content="index,follow" />
+    <link
+      rel="canonical"
+      href="https://www.katalyst.com.my/performance-management-agent"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Katalyst AI – Performance Management Agent"
+    />
+    <meta
+      property="og:description"
+      content="Katalyst AI – Performance Management Agent | Katalyst AI helps enterprise teams make better workforce decisions with AI-powered talent intelligence."
+    />
+    <meta
+      property="og:url"
+      content="https://yourdomain.com/Performance-Management-Agent.html"
+    />
+    <link rel="icon" type="image/webp" href="assets/images/favicon.webp" />
+    <link rel="stylesheet" href="assets/css/output.css" />
+  </head>
 
-<body>
-    <div id="cursor"
-        class="hidden lg:block fixed z-[1] w-36 h-36 bg-purple rounded-full blur-3xl pointer-events-none opacity-0">
-    </div>
+  <body>
+    <div
+      id="cursor"
+      class="hidden lg:block fixed z-[1] w-36 h-36 bg-purple rounded-full blur-3xl pointer-events-none opacity-0"
+    ></div>
     <header class="site-header">
-        <!-----------------Navbar-------------------->
-        <nav id="siteHeader" class="px-5 fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-[998] w-full">
-            <div
-                class="bg-white/30 backdrop-blur-xl border border-white ps-5 sm:ps-8 pe-5 py-[13px] flex items-center justify-between gap-5 rounded-[78px] mx-auto max-w-[1054px] transition-all duration-200">
-                <!-- Logo -->
-                <a href="/index.html" class="text-xl font-semibold ">
-                    <img src="assets/images/Logo.webp" alt="Katalyst AI Logo" class="w-[85%] sm:w-full h-full ">
-                </a>
+      <!-----------------Navbar-------------------->
+      <nav
+        id="siteHeader"
+        class="px-5 fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-[998] w-full"
+      >
+        <div
+          class="bg-white/30 backdrop-blur-xl border border-white ps-5 sm:ps-8 pe-5 py-[13px] flex items-center justify-between gap-5 rounded-[78px] mx-auto max-w-[1054px] transition-all duration-200"
+        >
+          <!-- Logo -->
+          <a href="/" class="text-xl font-semibold">
+            <img
+              src="assets/images/Logo.webp"
+              alt="Katalyst AI Logo"
+              class="w-[85%] sm:w-full h-full"
+            />
+          </a>
 
-                <button id="menuToggle"
-                    class="flex items-center justify-center w-10 h-10 rounded-full lg:hidden bg-white/40 backdrop-blur-lg"
-                    aria-label="Open menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#000">
-                        <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
-                    </svg>
-                </button>
+          <button
+            id="menuToggle"
+            class="flex items-center justify-center w-10 h-10 rounded-full lg:hidden bg-white/40 backdrop-blur-lg"
+            aria-label="Open menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="#000"
+            >
+              <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+          </button>
 
-                <!-- Menu -->
-                <ul
-                    class="hidden lg:flex items-center gap-x-3 text-nowrap font-dm-sans font-normal text-black text-base tracking-[1%] ">
-                    <li><a href="index.html" class="nav-link px-[23px] py-[11px] rounded-[60px]">Home</a></li>
-                    <li>
-                        <div id="productsToggle"
-                            class="nav-link flex items-center gap-x-2 ps-4.5 pe-[15px] py-[11px] rounded-[60px] cursor-pointer">
-                            Products
+          <!-- Menu -->
+          <ul
+            class="hidden lg:flex items-center gap-x-3 text-nowrap font-dm-sans font-normal text-black text-base tracking-[1%]"
+          >
+            <li>
+              <a href="/" class="nav-link px-[23px] py-[11px] rounded-[60px]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <div
+                id="productsToggle"
+                class="nav-link flex items-center gap-x-2 ps-4.5 pe-[15px] py-[11px] rounded-[60px] cursor-pointer"
+              >
+                Products
 
-                            <svg id="productsArrow" width="9" height="6" viewBox="0 0 9 6" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M3.49136 5.19583L0.264596 1.67572C-0.323355 1.03432 0.131646 0 1.00175 0H7.45528C8.32539 0 8.78039 1.03432 8.19243 1.67573L4.96567 5.19583C4.56933 5.6282 3.8877 5.6282 3.49136 5.19583Z"
-                                    fill="#A92CEC" />
-                            </svg>
-                        </div>
-                    </li>
-                    <li><a href="Solutions.html" class="nav-link px-[23px] py-[11px] rounded-[60px]">Solutions</a></li>
-                    <li><a href="Why-Katalyst.html" class="nav-link px-[23px] py-[11px] rounded-[60px]">Why Katalyst
-                            AI</a></li>
-                </ul>
+                <svg
+                  id="productsArrow"
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.49136 5.19583L0.264596 1.67572C-0.323355 1.03432 0.131646 0 1.00175 0H7.45528C8.32539 0 8.78039 1.03432 8.19243 1.67573L4.96567 5.19583C4.56933 5.6282 3.8877 5.6282 3.49136 5.19583Z"
+                    fill="#A92CEC"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li>
+              <a
+                href="/solutions"
+                class="nav-link px-[23px] py-[11px] rounded-[60px]"
+                >Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                href="/why-katalyst"
+                class="nav-link px-[23px] py-[11px] rounded-[60px]"
+                >Why Katalyst AI</a
+              >
+            </li>
+          </ul>
 
-                <a href="Contact-Us.html" class="hidden lg:block btn-primary !px-4 !py-[13.5px]">Contact
-                    Us</a>
-            </div>
-        </nav>
-        <!------- Product DropDown -------->
-        <div id="productsDropdown"
-            class="hidden lg:block px-5 fixed top-[120px] left-1/2 -translate-x-1/2 w-full opacity-0 invisible translate-y-2 transition-all duration-300 ease-out z-[997]">
-            <div class="max-w-[1054px] mx-auto bg-white backdrop-blur-[74px] border border-[#BDD8FF] rounded-[16px]">
-                <div class="ps-[63px] pt-[29px] pe-[30px] pb-[36px]">
-                    <div class="flex justify-between gap-7.5">
-                        <div class=" ">
-                            <div
-                                class="description font-dm-sans leading-[100%] flex flex-col gap-[29px] text-black mt-7.5">
-                                <a href="Product-Portfolio.html" class="menu-link">Explore All Products</a>
-                                <a href="talent-Intelligence.html" class="menu-link">Talent Intelligence
-                                    Platform</a>
-                                <a href="Talent-Acquisition.html" class="menu-link">Talent Acquisition</a>
-                                <a href="Talent-Development.html" class="menu-link">Talent Development</a>
-                                <a href="Succession-Planning-Agent.html" class="menu-link">Succession
-                                    Planning Agent</a>
-                                <a href="Performance-Management-Agent.html" class="menu-link active">Performance
-                                    Management Agent</a>
-                            </div>
-                        </div>
-                        <div class=" max-w-[532px] w-full">
-                            <div class="relative rounded-[10px] px-8 pt-8 pb-[35px] overflow-hidden bg-[#DFFDFF]">
-                                <img src="assets/images/products-card-bg.webp" class="absolute bottom-0 right-0 z-0">
-                                <div class="relative z-10">
-                                    <div class="heading-2 text-left">Let’s ready get started?</div>
-                                    <p class="mt-2.5">Your journey starts here. <br>Let’s build something great
-                                        together.</p>
-                                    <div class="mt-[95px]">
-                                        <a href="Contact-Us.html" class="btn-primary-outline py-3">Get in Touch</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <a
+            href="/contact-us"
+            class="hidden lg:block btn-primary !px-4 !py-[13.5px]"
+            >Contact Us</a
+          >
+        </div>
+      </nav>
+      <!------- Product DropDown -------->
+      <div
+        id="productsDropdown"
+        class="hidden lg:block px-5 fixed top-[120px] left-1/2 -translate-x-1/2 w-full opacity-0 invisible translate-y-2 transition-all duration-300 ease-out z-[997]"
+      >
+        <div
+          class="max-w-[1054px] mx-auto bg-white backdrop-blur-[74px] border border-[#BDD8FF] rounded-[16px]"
+        >
+          <div class="ps-[63px] pt-[29px] pe-[30px] pb-[36px]">
+            <div class="flex justify-between gap-7.5">
+              <div class=" ">
+                <div
+                  class="description font-dm-sans leading-[100%] flex flex-col gap-[29px] text-black mt-7.5"
+                >
+                  <a href="/product-portfolio" class="menu-link"
+                    >Explore All Products</a
+                  >
+                  <a href="/talent-intelligence" class="menu-link"
+                    >Talent Intelligence Platform</a
+                  >
+                  <a href="/talent-acquisition" class="menu-link"
+                    >Talent Acquisition</a
+                  >
+                  <a href="/talent-development" class="menu-link"
+                    >Talent Development</a
+                  >
+                  <a href="/succession-planning-agent" class="menu-link"
+                    >Succession Planning Agent</a
+                  >
+                  <a
+                    href="/performance-management-agent"
+                    class="menu-link active"
+                    >Performance Management Agent</a
+                  >
                 </div>
-            </div>
-        </div>
-        <!----------Mobile--------->
-        <div id="mainNav"
-            class="block lg:hidden fixed top-0 end-0 w-full sm:w-[400px] h-screen bg-lavender transform translate-x-full transition-transform duration-300 z-[999]">
-            <div class="flex flex-col h-full max-h-[100dvh] p-5">
-                <button id="menuClose" class="pb-3 text-xl text-end">✕</button>
-                <div class="flex flex-col justify-between h-full gap-5">
-                    <div class="flex flex-col items-start gap-2 overflow-y-auto grow">
-                        <a href="index.html"
-                            class="mobile-nav-link py-2 px-3 rounded-[70px] font-dm-sans font-normal text-base leading-[100%] text-heading hover:text-primary focus-visible:text-primary transition-all duration-300 ease-in-out outline-0">
-                            Home</a>
-                        <div id="mobileProducts" class="w-full">
-                            <div id="mobileProductsToggle"
-                                class="mobile-nav-link py-2 px-3 flex items-center justify-between cursor-pointer">
-                                <div class="">Products</div>
-                                <svg id="mobileProductsArrow" width="9" height="6" viewBox="0 0 9 6" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M3.49136 5.19583L0.264596 1.67572C-0.323355 1.03432 0.131646 0 1.00175 0H7.45528C8.32539 0 8.78039 1.03432 8.19243 1.67573L4.96567 5.19583C4.56933 5.6282 3.8877 5.6282 3.49136 5.19583Z"
-                                        fill="#A92CEC" />
-                                </svg>
-                            </div>
-                            <div id="mobileProductsDropdown"
-                                class="max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out will-change-[max-height]">
-                                <div class="ps-6 py-3 font-dm-sans text-sm flex flex-col gap-4 text-black">
-                                    <a href="Product-Portfolio.html" class="menu-link">Explore All
-                                        Products</a>
-                                    <a href="talent-Intelligence.html" class="menu-link">Talent Intelligence
-                                        Platform</a>
-                                    <a href="Talent-Acquisition.html" class="menu-link">Talent
-                                        Acquisition</a>
-                                    <a href="Talent-Development.html" class="menu-link">Talent
-                                        Development</a>
-                                    <a href="Succession-Planning-Agent.html" class="menu-link">Succession
-                                        Planning Agent</a>
-                                    <a href="Performance-Management-Agent.html" class="menu-link active">Performance
-                                        Management Agent</a>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="Solutions.html"
-                            class="mobile-nav-link py-2 px-3 rounded-[70px] font-dm-sans font-normal text-base leading-[100%] text-heading hover:text-primary focus-visible:text-primary transition-all duration-300 ease-in-out outline-0">
-                            Solutions</a>
-                        <a href="Why-Katalyst.html"
-                            class="mobile-nav-link py-2 px-3 rounded-[70px] font-dm-sans font-normal text-base leading-[100%] text-heading hover:text-primary focus-visible:text-primary transition-all duration-300 ease-in-out outline-0">Why
-                            Katalyst AI</a>
+              </div>
+              <div class="max-w-[532px] w-full">
+                <div
+                  class="relative rounded-[10px] px-8 pt-8 pb-[35px] overflow-hidden bg-[#DFFDFF]"
+                >
+                  <img
+                    src="assets/images/products-card-bg.webp"
+                    class="absolute bottom-0 right-0 z-0"
+                  />
+                  <div class="relative z-10">
+                    <div class="heading-2 text-left">
+                      Let’s ready get started?
                     </div>
-
-                    <div class="pt-3">
-                        <a href="Contact-Us.html" class="btn-primary !px-4 !py-3">Contact
-                            Us</a>
+                    <p class="mt-2.5">
+                      Your journey starts here. <br />Let’s build something
+                      great together.
+                    </p>
+                    <div class="mt-[95px]">
+                      <a href="/contact-us" class="btn-primary-outline py-3"
+                        >Get in Touch</a
+                      >
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div id="menuOverlay" class="fixed inset-0 bg-black/40 opacity-0 invisible transition-all duration-300 z-[998]">
+      </div>
+      <!----------Mobile--------->
+      <div
+        id="mainNav"
+        class="block lg:hidden fixed top-0 end-0 w-full sm:w-[400px] h-screen bg-lavender transform translate-x-full transition-transform duration-300 z-[999]"
+      >
+        <div class="flex flex-col h-full max-h-[100dvh] p-5">
+          <button id="menuClose" class="pb-3 text-xl text-end">✕</button>
+          <div class="flex flex-col justify-between h-full gap-5">
+            <div class="flex flex-col items-start gap-2 overflow-y-auto grow">
+              <a
+                href="/"
+                class="mobile-nav-link py-2 px-3 rounded-[70px] font-dm-sans font-normal text-base leading-[100%] text-heading hover:text-primary focus-visible:text-primary transition-all duration-300 ease-in-out outline-0"
+              >
+                Home</a
+              >
+              <div id="mobileProducts" class="w-full">
+                <div
+                  id="mobileProductsToggle"
+                  class="mobile-nav-link py-2 px-3 flex items-center justify-between cursor-pointer"
+                >
+                  <div class="">Products</div>
+                  <svg
+                    id="mobileProductsArrow"
+                    width="9"
+                    height="6"
+                    viewBox="0 0 9 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.49136 5.19583L0.264596 1.67572C-0.323355 1.03432 0.131646 0 1.00175 0H7.45528C8.32539 0 8.78039 1.03432 8.19243 1.67573L4.96567 5.19583C4.56933 5.6282 3.8877 5.6282 3.49136 5.19583Z"
+                      fill="#A92CEC"
+                    />
+                  </svg>
+                </div>
+                <div
+                  id="mobileProductsDropdown"
+                  class="max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out will-change-[max-height]"
+                >
+                  <div
+                    class="ps-6 py-3 font-dm-sans text-sm flex flex-col gap-4 text-black"
+                  >
+                    <a href="/product-portfolio" class="menu-link"
+                      >Explore All Products</a
+                    >
+                    <a href="/talent-intelligence" class="menu-link"
+                      >Talent Intelligence Platform</a
+                    >
+                    <a href="/talent-acquisition" class="menu-link"
+                      >Talent Acquisition</a
+                    >
+                    <a href="/talent-development" class="menu-link"
+                      >Talent Development</a
+                    >
+                    <a href="/succession-planning-agent" class="menu-link"
+                      >Succession Planning Agent</a
+                    >
+                    <a
+                      href="/performance-management-agent"
+                      class="menu-link active"
+                      >Performance Management Agent</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <a
+                href="/solutions"
+                class="mobile-nav-link py-2 px-3 rounded-[70px] font-dm-sans font-normal text-base leading-[100%] text-heading hover:text-primary focus-visible:text-primary transition-all duration-300 ease-in-out outline-0"
+              >
+                Solutions</a
+              >
+              <a
+                href="/why-katalyst"
+                class="mobile-nav-link py-2 px-3 rounded-[70px] font-dm-sans font-normal text-base leading-[100%] text-heading hover:text-primary focus-visible:text-primary transition-all duration-300 ease-in-out outline-0"
+                >Why Katalyst AI</a
+              >
+            </div>
+
+            <div class="pt-3">
+              <a href="/contact-us" class="btn-primary !px-4 !py-3"
+                >Contact Us</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
+      <div
+        id="menuOverlay"
+        class="fixed inset-0 bg-black/40 opacity-0 invisible transition-all duration-300 z-[998]"
+      ></div>
     </header>
 
-    <section class="relative w-full h-full ">
-        <img src="assets/images/Talent-Acquisition/left side.png" class="absolute top-0 left-0 z-10 w-auto h-auto" />
-        <img src="assets/images/Talent-Acquisition/second-left.png"
-            class="absolute top-[585px] ml-7 w-[clamp(15vh,30vw,229px)] left-0 h-fit z-10" />
-        <div class="relative bg-gradient-to-b 
-              from-periwinkle-soft 
-              via-mist-blue 
-              to-gradient-light-indigo">
-            <div class="relative h-full max-h-[1351px] ">
-                <div
-                    class="absolute bottom-[-321px] left-0 w-full z-20 h-[400px] bg-[linear-gradient(180deg,rgba(234,234,253,0)_0%,rgba(234,234,253,0.4)_50%,var(--color-surface-lavender)_100%)]">
+    <section class="relative w-full h-full">
+      <img
+        src="assets/images/Talent-Acquisition/left side.png"
+        class="absolute top-0 left-0 z-10 w-auto h-auto"
+      />
+      <img
+        src="assets/images/Talent-Acquisition/second-left.png"
+        class="absolute top-[585px] ml-7 w-[clamp(15vh,30vw,229px)] left-0 h-fit z-10"
+      />
+      <div
+        class="relative bg-gradient-to-b from-periwinkle-soft via-mist-blue to-gradient-light-indigo"
+      >
+        <div class="relative h-full max-h-[1351px]">
+          <div
+            class="absolute bottom-[-321px] left-0 w-full z-20 h-[400px] bg-[linear-gradient(180deg,rgba(234,234,253,0)_0%,rgba(234,234,253,0.4)_50%,var(--color-surface-lavender)_100%)]"
+          ></div>
+
+          <!-- Top-center image -->
+          <img
+            src="assets/images/Talent-Acquisition/center top.png"
+            class="absolute bottom-[-321px] z-10 w-auto h-[1351px] transform -translate-x-1/2 left-1/2"
+          />
+
+          <!-- Top-right image -->
+          <img
+            src="assets/images/Talent-Acquisition/right-side.png"
+            class="absolute top-[161px] right-0 z-30 h-auto max-w-[clamp(10vh,15vw,164px)]"
+          />
+
+          <div class="relative pt-[105px] pb-[194px] px-5 lg:px-0 z-[99]">
+            <div
+              class="flex flex-col items-center justify-center max-w-[761px] mx-auto mt-10 sm:mt-[110px]"
+            >
+              <div
+                id="heroBtn"
+                class="flex items-center gap-2 px-5 py-[10px] w-fit font-inter font-medium text-base sm:text-[18px] text-black bg-white/20 leading-[20px] text-nowrap rounded-[50px] border border-purple/40 shadow-[0px_9px_44px_0px_#BDDBF6]"
+              >
+                Structured Performance
+              </div>
+              <div id="heroHeading" class="heading-1 mt-[33px]">
+                Meaningful Conversations. Continuous Growth.
+              </div>
+              <div id="heroDec" class="description mt-[22px] text-center">
+                <div class="mb-4">
+                  Performance management should create clarity, alignment, and
+                  growth not compliance fatigue.
                 </div>
-
-                <!-- Top-center image -->
-                <img src="assets/images/Talent-Acquisition/center top.png"
-                    class="absolute bottom-[-321px] z-10 w-auto h-[1351px] transform -translate-x-1/2 left-1/2" />
-
-                <!-- Top-right image -->
-                <img src="assets/images/Talent-Acquisition/right-side.png"
-                    class="absolute top-[161px] right-0 z-30 h-auto max-w-[clamp(10vh,15vw,164px)]" />
-
-                <div class="relative pt-[105px] pb-[194px] px-5 lg:px-0 z-[99]">
-                    <div class="flex flex-col items-center justify-center max-w-[761px] mx-auto mt-10 sm:mt-[110px] ">
-                        <div id="heroBtn"
-                            class="flex items-center gap-2 px-5 py-[10px] w-fit font-inter font-medium text-base sm:text-[18px] text-black bg-white/20 leading-[20px] text-nowrap rounded-[50px] border border-purple/40 shadow-[0px_9px_44px_0px_#BDDBF6] ">
-                            Structured Performance
-                        </div>
-                        <div id="heroHeading" class="heading-1 mt-[33px]">
-                            Meaningful Conversations. Continuous Growth.
-                        </div>
-                        <div id="heroDec" class="description mt-[22px] text-center">
-                            <div class="mb-4">Performance management should create clarity, alignment, and growth not
-                                compliance fatigue.
-                            </div>
-                            <div> The KatalystAI Performance Management Agent provides a structured, intelligence-driven
-                                framework that helps organizations define performance expectations clearly, measure
-                                outcomes
-                                fairly, and support continuous, meaningful conversations between managers and employees.
-                                It brings together organizational modelling, KPI governance, and AI-supported
-                                performance
-                                dialogue into a single, enterprise-ready system.
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                  The KatalystAI Performance Management Agent provides a
+                  structured, intelligence-driven framework that helps
+                  organizations define performance expectations clearly, measure
+                  outcomes fairly, and support continuous, meaningful
+                  conversations between managers and employees. It brings
+                  together organizational modelling, KPI governance, and
+                  AI-supported performance dialogue into a single,
+                  enterprise-ready system.
                 </div>
+              </div>
             </div>
-
-            <div class="px-5 md:px-10 xl:px-[85px] pb-10 md:pb-[83px] relative ">
-                <img src="assets/images/Performance-Management-Agent/S1-bg.webp" alt="S1-bg"
-                    class="w-full h-[296px] absolute top-0 left-0 pointer-events-none z-10">
-                <div class="fade-in hero-card max-w-[1271px] mt-[-115px] pt-[70px] pe-0 pb-8 lg:pb-[72px]">
-                    <div class="heading-2 px-6 md:px-[59px] mb-[32px]">
-                        Why It Matters
-                    </div>
-                    <div
-                        class="flex flex-col items-center lg:flex-row gap-[42px] ps-6 pe-6 md:ps-[59px] md:pe-[59px] lg:pe-[89px]">
-                        <div class="items-center flex-1">
-                            <div class="w-full lg:max-w-[552px]">
-                                <div class="heading-5 font-dm-sans mb-[13px]">
-                                    Many performance management systems struggle because:
-                                </div>
-                                <div class="mt-[13px]">
-                                    <div class="feature-list description">
-                                        <div class="flex gap-2 fade-li">
-                                            <span class="my-2.5">
-                                                <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                                </svg>
-                                            </span>
-                                            Performance cycles are rigid and disconnected from business reality
-                                        </div>
-                                        <div class="flex gap-2 fade-li">
-                                            <span class="my-2.5">
-                                                <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                                </svg>
-                                            </span>
-                                            KPIs are inconsistently defined across roles and levels
-                                        </div>
-                                        <div class="flex gap-2 fade-li">
-                                            <span class="my-2.5">
-                                                <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                                </svg>
-                                            </span>
-                                            Quantitative outcomes overshadow behavioral impact or vice versa
-                                        </div>
-                                        <div class="flex gap-2 fade-li">
-                                            <span class="my-2.5">
-                                                <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                                </svg>
-                                            </span>
-                                            Reviews happen too late to influence performance meaningfully
-                                        </div>
-                                    </div>
-                                    <div class="description mt-[13px] lg:max-w-[478px]">
-                                        <div class="mb-[13px]">As a result, performance becomes an administrative
-                                            process
-                                            rather than a driver of accountability and growth.</div>
-                                        <div>KatalystAI reframes performance management as a living system, aligned to
-                                            organizational structure, role expectations, and continuous feedback.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex-1">
-                            <div class="flex items-center justify-center mx-auto max-w-[582px] h-full ">
-                                <img src="assets/images/Performance-Management-Agent/S1-right.webp" alt="why-it-matters"
-                                    loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="px-5 md:px-10 xl:px-[85px] pb-10 md:pb-[83px] relative">
+          <img
+            src="assets/images/Performance-Management-Agent/S1-bg.webp"
+            alt="S1-bg"
+            class="w-full h-[296px] absolute top-0 left-0 pointer-events-none z-10"
+          />
+          <div
+            class="fade-in hero-card max-w-[1271px] mt-[-115px] pt-[70px] pe-0 pb-8 lg:pb-[72px]"
+          >
+            <div class="heading-2 px-6 md:px-[59px] mb-[32px]">
+              Why It Matters
+            </div>
+            <div
+              class="flex flex-col items-center lg:flex-row gap-[42px] ps-6 pe-6 md:ps-[59px] md:pe-[59px] lg:pe-[89px]"
+            >
+              <div class="items-center flex-1">
+                <div class="w-full lg:max-w-[552px]">
+                  <div class="heading-5 font-dm-sans mb-[13px]">
+                    Many performance management systems struggle because:
+                  </div>
+                  <div class="mt-[13px]">
+                    <div class="feature-list description">
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg
+                            width="7"
+                            height="8"
+                            viewBox="0 0 7 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                              fill="#A92CEC"
+                            />
+                          </svg>
+                        </span>
+                        Performance cycles are rigid and disconnected from
+                        business reality
+                      </div>
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg
+                            width="7"
+                            height="8"
+                            viewBox="0 0 7 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                              fill="#A92CEC"
+                            />
+                          </svg>
+                        </span>
+                        KPIs are inconsistently defined across roles and levels
+                      </div>
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg
+                            width="7"
+                            height="8"
+                            viewBox="0 0 7 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                              fill="#A92CEC"
+                            />
+                          </svg>
+                        </span>
+                        Quantitative outcomes overshadow behavioral impact or
+                        vice versa
+                      </div>
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg
+                            width="7"
+                            height="8"
+                            viewBox="0 0 7 8"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                              fill="#A92CEC"
+                            />
+                          </svg>
+                        </span>
+                        Reviews happen too late to influence performance
+                        meaningfully
+                      </div>
+                    </div>
+                    <div class="description mt-[13px] lg:max-w-[478px]">
+                      <div class="mb-[13px]">
+                        As a result, performance becomes an administrative
+                        process rather than a driver of accountability and
+                        growth.
+                      </div>
+                      <div>
+                        KatalystAI reframes performance management as a living
+                        system, aligned to organizational structure, role
+                        expectations, and continuous feedback.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1">
+                <div
+                  class="flex items-center justify-center mx-auto max-w-[582px] h-full"
+                >
+                  <img
+                    src="assets/images/Performance-Management-Agent/S1-right.webp"
+                    alt="why-it-matters"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="relative">
-        <div
-            class="absolute top-[-800px] lg:top-[-330px] left-0 w-full h-[800px] lg:h-[330px] bg-[var(--color-surface-lavender)]">
+      <div
+        class="absolute top-[-800px] lg:top-[-330px] left-0 w-full h-[800px] lg:h-[330px] bg-[var(--color-surface-lavender)]"
+      ></div>
+      <div
+        class="relative z-[20] px-5 md:px-10 xl:px-[85px] pb-[80px] bg-[linear-gradient(180deg,var(--color-surface-lavender)_0%,#F6FAFF_100%)]"
+      >
+        <img
+          src="assets/images/Succession-Planning-Agent/bg-horizontal.webp"
+          loading="lazy"
+          class="absolute top-[-350px] left-0 w-full h-[586px] pointer-events-none"
+        />
+        <div class="text-center">
+          <div class="mb-3 fade-in heading-2 sm:mb-7">
+            How Performance Management Works
+          </div>
+          <div class="fade-in description max-w-[853px] mx-auto">
+            The Performance Management Agent is designed to reflect how
+            organizations actually operate-across hierarchy, time, and
+            accountability.
+          </div>
         </div>
-        <div
-            class="relative z-[20] px-5 md:px-10 xl:px-[85px] pb-[80px] bg-[linear-gradient(180deg,var(--color-surface-lavender)_0%,#F6FAFF_100%)]">
-            <img src="assets/images/Succession-Planning-Agent/bg-horizontal.webp" loading="lazy"
-                class="absolute top-[-350px] left-0 w-full h-[586px] pointer-events-none" />
-            <div class="text-center">
-                <div class="mb-3 fade-in heading-2 sm:mb-7">
-                    How Performance Management Works
+
+        <div class="mt-[41px] text-black max-w-[1271px] mx-auto">
+          <div class="flex flex-col lg:flex-row gap-7.5">
+            <!-- Steps -->
+            <div
+              class="flex flex-row lg:flex-col gap-2.5 w-auto xl:w-full lg:max-w-[396px] overflow-x-auto pb-2 lg:pb-0 lg:sticky lg:top-[140px] lg:self-start"
+            >
+              <div class="step active" data-target="card-1">
+                <div class="step-label">Step 1</div>
+                <div class="step-title">Configurable Performance Cycles</div>
+              </div>
+              <div class="step" data-target="card-2">
+                <div class="step-label">Step 2</div>
+                <div class="step-title">Balanced KPI Framework</div>
+              </div>
+              <div class="step" data-target="card-3">
+                <div class="step-label">Step 3</div>
+                <div class="step-title">Role-Aligned KPI Definition</div>
+              </div>
+              <div class="step" data-target="card-4">
+                <div class="step-label">Step 4</div>
+                <div class="step-title">
+                  Continuous Performance Conversations
                 </div>
-                <div class="fade-in description max-w-[853px] mx-auto">
-                    The Performance Management Agent is designed to reflect how organizations actually operate-across
-                    hierarchy, time, and accountability.
-                </div>
+              </div>
             </div>
 
-
-            <div class=" mt-[41px] text-black max-w-[1271px] mx-auto">
-                <div class="flex flex-col lg:flex-row gap-7.5">
-
-                    <!-- Steps -->
+            <!-- Step Content -->
+            <div class="flex-1">
+              <div class="flex flex-col gap-7.5">
+                <div
+                  id="card-1"
+                  class="section-card relative bg-white/50 h-full rounded-[20px] px-6 md:px-10 py-8 md:py-[41px] overflow-hidden"
+                >
+                  <img
+                    src="assets/images/Performance-Management-Agent/cardbg-1.webp"
+                    class="absolute top-0 right-0 z-0 object-fill pointer-events-none w-fit"
+                  />
+                  <div class="relative z-20">
                     <div
-                        class="flex flex-row lg:flex-col gap-2.5 w-auto xl:w-full lg:max-w-[396px] overflow-x-auto pb-2 lg:pb-0 lg:sticky lg:top-[140px] lg:self-start">
-                        <div class="step active" data-target="card-1">
-                            <div class="step-label">Step 1</div>
-                            <div class="step-title">Configurable Performance Cycles</div>
-                        </div>
-                        <div class="step" data-target="card-2">
-                            <div class="step-label">Step 2</div>
-                            <div class="step-title">Balanced KPI Framework</div>
-                        </div>
-                        <div class="step" data-target="card-3">
-                            <div class="step-label">Step 3</div>
-                            <div class="step-title">Role-Aligned KPI Definition</div>
-                        </div>
-                        <div class="step" data-target="card-4">
-                            <div class="step-label">Step 4</div>
-                            <div class="step-title">Continuous Performance Conversations</div>
-                        </div>
+                      class="p-0.5 w-fit rounded-[50px] bg-[linear-gradient(127.43deg,var(--color-lilac)_8.26%,var(--color-pink-blush)_40.3%,var(--color-sky-indigo)_64.41%,var(--color-indigo-soft)_95%)] mb-[15px]"
+                    >
+                      <div
+                        class="px-4 sm:px-5 py-1.5 sm:py-[8.5px] text-black rounded-[50px] bg-white font-inter font-medium text-base sm:text-[18px] leading-[20px]"
+                      >
+                        Role Insights
+                      </div>
                     </div>
-
-                    <!-- Step Content -->
-                    <div class="flex-1">
-
-                        <div class="flex flex-col gap-7.5">
-                            <div id="card-1"
-                                class="section-card relative bg-white/50 h-full rounded-[20px] px-6 md:px-10 py-8 md:py-[41px] overflow-hidden">
-                                <img src="assets/images/Performance-Management-Agent/cardbg-1.webp"
-                                    class="absolute top-0 right-0 z-0 object-fill pointer-events-none w-fit">
-                                <div class="relative z-20">
-                                    <div
-                                        class="p-0.5 w-fit rounded-[50px] bg-[linear-gradient(127.43deg,var(--color-lilac)_8.26%,var(--color-pink-blush)_40.3%,var(--color-sky-indigo)_64.41%,var(--color-indigo-soft)_95%)] mb-[15px]">
-                                        <div
-                                            class="px-4 sm:px-5 py-1.5 sm:py-[8.5px] text-black rounded-[50px] bg-white font-inter font-medium text-base sm:text-[18px] leading-[20px]">
-                                            Role Insights
-                                        </div>
-                                    </div>
-                                    <div class="heading-3">
-                                        Configurable Performance Cycles
-                                    </div>
-                                    <div class="description max-w-[552px] mt-[5px] mb-5">
-                                        Performance cycles are aligned to the organization’s financial year and can
-                                        be configured to reflect business cadence-quarterly, biannual, annual, or
-                                        even monthly-without forcing a one-size-fits-all approach.
-                                        This flexibility supports both operational roles and strategic leadership
-                                        functions.
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="card-2"
-                                class="section-card relative bg-white/50 h-full rounded-[20px] px-6 md:px-10 py-8 md:py-[41px] overflow-hidden ">
-                                <img src="assets/images/Performance-Management-Agent/cardbg-2.webp"
-                                    class="absolute bottom-0 right-0 z-0 object-fill pointer-events-none w-fit">
-                                <div class="relative z-20">
-                                    <div
-                                        class="p-0.5 w-fit rounded-[50px] bg-[linear-gradient(127.43deg,var(--color-lilac)_8.26%,var(--color-pink-blush)_40.3%,var(--color-sky-indigo)_64.41%,var(--color-indigo-soft)_95%)] mb-[15px]">
-                                        <div
-                                            class="px-4 sm:px-5 py-1.5 sm:py-[8.5px] rounded-[50px] bg-white font-inter font-medium text-base sm:text-[18px] leading-[20px]">
-                                            Performance Standards
-                                        </div>
-                                    </div>
-                                    <div class="heading-3">
-                                        Balanced KPI Framework
-                                    </div>
-                                    <div class="description font-semibold leading-[24px] text-black/50 mt-[5px]">
-                                        Performance is evaluated using a structured mix of:
-                                    </div>
-                                    <div class="mt-3 ">
-                                        <div class="feature-list description">
-                                            <div class="flex gap-2 fade-li">
-                                                <span class="my-2.5">
-                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                                    </svg>
-                                                </span>
-                                                Quantitative (Outcome-Based) KPIs – measurable, numerical objectives
-                                            </div>
-                                            <div class="flex gap-2 fade-li">
-                                                <span class="my-2.5">
-                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                                    </svg>
-                                                </span>
-                                                Qualitative (Behavioral) KPIs – leadership, collaboration, and
-                                                role-specific behaviors
-                                            </div>
-
-                                        </div>
-                                        <div class="description mt-5 max-w-[560px]">Organizations can define KPI
-                                            weightage at the
-                                            job-category level (for example, balancing outcomes and behaviors), with
-                                            the ability to override weightage at the individual level when required.
-                                            <br>
-                                            This ensures fairness while allowing managerial judgment.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="card-3"
-                                class="section-card relative bg-white/50 h-full border-t-4 border-l-3 border-white rounded-[20px] px-6 md:px-10 py-8 md:py-[41px] overflow-hidden">
-                                <img src="assets/images/Performance-Management-Agent/cardbg-3.webp"
-                                    class="absolute bottom-0 right-0 z-0 pointer-events-none w-fit">
-                                <div class="relative z-20">
-                                    <div
-                                        class="p-0.5 w-fit rounded-[50px] bg-[linear-gradient(127.43deg,var(--color-lilac)_8.26%,var(--color-pink-blush)_40.3%,var(--color-sky-indigo)_64.41%,var(--color-indigo-soft)_95%)] mb-[15px]">
-                                        <div
-                                            class="px-4 sm:px-5 py-1.5 sm:py-[8.5px] rounded-[50px] bg-white font-inter font-medium text-base sm:text-[18px] leading-[20px]">
-                                            Talent Assessment
-                                        </div>
-                                    </div>
-                                    <div class="heading-3">
-                                        Role-Aligned KPI Definition
-                                    </div>
-                                    <div class="description-1 max-w-[732px]">Managers and employees collaboratively
-                                        define performance areas for each cycle supporting multiple objectives
-                                        within both quantitative and qualitative dimensions.</div>
-                                    <div class="mt-[16px] description-1">
-                                        This reinforces ownership, clarity, and alignment from the start of the
-                                        cycle.
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="card-4"
-                                class="section-card relative bg-white/50 h-full rounded-[20px] px-6 md:px-10 py-8 md:py-[41px] pb-[34px] overflow-hidden">
-                                <img src="assets/images/Performance-Management-Agent/cardbg-4.webp"
-                                    class="absolute bottom-0 right-0 z-0 pointer-events-none w-fit">
-                                <div class="relative z-20">
-                                    <div
-                                        class="p-0.5 w-fit rounded-[50px] bg-[linear-gradient(127.43deg,var(--color-lilac)_8.26%,var(--color-pink-blush)_40.3%,var(--color-sky-indigo)_64.41%,var(--color-indigo-soft)_95%)] mb-[15px]">
-                                        <div
-                                            class="px-4 sm:px-5 py-1.5 sm:py-[8.5px] rounded-[50px] bg-white font-inter font-medium text-base sm:text-[18px] leading-[20px]">
-                                            Readiness Pipeline
-                                        </div>
-                                    </div>
-                                    <div class="heading-3">
-                                        Continuous Performance Conversations
-                                    </div>
-                                    <p class="text-black mt-1.5">Performance is not assessed only at the end of a cycle.
-                                    </p>
-                                    <div class="description font-semibold text-black/50 mt-4.5">
-                                        KatalystAI enables:
-                                    </div>
-                                    <div class="mt-[19px]">
-                                        <div class="feature-list description">
-                                            <div class="flex gap-2 fade-li">
-                                                <span class="my-2.5">
-                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                                    </svg>
-                                                </span>
-                                                Structured, scheduled performance conversations
-                                            </div>
-                                            <div class="flex gap-2 fade-li">
-                                                <span class="my-2.5">
-                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                                    </svg>
-                                                </span>
-                                                Mid-cycle and periodic check-ins
-                                            </div>
-                                            <div class="flex gap-2 fade-li max-w-[444px]">
-                                                <span class="my-2.5">
-                                                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                                    </svg>
-                                                </span>
-                                                AI-supported guidance to help managers ask the right questions and
-                                                provide constructive feedback
-                                            </div>
-                                        </div>
-                                        <div class="description mt-5 max-w-[658px]">Organizations can configure how
-                                            often these
-                                            conversations occur monthly, quarterly, or at cycle milestones ensuring
-                                            feedback remains timely and actionable. AI supports consistency and
-                                            insight, while conversations remain human-led and contextual.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
+                    <div class="heading-3">Configurable Performance Cycles</div>
+                    <div class="description max-w-[552px] mt-[5px] mb-5">
+                      Performance cycles are aligned to the organization’s
+                      financial year and can be configured to reflect business
+                      cadence-quarterly, biannual, annual, or even
+                      monthly-without forcing a one-size-fits-all approach. This
+                      flexibility supports both operational roles and strategic
+                      leadership functions.
                     </div>
+                  </div>
                 </div>
+                <div
+                  id="card-2"
+                  class="section-card relative bg-white/50 h-full rounded-[20px] px-6 md:px-10 py-8 md:py-[41px] overflow-hidden"
+                >
+                  <img
+                    src="assets/images/Performance-Management-Agent/cardbg-2.webp"
+                    class="absolute bottom-0 right-0 z-0 object-fill pointer-events-none w-fit"
+                  />
+                  <div class="relative z-20">
+                    <div
+                      class="p-0.5 w-fit rounded-[50px] bg-[linear-gradient(127.43deg,var(--color-lilac)_8.26%,var(--color-pink-blush)_40.3%,var(--color-sky-indigo)_64.41%,var(--color-indigo-soft)_95%)] mb-[15px]"
+                    >
+                      <div
+                        class="px-4 sm:px-5 py-1.5 sm:py-[8.5px] rounded-[50px] bg-white font-inter font-medium text-base sm:text-[18px] leading-[20px]"
+                      >
+                        Performance Standards
+                      </div>
+                    </div>
+                    <div class="heading-3">Balanced KPI Framework</div>
+                    <div
+                      class="description font-semibold leading-[24px] text-black/50 mt-[5px]"
+                    >
+                      Performance is evaluated using a structured mix of:
+                    </div>
+                    <div class="mt-3">
+                      <div class="feature-list description">
+                        <div class="flex gap-2 fade-li">
+                          <span class="my-2.5">
+                            <svg
+                              width="7"
+                              height="8"
+                              viewBox="0 0 7 8"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                                fill="#A92CEC"
+                              />
+                            </svg>
+                          </span>
+                          Quantitative (Outcome-Based) KPIs – measurable,
+                          numerical objectives
+                        </div>
+                        <div class="flex gap-2 fade-li">
+                          <span class="my-2.5">
+                            <svg
+                              width="7"
+                              height="8"
+                              viewBox="0 0 7 8"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                                fill="#A92CEC"
+                              />
+                            </svg>
+                          </span>
+                          Qualitative (Behavioral) KPIs – leadership,
+                          collaboration, and role-specific behaviors
+                        </div>
+                      </div>
+                      <div class="description mt-5 max-w-[560px]">
+                        Organizations can define KPI weightage at the
+                        job-category level (for example, balancing outcomes and
+                        behaviors), with the ability to override weightage at
+                        the individual level when required.
+                        <br />
+                        This ensures fairness while allowing managerial
+                        judgment.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="card-3"
+                  class="section-card relative bg-white/50 h-full border-t-4 border-l-3 border-white rounded-[20px] px-6 md:px-10 py-8 md:py-[41px] overflow-hidden"
+                >
+                  <img
+                    src="assets/images/Performance-Management-Agent/cardbg-3.webp"
+                    class="absolute bottom-0 right-0 z-0 pointer-events-none w-fit"
+                  />
+                  <div class="relative z-20">
+                    <div
+                      class="p-0.5 w-fit rounded-[50px] bg-[linear-gradient(127.43deg,var(--color-lilac)_8.26%,var(--color-pink-blush)_40.3%,var(--color-sky-indigo)_64.41%,var(--color-indigo-soft)_95%)] mb-[15px]"
+                    >
+                      <div
+                        class="px-4 sm:px-5 py-1.5 sm:py-[8.5px] rounded-[50px] bg-white font-inter font-medium text-base sm:text-[18px] leading-[20px]"
+                      >
+                        Talent Assessment
+                      </div>
+                    </div>
+                    <div class="heading-3">Role-Aligned KPI Definition</div>
+                    <div class="description-1 max-w-[732px]">
+                      Managers and employees collaboratively define performance
+                      areas for each cycle supporting multiple objectives within
+                      both quantitative and qualitative dimensions.
+                    </div>
+                    <div class="mt-[16px] description-1">
+                      This reinforces ownership, clarity, and alignment from the
+                      start of the cycle.
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="card-4"
+                  class="section-card relative bg-white/50 h-full rounded-[20px] px-6 md:px-10 py-8 md:py-[41px] pb-[34px] overflow-hidden"
+                >
+                  <img
+                    src="assets/images/Performance-Management-Agent/cardbg-4.webp"
+                    class="absolute bottom-0 right-0 z-0 pointer-events-none w-fit"
+                  />
+                  <div class="relative z-20">
+                    <div
+                      class="p-0.5 w-fit rounded-[50px] bg-[linear-gradient(127.43deg,var(--color-lilac)_8.26%,var(--color-pink-blush)_40.3%,var(--color-sky-indigo)_64.41%,var(--color-indigo-soft)_95%)] mb-[15px]"
+                    >
+                      <div
+                        class="px-4 sm:px-5 py-1.5 sm:py-[8.5px] rounded-[50px] bg-white font-inter font-medium text-base sm:text-[18px] leading-[20px]"
+                      >
+                        Readiness Pipeline
+                      </div>
+                    </div>
+                    <div class="heading-3">
+                      Continuous Performance Conversations
+                    </div>
+                    <p class="text-black mt-1.5">
+                      Performance is not assessed only at the end of a cycle.
+                    </p>
+                    <div class="description font-semibold text-black/50 mt-4.5">
+                      KatalystAI enables:
+                    </div>
+                    <div class="mt-[19px]">
+                      <div class="feature-list description">
+                        <div class="flex gap-2 fade-li">
+                          <span class="my-2.5">
+                            <svg
+                              width="7"
+                              height="8"
+                              viewBox="0 0 7 8"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                                fill="#A92CEC"
+                              />
+                            </svg>
+                          </span>
+                          Structured, scheduled performance conversations
+                        </div>
+                        <div class="flex gap-2 fade-li">
+                          <span class="my-2.5">
+                            <svg
+                              width="7"
+                              height="8"
+                              viewBox="0 0 7 8"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                                fill="#A92CEC"
+                              />
+                            </svg>
+                          </span>
+                          Mid-cycle and periodic check-ins
+                        </div>
+                        <div class="flex gap-2 fade-li max-w-[444px]">
+                          <span class="my-2.5">
+                            <svg
+                              width="7"
+                              height="8"
+                              viewBox="0 0 7 8"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                                fill="#A92CEC"
+                              />
+                            </svg>
+                          </span>
+                          AI-supported guidance to help managers ask the right
+                          questions and provide constructive feedback
+                        </div>
+                      </div>
+                      <div class="description mt-5 max-w-[658px]">
+                        Organizations can configure how often these
+                        conversations occur monthly, quarterly, or at cycle
+                        milestones ensuring feedback remains timely and
+                        actionable. AI supports consistency and insight, while
+                        conversations remain human-led and contextual.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="bg-alice-blue">
-        <div class="bg-black build">
-            <div
-                class=" h-[600px] sm:h-[640px] relative lg:h-[741px] max-w-[1440px] mx-auto px-6 md:px-0 flex justify-center text-center text-white  bg-cover bg-center">
-                <img src="assets/images/Home-Page-image/workforce-Bg-3.webp" loading="lazy"
-                    class="absolute w-full h-full" alt="workforce-BG">
-                <div class="max-w-[700px] mt-[139px]">
-                    <div class="mb-8 fade-in">
-                        <div class="heading-main">
-                            Designed for Today.</div>
-                        <div class="font-dm-sans font-medium  text-[24px] md:text-[32px] tracking-[1%]">Ready for What’s
-                            Next</div>
-                    </div>
-                    <div class="fade-in description text-white/80 ">KatalystAI supports organizations at different
-                        stages of workforce maturity- <br>from targeted use cases to full talent lifecycle
-                        transformation.
-                    </div>
-                    <div class="fade-in mt-[43px] flex items-center justify-center flex-wrap gap-3 w-full">
-                        <a href="Product-Portfolio.html"
-                            class="flex items-center gap-x-2.5 py-2 sm:py-3 px-3 sm:px-6  font-inter font-medium text-sm sm:text-base border-2 border-purple rounded-[60px] text-black bg-white text-nowrap">
-                            <span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_193_331)">
-                                        <path
-                                            d="M3 10C3 10.9193 3.18106 11.8295 3.53284 12.6788C3.88463 13.5281 4.40024 14.2997 5.05025 14.9497C5.70026 15.5998 6.47194 16.1154 7.32122 16.4672C8.1705 16.8189 9.08075 17 10 17C10.9193 17 11.8295 16.8189 12.6788 16.4672C13.5281 16.1154 14.2997 15.5998 14.9497 14.9497C15.5998 14.2997 16.1154 13.5281 16.4672 12.6788C16.8189 11.8295 17 10.9193 17 10C17 9.08075 16.8189 8.1705 16.4672 7.32122C16.1154 6.47194 15.5998 5.70026 14.9497 5.05025C14.2997 4.40024 13.5281 3.88463 12.6788 3.53284C11.8295 3.18106 10.9193 3 10 3C9.08075 3 8.1705 3.18106 7.32122 3.53284C6.47194 3.88463 5.70026 4.40024 5.05025 5.05025C4.40024 5.70026 3.88463 6.47194 3.53284 7.32122C3.18106 8.1705 3 9.08075 3 10Z"
-                                            stroke="#A92CEC" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M21 21L15 15" stroke="#A92CEC" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_193_331">
-                                            <rect width="24" height="24" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </span>
-                            Explore the Product Portfolio</a>
-                        <a href="Contact-Us.html"
-                            class="flex items-center gap-x-2.5 py-2 sm:py-3 px-5 sm:px-[37px] font-inter font-medium text-sm sm:text-base border-2 border-mint-green rounded-[60px] text-black bg-white text-nowrap">
-                            <span>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_193_337)">
-                                        <path
-                                            d="M4 15C4 14.4696 4.21071 13.9609 4.58579 13.5858C4.96086 13.2107 5.46957 13 6 13H7C7.53043 13 8.03914 13.2107 8.41421 13.5858C8.78929 13.9609 9 14.4696 9 15V18C9 18.5304 8.78929 19.0391 8.41421 19.4142C8.03914 19.7893 7.53043 20 7 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18V15Z"
-                                            stroke="#10D3AD" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M15 15C15 14.4696 15.2107 13.9609 15.5858 13.5858C15.9609 13.2107 16.4696 13 17 13H18C18.5304 13 19.0391 13.2107 19.4142 13.5858C19.7893 13.9609 20 14.4696 20 15V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H17C16.4696 20 15.9609 19.7893 15.5858 19.4142C15.2107 19.0391 15 18.5304 15 18V15Z"
-                                            stroke="#10D3AD" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M4 15V12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84285 9.87827 4 12 4C14.1217 4 16.1566 4.84285 17.6569 6.34315C19.1571 7.84344 20 9.87827 20 12V15"
-                                            stroke="#10D3AD" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_193_337">
-                                            <rect width="24" height="24" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </span>
-                            Talk to Us About Your Use Case</a>
-                    </div>
-                </div>
+      <div class="bg-black build">
+        <div
+          class="h-[600px] sm:h-[640px] relative lg:h-[741px] max-w-[1440px] mx-auto px-6 md:px-0 flex justify-center text-center text-white bg-cover bg-center"
+        >
+          <img
+            src="assets/images/Home-Page-image/workforce-Bg-3.webp"
+            loading="lazy"
+            class="absolute w-full h-full"
+            alt="workforce-BG"
+          />
+          <div class="max-w-[700px] mt-[139px]">
+            <div class="mb-8 fade-in">
+              <div class="heading-main">Designed for Today.</div>
+              <div
+                class="font-dm-sans font-medium text-[24px] md:text-[32px] tracking-[1%]"
+              >
+                Ready for What’s Next
+              </div>
             </div>
+            <div class="fade-in description text-white/80">
+              KatalystAI supports organizations at different stages of workforce
+              maturity- <br />from targeted use cases to full talent lifecycle
+              transformation.
+            </div>
+            <div
+              class="fade-in mt-[43px] flex items-center justify-center flex-wrap gap-3 w-full"
+            >
+              <a
+                href="/product-portfolio"
+                class="flex items-center gap-x-2.5 py-2 sm:py-3 px-3 sm:px-6 font-inter font-medium text-sm sm:text-base border-2 border-purple rounded-[60px] text-black bg-white text-nowrap"
+              >
+                <span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_193_331)">
+                      <path
+                        d="M3 10C3 10.9193 3.18106 11.8295 3.53284 12.6788C3.88463 13.5281 4.40024 14.2997 5.05025 14.9497C5.70026 15.5998 6.47194 16.1154 7.32122 16.4672C8.1705 16.8189 9.08075 17 10 17C10.9193 17 11.8295 16.8189 12.6788 16.4672C13.5281 16.1154 14.2997 15.5998 14.9497 14.9497C15.5998 14.2997 16.1154 13.5281 16.4672 12.6788C16.8189 11.8295 17 10.9193 17 10C17 9.08075 16.8189 8.1705 16.4672 7.32122C16.1154 6.47194 15.5998 5.70026 14.9497 5.05025C14.2997 4.40024 13.5281 3.88463 12.6788 3.53284C11.8295 3.18106 10.9193 3 10 3C9.08075 3 8.1705 3.18106 7.32122 3.53284C6.47194 3.88463 5.70026 4.40024 5.05025 5.05025C4.40024 5.70026 3.88463 6.47194 3.53284 7.32122C3.18106 8.1705 3 9.08075 3 10Z"
+                        stroke="#A92CEC"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M21 21L15 15"
+                        stroke="#A92CEC"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_193_331">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                Explore the Product Portfolio</a
+              >
+              <a
+                href="/contact-us"
+                class="flex items-center gap-x-2.5 py-2 sm:py-3 px-5 sm:px-[37px] font-inter font-medium text-sm sm:text-base border-2 border-mint-green rounded-[60px] text-black bg-white text-nowrap"
+              >
+                <span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_193_337)">
+                      <path
+                        d="M4 15C4 14.4696 4.21071 13.9609 4.58579 13.5858C4.96086 13.2107 5.46957 13 6 13H7C7.53043 13 8.03914 13.2107 8.41421 13.5858C8.78929 13.9609 9 14.4696 9 15V18C9 18.5304 8.78929 19.0391 8.41421 19.4142C8.03914 19.7893 7.53043 20 7 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18V15Z"
+                        stroke="#10D3AD"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 15C15 14.4696 15.2107 13.9609 15.5858 13.5858C15.9609 13.2107 16.4696 13 17 13H18C18.5304 13 19.0391 13.2107 19.4142 13.5858C19.7893 13.9609 20 14.4696 20 15V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H17C16.4696 20 15.9609 19.7893 15.5858 19.4142C15.2107 19.0391 15 18.5304 15 18V15Z"
+                        stroke="#10D3AD"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4 15V12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84285 9.87827 4 12 4C14.1217 4 16.1566 4.84285 17.6569 6.34315C19.1571 7.84344 20 9.87827 20 12V15"
+                        stroke="#10D3AD"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_193_337">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                Talk to Us About Your Use Case</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="fade-in mt-[-15%] lg:mt-[-220px] px-5 md:px-10 lg:px-[85px] mx-auto w-fit h-full">
-            <img src="assets/images/Home-Page-image/workforce-BG-2.webp" loading="lazy" alt="worksforce-BG"
-                class="w-full h-full bg-cover">
-        </div>
-
+      <div
+        class="fade-in mt-[-15%] lg:mt-[-220px] px-5 md:px-10 lg:px-[85px] mx-auto w-fit h-full"
+      >
+        <img
+          src="assets/images/Home-Page-image/workforce-BG-2.webp"
+          loading="lazy"
+          alt="worksforce-BG"
+          class="w-full h-full bg-cover"
+        />
+      </div>
     </section>
 
     <section class="relative bg-alice-blue">
-        <div class="absolute h-[586px] w-full top-[-90px] left-0 ">
-            <img src="assets/images/Performance-Management-Agent/bg-effect.webp" alt="bg-effect" loading="lazy"
-                class="w-full h-full bg-cover">
-        </div>
-        <div class="px-5 md:px-10 xl:px-[85px] pt-10 pb-10 md:pb-[83px] relative">
-            <div class="max-w-[1271px] mx-auto">
-                <div class="fade-in heading-2 mb-8 md:mb-[50px]">
-                    Enterprise Outcomes</div>
-                <div
-                    class="fade-in section-card flex flex-col items-center lg:flex-row gap-[30px] ps-6 pe-6 md:ps-[59px] md:pe-[59px] lg:pe-[67px] lg:px-[65px] px-6 lg:pt-[67px] pt-[40px] pb-2 md:pb-[40px]">
-                    <div class="flex-1">
-                        <div class="flex items-center justify-center mx-auto w-fit h-fit ">
-                            <img src="assets/images/Performance-Management-Agent/S5-left.webp" class="ml-8 lg:ml-0"
-                                loading="lazy" alt="Cards-stack">
-                        </div>
-                    </div>
-                    <div class="flex-1">
-                        <div class="w-full lg:max-w-[553px]">
-                            <div class="heading-5 font-dm-sans mb-[13px]">
-                                Organizations using the Succession Planning Agent achieve:</div>
-                            <div class="mb-5 feature-list description">
-                                <div class="flex gap-2 fade-li">
-                                    <span class="my-2.5">
-                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                        </svg>
-                                    </span>
-                                    Clear alignment between role expectations and performance outcomes
-                                </div>
-                                <div class="flex gap-2 fade-li">
-                                    <span class="my-2.5">
-                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                        </svg>
-                                    </span>
-                                    Fair, transparent performance evaluation across teams and levels
-                                </div>
-                                <div class="flex gap-2 fade-li">
-                                    <span class="my-2.5">
-                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                        </svg>
-                                    </span>
-                                    Stronger manager–employee engagement through ongoing dialogue
-                                </div>
-                                <div class="flex gap-2 fade-li">
-                                    <span class="my-2.5">
-                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                        </svg>
-                                    </span>
-                                    Earlier identification of performance risks and development needs
-                                </div>
-                                <div class="flex gap-2 fade-li">
-                                    <span class="my-2.5">
-                                        <svg width="7" height="8" viewBox="0 0 7 8" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
-                                        </svg>
-                                    </span>
-                                    Performance data that meaningfully feeds into development, succession, and workforce
-                                    planning
-                                </div>
-
-                            </div>
-                            <div class="description">
-                                Performance management becomes a system of accountability and growth not a yearly
-                                ritual.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="absolute h-[586px] w-full top-[-90px] left-0">
+        <img
+          src="assets/images/Performance-Management-Agent/bg-effect.webp"
+          alt="bg-effect"
+          loading="lazy"
+          class="w-full h-full bg-cover"
+        />
+      </div>
+      <div class="px-5 md:px-10 xl:px-[85px] pt-10 pb-10 md:pb-[83px] relative">
+        <div class="max-w-[1271px] mx-auto">
+          <div class="fade-in heading-2 mb-8 md:mb-[50px]">
+            Enterprise Outcomes
+          </div>
+          <div
+            class="fade-in section-card flex flex-col items-center lg:flex-row gap-[30px] ps-6 pe-6 md:ps-[59px] md:pe-[59px] lg:pe-[67px] lg:px-[65px] px-6 lg:pt-[67px] pt-[40px] pb-2 md:pb-[40px]"
+          >
+            <div class="flex-1">
+              <div class="flex items-center justify-center mx-auto w-fit h-fit">
+                <img
+                  src="assets/images/Performance-Management-Agent/S5-left.webp"
+                  class="ml-8 lg:ml-0"
+                  loading="lazy"
+                  alt="Cards-stack"
+                />
+              </div>
             </div>
+            <div class="flex-1">
+              <div class="w-full lg:max-w-[553px]">
+                <div class="heading-5 font-dm-sans mb-[13px]">
+                  Organizations using the Succession Planning Agent achieve:
+                </div>
+                <div class="mb-5 feature-list description">
+                  <div class="flex gap-2 fade-li">
+                    <span class="my-2.5">
+                      <svg
+                        width="7"
+                        height="8"
+                        viewBox="0 0 7 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                          fill="#A92CEC"
+                        />
+                      </svg>
+                    </span>
+                    Clear alignment between role expectations and performance
+                    outcomes
+                  </div>
+                  <div class="flex gap-2 fade-li">
+                    <span class="my-2.5">
+                      <svg
+                        width="7"
+                        height="8"
+                        viewBox="0 0 7 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                          fill="#A92CEC"
+                        />
+                      </svg>
+                    </span>
+                    Fair, transparent performance evaluation across teams and
+                    levels
+                  </div>
+                  <div class="flex gap-2 fade-li">
+                    <span class="my-2.5">
+                      <svg
+                        width="7"
+                        height="8"
+                        viewBox="0 0 7 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                          fill="#A92CEC"
+                        />
+                      </svg>
+                    </span>
+                    Stronger manager–employee engagement through ongoing
+                    dialogue
+                  </div>
+                  <div class="flex gap-2 fade-li">
+                    <span class="my-2.5">
+                      <svg
+                        width="7"
+                        height="8"
+                        viewBox="0 0 7 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                          fill="#A92CEC"
+                        />
+                      </svg>
+                    </span>
+                    Earlier identification of performance risks and development
+                    needs
+                  </div>
+                  <div class="flex gap-2 fade-li">
+                    <span class="my-2.5">
+                      <svg
+                        width="7"
+                        height="8"
+                        viewBox="0 0 7 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
+                          fill="#A92CEC"
+                        />
+                      </svg>
+                    </span>
+                    Performance data that meaningfully feeds into development,
+                    succession, and workforce planning
+                  </div>
+                </div>
+                <div class="description">
+                  Performance management becomes a system of accountability and
+                  growth not a yearly ritual.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    <section class="relative w-full h-full bg-alice-blue ">
-        <div class="absolute top-[-200px] left-0 w-full h-[586px] z-0">
-            <img src="assets/images/Performance-Management-Agent/bg-effect 2.webp" alt="bg-effect 2"
-                class="object-cover w-full h-full ">
-        </div>
+    <section class="relative w-full h-full bg-alice-blue">
+      <div class="absolute top-[-200px] left-0 w-full h-[586px] z-0">
+        <img
+          src="assets/images/Performance-Management-Agent/bg-effect 2.webp"
+          alt="bg-effect 2"
+          class="object-cover w-full h-full"
+        />
+      </div>
 
-        <div class="max-w-[1440px] mx-auto pb-[100px] ">
-            <div class="px-5 md:px-10 xl:px-21 ">
-                <div class="w-full text-center fade-in lg:text-left ">
-                    <div class="flex-1 heading-2 mb-[13px] text-left ">
-                        Part of the Unified Talent Intelligence Ecosystem </div>
-                    <div class="description text-left pb-10 max-w-[531px]">
-                        The Performance Management Agent integrates seamlessly with:
-                    </div>
-                </div>
-                <div id="talentCardsContainer relative w-full "
-                    class="w-full flex lg:flex-row md:flex-row flex-wrap items-center gap-7.5 overflow-hidden z-10 ">
-                    <div
-                        class="flex-1 p-5 md:p-7 lg:p-[30px] md:w-[300px] lg:w-[403px] bg-white rounded-[20px] shrink-0">
-                        <div class="p-3 md:p-4 lg:p-[17px] bg-lavender rounded-[10px] w-fit">
-                            <img src="assets/images/Talent-Acquisition/card.svg" alt="card1"
-                                class="lg:w-auto lg:h-auto">
-                        </div>
-                        <div class="mt-[30px]">
-                            <div class="text-black-soft heading-5 text-nowrap">
-                                Talent Development
-                            </div>
-                            <p class="mt-2 sm:mt-[15px] mb-1 text-black-soft/70">
-                                Informing personalized growth paths
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="flex-1 p-5 md:p-7 lg:p-[30px] md:w-[300px] lg:w-[403px] bg-white rounded-[20px] shrink-0">
-                        <div class="p-3 md:p-4 lg:p-[17px] bg-lavender rounded-[10px] w-fit">
-                            <img src="assets/images/Talent-Acquisition/card2.svg" alt="card1"
-                                class="lg:w-auto lg:h-auto">
-                        </div>
-                        <div class="mt-[30px]">
-                            <div class="text-black-soft heading-5 text-nowrap">
-                                Succession Planning
-                            </div>
-                            <p class="mt-2 sm:mt-[15px] mb-1 text-black-soft/70">
-                                Validating readiness and consistency
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="flex-1 p-5 md:p-7 lg:p-[29px] md:w-[300px] lg:w-[403px] bg-white rounded-[20px] shrink-0">
-                        <div class="p-3 md:p-4 lg:p-[17px] bg-lavender rounded-[10px] w-fit">
-                            <img src="assets/images/Talent-Acquisition/card3.svg" alt="card1"
-                                class="lg:w-auto lg:h-auto">
-                        </div>
-                        <div class="mt-[30px]">
-                            <div class="text-black-soft heading-5 text-nowrap">
-                                Workforce Planning
-                            </div>
-                            <p class="mt-2 sm:mt-[15px] mb-1 text-black-soft/70">
-                                Aligning performance capability with future demand
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-10 text-base font-normal leading-7 font-inter text-black/70 ">
-                    This ensures performance intelligence contributes directly to broader workforce decisions.
-                </div>
+      <div class="max-w-[1440px] mx-auto pb-[100px]">
+        <div class="px-5 md:px-10 xl:px-21">
+          <div class="w-full text-center fade-in lg:text-left">
+            <div class="flex-1 heading-2 mb-[13px] text-left">
+              Part of the Unified Talent Intelligence Ecosystem
             </div>
+            <div class="description text-left pb-10 max-w-[531px]">
+              The Performance Management Agent integrates seamlessly with:
+            </div>
+          </div>
+          <div
+            id="talentCardsContainer relative w-full "
+            class="w-full flex lg:flex-row md:flex-row flex-wrap items-center gap-7.5 overflow-hidden z-10"
+          >
+            <div
+              class="flex-1 p-5 md:p-7 lg:p-[30px] md:w-[300px] lg:w-[403px] bg-white rounded-[20px] shrink-0"
+            >
+              <div
+                class="p-3 md:p-4 lg:p-[17px] bg-lavender rounded-[10px] w-fit"
+              >
+                <img
+                  src="assets/images/Talent-Acquisition/card.svg"
+                  alt="card1"
+                  class="lg:w-auto lg:h-auto"
+                />
+              </div>
+              <div class="mt-[30px]">
+                <div class="text-black-soft heading-5 text-nowrap">
+                  Talent Development
+                </div>
+                <p class="mt-2 sm:mt-[15px] mb-1 text-black-soft/70">
+                  Informing personalized growth paths
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex-1 p-5 md:p-7 lg:p-[30px] md:w-[300px] lg:w-[403px] bg-white rounded-[20px] shrink-0"
+            >
+              <div
+                class="p-3 md:p-4 lg:p-[17px] bg-lavender rounded-[10px] w-fit"
+              >
+                <img
+                  src="assets/images/Talent-Acquisition/card2.svg"
+                  alt="card1"
+                  class="lg:w-auto lg:h-auto"
+                />
+              </div>
+              <div class="mt-[30px]">
+                <div class="text-black-soft heading-5 text-nowrap">
+                  Succession Planning
+                </div>
+                <p class="mt-2 sm:mt-[15px] mb-1 text-black-soft/70">
+                  Validating readiness and consistency
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex-1 p-5 md:p-7 lg:p-[29px] md:w-[300px] lg:w-[403px] bg-white rounded-[20px] shrink-0"
+            >
+              <div
+                class="p-3 md:p-4 lg:p-[17px] bg-lavender rounded-[10px] w-fit"
+              >
+                <img
+                  src="assets/images/Talent-Acquisition/card3.svg"
+                  alt="card1"
+                  class="lg:w-auto lg:h-auto"
+                />
+              </div>
+              <div class="mt-[30px]">
+                <div class="text-black-soft heading-5 text-nowrap">
+                  Workforce Planning
+                </div>
+                <p class="mt-2 sm:mt-[15px] mb-1 text-black-soft/70">
+                  Aligning performance capability with future demand
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-10 text-base font-normal leading-7 font-inter text-black/70"
+          >
+            This ensures performance intelligence contributes directly to
+            broader workforce decisions.
+          </div>
         </div>
+      </div>
     </section>
 
     <!------------------ Footer ------------------>
     <footer class="bg-alice-blue">
-        <div class="bg-no-repeat bg-bottom bg-center relative max-w-[1440px] px-5 md:px-10 lg:px-[80px] mx-auto">
-            <img src="assets/images/Home-Page-image/footer-bg.webp" loading="lazy"
-                class="absolute bottom-0 left-0 w-full h-full" alt="footer-bg">
-            <div class="pb-6 sm:pb-[50px] lg:pb-[79px] ">
-                <div class="section-card bg-white/10 px-6 sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8 sm:pb-[54px]">
-                    <div class="hidden md:block relative mb-[37px] bg-[linear-gradient(194.73deg,var(--color-surface-sky)_17.12%,var(--color-soft-lavender)_91.59%)] bg-clip-text text-transparent font-inter font-bold text-[clamp(50px,11.08vw,174px)] leading-[clamp(96px,17.92vw,258px)]
-text-center uppercase">
-                        <div>Katalyst Ai</div>
-                        <div class=" md:absolute md:left-1/2 md:-translate-x-1/2 md:top-1/2 md:-translate-y-1/2">
-                            <svg width="253" height="37" viewBox="0 0 253 37" fill="none"
-                                class="w-[193px] lg:w-full shrink" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M67.3455 28.5682L58.4225 19.2604V28.5682H54.6411V7.76074H58.4225V17.2512L67.3766 7.76074H72.1218L62.1029 18.18L72.2889 28.5682H67.3455Z"
-                                    fill="#090431" />
-                                <path
-                                    d="M74.147 28.5682L82.8018 7.76074H87.1817L95.8716 28.5682H91.8259L84.9937 11.2662L78.1266 28.5682H74.147Z"
-                                    fill="#090431" />
-                                <path
-                                    d="M114.281 7.76074V10.5473H108.144V28.5682H104.363V10.5473H98.1914V7.76074H114.281Z"
-                                    fill="#090431" />
-                                <path
-                                    d="M116.601 28.5682L125.26 7.76074H129.64L138.33 28.5682H134.284L127.452 11.2662L120.585 28.5682H116.601Z"
-                                    fill="#090431" />
-                                <path d="M145.629 25.8167H153.425V28.5682H141.847V7.76074H145.629V25.8167Z"
-                                    fill="#090431" />
-                                <path
-                                    d="M174.022 7.76074L166.393 21.0248V28.5682H162.612V21.0248L154.948 7.76074H159.161L164.5 17.9702L169.84 7.76074H174.022Z"
-                                    fill="#090431" />
-                                <path
-                                    d="M180.788 28.0436C179.549 27.5565 178.576 26.8635 177.869 25.9644C177.162 25.0654 176.808 24.0174 176.808 22.8204H180.854C180.942 23.7194 181.334 24.4578 182.031 25.0356C182.728 25.616 183.706 25.9061 184.966 25.9061C186.271 25.9061 187.29 25.6211 188.02 25.0511C188.748 24.4837 189.112 23.7505 189.112 22.8515C189.112 22.152 188.886 21.5832 188.432 21.1454C187.979 20.7049 187.415 20.3655 186.742 20.1272C186.068 19.8888 185.134 19.6297 183.94 19.3499C182.434 18.9898 181.213 18.6244 180.275 18.2539C179.334 17.886 178.532 17.3122 177.869 16.5323C177.206 15.755 176.874 14.7174 176.874 13.4193C176.874 12.2223 177.206 11.1743 177.869 10.2753C178.532 9.37885 179.461 8.69097 180.656 8.21165C181.85 7.73234 183.232 7.49268 184.802 7.49268C187.036 7.49268 188.865 7.99661 190.29 9.00447C191.717 10.0123 192.509 11.3946 192.664 13.1512H188.483C188.418 12.3921 188.02 11.743 187.29 11.2041C186.559 10.6652 185.596 10.3958 184.402 10.3958C183.319 10.3958 182.434 10.6458 181.748 11.1458C181.064 11.6459 180.722 12.3649 180.722 13.3028C180.722 13.9401 180.937 14.4635 181.367 14.8728C181.799 15.2822 182.347 15.6061 183.011 15.8444C183.674 16.0854 184.581 16.3458 185.731 16.6256C187.257 17.0038 188.501 17.3821 189.462 17.7604C190.423 18.1412 191.242 18.7255 191.918 19.5131C192.592 20.3007 192.929 21.3539 192.929 22.6727C192.929 23.7298 192.614 24.7273 191.984 25.6652C191.352 26.6031 190.434 27.3571 189.229 27.927C188.024 28.4945 186.603 28.7782 184.966 28.7782C183.419 28.7782 182.026 28.5333 180.788 28.0436Z"
-                                    fill="#090431" />
-                                <path
-                                    d="M212.663 7.76074V10.5473H206.527V28.5682H202.745V10.5473H196.578V7.76074H212.663Z"
-                                    fill="#090431" />
-                                <path
-                                    d="M223.977 28.5682L232.631 7.76074H237.011L245.701 28.5682H241.655L234.823 11.2662L227.956 28.5682H223.977Z"
-                                    fill="#090431" />
-                                <path d="M253 7.76074V28.5682H249.219V7.76074H253Z" fill="#090431" />
-                                <path
-                                    d="M41.6143 0.03125L26.4226 18.1377L17.6162 7.18601C18.6111 4.7415 19.9325 2.63898 21.4676 0.711359C21.623 0.519633 21.8096 0.29293 22.0272 0.03125H41.6143Z"
-                                    fill="url(#paint0_linear_369_112)" />
-                                <path
-                                    d="M41.6378 0V0.0310914C34.9339 8.03695 26.7921 17.7606 26.4617 18.1803L26.4229 18.1453V18.1375L41.6145 0.0310914L41.6378 0Z"
-                                    fill="url(#paint1_linear_369_112)" />
-                                <path
-                                    d="M41.1324 36.6017H23.1348C22.2254 35.5369 21.5142 34.7052 21.1022 34.2C19.6954 32.4861 18.58 30.5857 17.7056 28.5181L17.7133 28.5104L26.4226 18.1455L26.4615 18.1805C26.4537 18.1805 26.4381 18.2038 26.4304 18.2038C26.5547 18.367 34.6422 28.5648 41.1324 36.6017Z"
-                                    fill="url(#paint2_linear_369_112)" />
-                                <path
-                                    d="M17.6163 7.18604C17.4971 7.4814 17.3818 7.78193 17.2704 8.08766C15.9413 11.7991 15.5138 15.7127 15.747 19.7545C15.9335 22.9646 16.6097 25.8832 17.7135 28.522L26.4188 18.1377L17.6163 7.18604Z"
-                                    fill="url(#paint3_linear_369_112)" />
-                                <path
-                                    d="M15.9874 0.03125C15.0702 3.9137 13.473 7.19378 11.3666 10.0386C9.0814 13.136 6.47367 15.4833 3.49286 16.9679C3.3944 17.0145 3.29983 17.0728 3.20915 17.1428C3.17806 17.1583 3.17029 17.2128 3.13531 17.271C3.14309 17.3021 3.15863 17.3177 3.1664 17.341H0.00292969V0.03125H15.9874Z"
-                                    fill="#A92CEC" />
-                                <path
-                                    d="M16.3999 36.602H0.00345452C0.00345452 30.1779 -0.00431814 23.7654 0.00345452 17.3413H3.16693C3.26409 17.625 3.48561 17.6483 3.66049 17.7377C5.02459 18.4645 6.32263 19.3505 7.55459 20.4387C10.2828 22.856 12.6379 25.8679 14.3829 29.7504C15.3415 31.9086 16.0138 34.1925 16.3999 36.602Z"
-                                    fill="#A92CEC" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_369_112" x1="29.7112" y1="-20.7008" x2="55.4505"
-                                        y2="58.5486" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#0882FA" />
-                                        <stop offset="0.85" stop-color="#10DFA1" />
-                                    </linearGradient>
-                                    <linearGradient id="paint1_linear_369_112" x1="23.554" y1="-65.7071" x2="77.584"
-                                        y2="100.648" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#0882FA" />
-                                        <stop offset="0.85" stop-color="#10DFA1" />
-                                    </linearGradient>
-                                    <linearGradient id="paint2_linear_369_112" x1="25.1164" y1="-17.4953" x2="45.1471"
-                                        y2="44.1786" gradientUnits="userSpaceOnUse">
-                                        <stop offset="0.251" stop-color="#0882FA" />
-                                        <stop offset="0.85" stop-color="#10DFA1" />
-                                    </linearGradient>
-                                    <linearGradient id="paint3_linear_369_112" x1="6.60439" y1="7.071" x2="30.2644"
-                                        y2="6.66997" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#0882FA" />
-                                        <stop offset="0.85" stop-color="#10DFA1" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-
-                        </div>
-                    </div>
-                    <div class="mb-10 md:hidden">
-                        <svg width="193" height="28" viewBox="0 0 193 28" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M51.3727 21.7947L44.5658 14.6943V21.7947H41.6812V5.92188H44.5658V13.1616L51.3964 5.92188H55.0163L47.3733 13.8701L55.1438 21.7947H51.3727Z"
-                                fill="#090431" />
-                            <path
-                                d="M56.5625 21.7947L63.1648 5.92188H66.506L73.1351 21.7947H70.0488L64.8369 8.59601L59.5983 21.7947H56.5625Z"
-                                fill="#090431" />
-                            <path d="M87.1805 5.92188V8.04754H82.4993V21.7947H79.6147V8.04754H74.9067V5.92188H87.1805Z"
-                                fill="#090431" />
-                            <path
-                                d="M88.9502 21.7947L95.5555 5.92188H98.8967L105.526 21.7947H102.439L97.2276 8.59601L91.989 21.7947H88.9502Z"
-                                fill="#090431" />
-                            <path d="M111.091 19.6957H117.038V21.7947H108.207V5.92188H111.091V19.6957Z"
-                                fill="#090431" />
-                            <path
-                                d="M132.753 5.92188L126.933 16.0403V21.7947H124.048V16.0403L118.202 5.92188H121.416L125.489 13.71L129.563 5.92188H132.753Z"
-                                fill="#090431" />
-                            <path
-                                d="M137.915 21.391C136.97 21.0194 136.228 20.4907 135.688 19.8049C135.149 19.1191 134.879 18.3196 134.879 17.4065H137.965C138.032 18.0923 138.332 18.6556 138.863 19.0963C139.395 19.5391 140.141 19.7604 141.102 19.7604C142.098 19.7604 142.875 19.543 143.432 19.1082C143.987 18.6754 144.265 18.116 144.265 17.4302C144.265 16.8966 144.092 16.4627 143.746 16.1287C143.4 15.7927 142.971 15.5338 142.457 15.352C141.943 15.1701 141.23 14.9725 140.319 14.759C139.171 14.4843 138.239 14.2056 137.523 13.923C136.806 13.6424 136.194 13.2046 135.688 12.6097C135.182 12.0167 134.929 11.2252 134.929 10.235C134.929 9.32186 135.182 8.52239 135.688 7.83657C136.194 7.15272 136.903 6.62797 137.814 6.26233C138.725 5.89669 139.78 5.71387 140.977 5.71387C142.681 5.71387 144.076 6.09829 145.163 6.86712C146.252 7.63596 146.856 8.69039 146.975 10.0304H143.785C143.735 9.45131 143.432 8.95622 142.875 8.54512C142.317 8.13402 141.583 7.92847 140.672 7.92847C139.846 7.92847 139.171 8.11919 138.647 8.50065C138.125 8.8821 137.864 9.43057 137.864 10.146C137.864 10.6322 138.028 11.0315 138.356 11.3438C138.687 11.656 139.105 11.9031 139.611 12.0849C140.116 12.2687 140.808 12.4674 141.686 12.6808C142.85 12.9694 143.799 13.2579 144.532 13.5465C145.265 13.837 145.89 14.2827 146.406 14.8836C146.919 15.4844 147.176 16.2878 147.176 17.2938C147.176 18.1002 146.936 18.8611 146.456 19.5766C145.974 20.2921 145.273 20.8672 144.354 21.3021C143.435 21.7349 142.351 21.9513 141.102 21.9513C139.922 21.9513 138.859 21.7645 137.915 21.391Z"
-                                fill="#090431" />
-                            <path d="M162.23 5.92188V8.04754H157.549V21.7947H154.664V8.04754H149.959V5.92188H162.23Z"
-                                fill="#090431" />
-                            <path
-                                d="M170.86 21.7947L177.463 5.92188H180.804L187.433 21.7947H184.347L179.135 8.59601L173.896 21.7947H170.86Z"
-                                fill="#090431" />
-                            <path d="M193.001 5.92188V21.7947H190.116V5.92188H193.001Z" fill="#090431" />
-                            <path
-                                d="M31.7454 0.0297852L20.1564 13.8421L13.4385 5.48773C14.1974 3.62296 15.2054 2.01907 16.3765 0.548601C16.4951 0.402344 16.6374 0.229406 16.8034 0.0297852H31.7454Z"
-                                fill="url(#paint0_linear_508_224)" />
-                            <path
-                                d="M31.7596 0V0.0237178C26.6455 6.13092 20.4345 13.5485 20.1825 13.8687L20.1528 13.842V13.8361L31.7418 0.0237178L31.7596 0Z"
-                                fill="url(#paint1_linear_508_224)" />
-                            <path
-                                d="M31.3818 27.9171H17.6524C16.9587 27.1047 16.4161 26.4703 16.1019 26.0849C15.0287 24.7775 14.1778 23.3278 13.5107 21.7506L13.5167 21.7446L20.1605 13.8379L20.1902 13.8646C20.1842 13.8646 20.1724 13.8824 20.1664 13.8824C20.2613 14.0069 26.4308 21.7861 31.3818 27.9171Z"
-                                fill="url(#paint2_linear_508_224)" />
-                            <path
-                                d="M13.4399 5.47803C13.349 5.70334 13.261 5.9326 13.176 6.16582C12.1621 8.99707 11.836 11.9825 12.0139 15.0657C12.1562 17.5145 12.6721 19.741 13.514 21.754L20.1549 13.8324L13.4399 5.47803Z"
-                                fill="url(#paint3_linear_508_224)" />
-                            <path
-                                d="M12.1976 0.0297852C11.498 2.99148 10.2795 5.49366 8.67263 7.66379C6.9294 10.0266 4.9401 11.8173 2.66619 12.9498C2.59108 12.9854 2.51894 13.0298 2.44977 13.0832C2.42605 13.095 2.42012 13.1365 2.39344 13.181C2.39937 13.2047 2.41123 13.2166 2.41716 13.2344H0.00390625V0.0297852H12.1976Z"
-                                fill="#A92CEC" />
-                            <path
-                                d="M12.5106 27.9253H0.00263527C0.00263527 23.0247 -0.00329409 18.133 0.00263527 13.2324H2.41588C2.49 13.4488 2.65899 13.4666 2.7924 13.5348C3.833 14.0892 4.8232 14.7652 5.76301 15.5953C7.84421 17.4393 9.64081 19.7369 10.9719 22.6986C11.7032 24.345 12.2161 26.0872 12.5106 27.9253Z"
-                                fill="#A92CEC" />
-                            <defs>
-                                <linearGradient id="paint0_linear_508_224" x1="22.6652" y1="-15.7855" x2="42.3"
-                                    y2="44.6694" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#0882FA" />
-                                    <stop offset="0.85" stop-color="#10DFA1" />
-                                </linearGradient>
-                                <linearGradient id="paint1_linear_508_224" x1="17.9643" y1="-50.1241" x2="59.1804"
-                                    y2="76.7789" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#0882FA" />
-                                    <stop offset="0.85" stop-color="#10DFA1" />
-                                </linearGradient>
-                                <linearGradient id="paint2_linear_508_224" x1="19.1641" y1="-13.3504" x2="34.4443"
-                                    y2="33.6971" gradientUnits="userSpaceOnUse">
-                                    <stop offset="0.251" stop-color="#0882FA" />
-                                    <stop offset="0.85" stop-color="#10DFA1" />
-                                </linearGradient>
-                                <linearGradient id="paint3_linear_508_224" x1="5.03949" y1="5.39027" x2="23.0885"
-                                    y2="5.08435" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="#0882FA" />
-                                    <stop offset="0.85" stop-color="#10DFA1" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div
-                        class="flex flex-col lg:flex-row items-start lg:items-center justify-center font-dm-sans font-medium text-center gap-x-5.5 gap-y-2.5 text-black">
-                        <div> <a href="index.html">
-                                Home</a>
-                        </div>
-                        <div class="flex items-center gap-5.5 font-medium text-nowrap">
-                            <span class="w-1.5 h-1.5 bg-black rounded-full shrink-0 hidden lg:block"></span>
-                            <span><a href="Product-Portfolio.html">Products</a></span>
-                        </div>
-                        <div class="flex items-center gap-5.5 text-nowrap">
-                            <span class="w-1.5 h-1.5 bg-black rounded-full shrink-0 hidden lg:block"></span>
-                            <span><a href="Solutions.html">Solutions</a></span>
-                        </div>
-                        <div class="flex items-center gap-5.5 text-nowrap">
-                            <span class="w-1.5 h-1.5 bg-black rounded-full shrink-0 hidden lg:block"></span>
-                            <span><a href="Why-Katalyst.html">Why Katalyst AI</a></span>
-                        </div>
-                        <div class="flex items-center gap-5.5 text-nowrap">
-                            <span class="w-1.5 h-1.5 bg-black rounded-full shrink-0 hidden lg:block"></span>
-                            <span><a href="Contact-Us.html">Contact Us</a></span>
-                        </div>
-
-                    </div>
-
-                    <div
-                        class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-y-8 gap-x-1 mt-8 lg:mt-[169px]">
-                        <div class="description flex-1 flex flex-col gap-2">
-                            <div class="flex items-center gap-x-2.5">
-                                <span>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                        class="shrink max-w-5 lg:max-w-6" xmlns="http://www.w3.org/2000/svg">
-                                        <g opacity="0.5" clip-path="url(#clip0_193_635)">
-                                            <path
-                                                d="M5 4H9L11 9L8.5 10.5C9.57096 12.6715 11.3285 14.429 13.5 15.5L15 13L20 15V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21C14.0993 20.763 10.4202 19.1065 7.65683 16.3432C4.8935 13.5798 3.23705 9.90074 3 6C3 5.46957 3.21071 4.96086 3.58579 4.58579C3.96086 4.21071 4.46957 4 5 4Z"
-                                                fill="#0C0630" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_193_635">
-                                                <rect width="24" height="24" fill="white" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </span> 03-5892 1175
-                            </div>
-
-                            <div class="lg:max-w-[355px]">
-                                <div class="flex gap-x-2.5 lg:max-w-[90%]">
-                                    <span class="mt-1"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            class="shrink max-w-5 lg:max-w-6" xmlns="http://www.w3.org/2000/svg">
-                                            <g opacity="0.5" clip-path="url(#clip0_193_647)">
-                                                <path
-                                                    d="M18.3641 4.63606C20.0164 6.28819 20.9614 8.51817 20.9993 10.8545C21.0372 13.1908 20.1649 15.4502 18.5671 17.1551L18.3641 17.3651L14.1211 21.6071C13.5827 22.1451 12.8599 22.4584 12.0992 22.4834C11.3385 22.5085 10.5967 22.2435 10.0241 21.7421L9.88006 21.6071L5.63606 17.3641C3.94822 15.6762 3 13.387 3 11.0001C3 8.61309 3.94822 6.32389 5.63606 4.63606C7.32389 2.94822 9.61309 2 12.0001 2C14.387 2 16.6762 2.94822 18.3641 4.63606ZM12.0001 8.00006C11.6061 8.00006 11.216 8.07765 10.852 8.22842C10.488 8.37918 10.1573 8.60016 9.87873 8.87873C9.60016 9.15731 9.37918 9.48803 9.22842 9.85201C9.07765 10.216 9.00006 10.6061 9.00006 11.0001C9.00006 11.394 9.07765 11.7841 9.22842 12.1481C9.37918 12.5121 9.60016 12.8428 9.87873 13.1214C10.1573 13.4 10.488 13.6209 10.852 13.7717C11.216 13.9225 11.6061 14.0001 12.0001 14.0001C12.7957 14.0001 13.5588 13.684 14.1214 13.1214C14.684 12.5588 15.0001 11.7957 15.0001 11.0001C15.0001 10.2044 14.684 9.44134 14.1214 8.87873C13.5588 8.31613 12.7957 8.00006 12.0001 8.00006Z"
-                                                    fill="#0C0630" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_193_647">
-                                                    <rect width="24" height="24" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span> A201 & A202, Level 2, West Wing, Wisma Consplant 2, 7, Jalan SS 16/1, Ss 16,
-                                    47500 Subang Jaya, Selangor
-                                </div>
-                            </div>
-                        </div>
-                        <div class=" hidden lg:flex items-center justify-center gap-1.5">
-                            <a href="https://www.linkedin.com/company/katalyst-talentintelligence" target="_blank"
-                                class="flex items-center justify-center gap-x-[6px] px-[13px] py-1  text-xs font-semibold leading-[28px] text-white bg-black rounded-[60px] tracking-[1%]">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_1788_34)">
-                                        <g clip-path="url(#clip1_1788_34)">
-                                            <path
-                                                d="M0.799805 3.9998C0.799805 3.15111 1.13695 2.33718 1.73706 1.73706C2.33718 1.13695 3.15111 0.799805 3.9998 0.799805H11.9998C12.8485 0.799805 13.6624 1.13695 14.2625 1.73706C14.8627 2.33718 15.1998 3.15111 15.1998 3.9998V11.9998C15.1998 12.8485 14.8627 13.6624 14.2625 14.2625C13.6624 14.8627 12.8485 15.1998 11.9998 15.1998H3.9998C3.15111 15.1998 2.33718 14.8627 1.73706 14.2625C1.13695 13.6624 0.799805 12.8485 0.799805 11.9998V3.9998Z"
-                                                fill="white" />
-                                            <path d="M4.7998 7.19971V11.1997" stroke="#0C0630" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M4.7998 4.7998V4.8078" stroke="#0C0630" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M8 11.1997V7.19971" stroke="#0C0630" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path
-                                                d="M11.2 11.1997V8.79971C11.2 8.37536 11.0314 7.96839 10.7314 7.66834C10.4313 7.36828 10.0243 7.19971 9.6 7.19971C9.17565 7.19971 8.76869 7.36828 8.46863 7.66834C8.16857 7.96839 8 8.37536 8 8.79971"
-                                                stroke="#0C0630" stroke-width="1.5" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </g>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_1788_34">
-                                            <rect width="16" height="16" fill="white" />
-                                        </clipPath>
-                                        <clipPath id="clip1_1788_34">
-                                            <rect width="19.2" height="19.2" fill="white"
-                                                transform="translate(-1.6001 -1.6001)" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                Linkedin
-                            </a>
-                        </div>
-                        <div class="flex-1 font-normal font-inter text-start lg:text-right">
-                            <div class="text-sm lg:text-base text-black/70 mb-3 lg:mb-[17px] leading-[100%]">Terms &
-                                Conditions
-                                | Privacy
-                                Policy</div>
-                            <div class="text-[12px] lg:text-sm text-black/50 leading-[100%] ">© KatalystAI 2025-26. All
-                                Rights
-                                Reserved.</div>
-                        </div>
-                    </div>
-                    <div class="flex lg:hidden items-center justify-center gap-1.5 mt-[40px]">
-                        <a href="https://www.linkedin.com/company/katalyst-talentintelligence" target="_blank"
-                            class="flex items-center justify-center gap-x-[6px] px-[13px] py-1  text-xs font-semibold leading-[28px] text-white bg-black rounded-[60px] tracking-[1%]">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_1788_34)">
-                                    <g clip-path="url(#clip1_1788_34)">
-                                        <path
-                                            d="M0.799805 3.9998C0.799805 3.15111 1.13695 2.33718 1.73706 1.73706C2.33718 1.13695 3.15111 0.799805 3.9998 0.799805H11.9998C12.8485 0.799805 13.6624 1.13695 14.2625 1.73706C14.8627 2.33718 15.1998 3.15111 15.1998 3.9998V11.9998C15.1998 12.8485 14.8627 13.6624 14.2625 14.2625C13.6624 14.8627 12.8485 15.1998 11.9998 15.1998H3.9998C3.15111 15.1998 2.33718 14.8627 1.73706 14.2625C1.13695 13.6624 0.799805 12.8485 0.799805 11.9998V3.9998Z"
-                                            fill="white" />
-                                        <path d="M4.7998 7.19971V11.1997" stroke="#0C0630" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M4.7998 4.7998V4.8078" stroke="#0C0630" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M8 11.1997V7.19971" stroke="#0C0630" stroke-width="1.5"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <path
-                                            d="M11.2 11.1997V8.79971C11.2 8.37536 11.0314 7.96839 10.7314 7.66834C10.4313 7.36828 10.0243 7.19971 9.6 7.19971C9.17565 7.19971 8.76869 7.36828 8.46863 7.66834C8.16857 7.96839 8 8.37536 8 8.79971"
-                                            stroke="#0C0630" stroke-width="1.5" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </g>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1788_34">
-                                        <rect width="16" height="16" fill="white" />
-                                    </clipPath>
-                                    <clipPath id="clip1_1788_34">
-                                        <rect width="19.2" height="19.2" fill="white"
-                                            transform="translate(-1.6001 -1.6001)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            Linkedin
-                        </a>
-                    </div>
-                </div>
+      <div
+        class="bg-no-repeat bg-bottom bg-center relative max-w-[1440px] px-5 md:px-10 lg:px-[80px] mx-auto"
+      >
+        <img
+          src="assets/images/Home-Page-image/footer-bg.webp"
+          loading="lazy"
+          class="absolute bottom-0 left-0 w-full h-full"
+          alt="footer-bg"
+        />
+        <div class="pb-6 sm:pb-[50px] lg:pb-[79px]">
+          <div
+            class="section-card bg-white/10 px-6 sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8 sm:pb-[54px]"
+          >
+            <div
+              class="hidden md:block relative mb-[37px] bg-[linear-gradient(194.73deg,var(--color-surface-sky)_17.12%,var(--color-soft-lavender)_91.59%)] bg-clip-text text-transparent font-inter font-bold text-[clamp(50px,11.08vw,174px)] leading-[clamp(96px,17.92vw,258px)] text-center uppercase"
+            >
+              <div>Katalyst Ai</div>
+              <div
+                class="md:absolute md:left-1/2 md:-translate-x-1/2 md:top-1/2 md:-translate-y-1/2"
+              >
+                <svg
+                  width="253"
+                  height="37"
+                  viewBox="0 0 253 37"
+                  fill="none"
+                  class="w-[193px] lg:w-full shrink"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M67.3455 28.5682L58.4225 19.2604V28.5682H54.6411V7.76074H58.4225V17.2512L67.3766 7.76074H72.1218L62.1029 18.18L72.2889 28.5682H67.3455Z"
+                    fill="#090431"
+                  />
+                  <path
+                    d="M74.147 28.5682L82.8018 7.76074H87.1817L95.8716 28.5682H91.8259L84.9937 11.2662L78.1266 28.5682H74.147Z"
+                    fill="#090431"
+                  />
+                  <path
+                    d="M114.281 7.76074V10.5473H108.144V28.5682H104.363V10.5473H98.1914V7.76074H114.281Z"
+                    fill="#090431"
+                  />
+                  <path
+                    d="M116.601 28.5682L125.26 7.76074H129.64L138.33 28.5682H134.284L127.452 11.2662L120.585 28.5682H116.601Z"
+                    fill="#090431"
+                  />
+                  <path
+                    d="M145.629 25.8167H153.425V28.5682H141.847V7.76074H145.629V25.8167Z"
+                    fill="#090431"
+                  />
+                  <path
+                    d="M174.022 7.76074L166.393 21.0248V28.5682H162.612V21.0248L154.948 7.76074H159.161L164.5 17.9702L169.84 7.76074H174.022Z"
+                    fill="#090431"
+                  />
+                  <path
+                    d="M180.788 28.0436C179.549 27.5565 178.576 26.8635 177.869 25.9644C177.162 25.0654 176.808 24.0174 176.808 22.8204H180.854C180.942 23.7194 181.334 24.4578 182.031 25.0356C182.728 25.616 183.706 25.9061 184.966 25.9061C186.271 25.9061 187.29 25.6211 188.02 25.0511C188.748 24.4837 189.112 23.7505 189.112 22.8515C189.112 22.152 188.886 21.5832 188.432 21.1454C187.979 20.7049 187.415 20.3655 186.742 20.1272C186.068 19.8888 185.134 19.6297 183.94 19.3499C182.434 18.9898 181.213 18.6244 180.275 18.2539C179.334 17.886 178.532 17.3122 177.869 16.5323C177.206 15.755 176.874 14.7174 176.874 13.4193C176.874 12.2223 177.206 11.1743 177.869 10.2753C178.532 9.37885 179.461 8.69097 180.656 8.21165C181.85 7.73234 183.232 7.49268 184.802 7.49268C187.036 7.49268 188.865 7.99661 190.29 9.00447C191.717 10.0123 192.509 11.3946 192.664 13.1512H188.483C188.418 12.3921 188.02 11.743 187.29 11.2041C186.559 10.6652 185.596 10.3958 184.402 10.3958C183.319 10.3958 182.434 10.6458 181.748 11.1458C181.064 11.6459 180.722 12.3649 180.722 13.3028C180.722 13.9401 180.937 14.4635 181.367 14.8728C181.799 15.2822 182.347 15.6061 183.011 15.8444C183.674 16.0854 184.581 16.3458 185.731 16.6256C187.257 17.0038 188.501 17.3821 189.462 17.7604C190.423 18.1412 191.242 18.7255 191.918 19.5131C192.592 20.3007 192.929 21.3539 192.929 22.6727C192.929 23.7298 192.614 24.7273 191.984 25.6652C191.352 26.6031 190.434 27.3571 189.229 27.927C188.024 28.4945 186.603 28.7782 184.966 28.7782C183.419 28.7782 182.026 28.5333 180.788 28.0436Z"
+                    fill="#090431"
+                  />
+                  <path
+                    d="M212.663 7.76074V10.5473H206.527V28.5682H202.745V10.5473H196.578V7.76074H212.663Z"
+                    fill="#090431"
+                  />
+                  <path
+                    d="M223.977 28.5682L232.631 7.76074H237.011L245.701 28.5682H241.655L234.823 11.2662L227.956 28.5682H223.977Z"
+                    fill="#090431"
+                  />
+                  <path
+                    d="M253 7.76074V28.5682H249.219V7.76074H253Z"
+                    fill="#090431"
+                  />
+                  <path
+                    d="M41.6143 0.03125L26.4226 18.1377L17.6162 7.18601C18.6111 4.7415 19.9325 2.63898 21.4676 0.711359C21.623 0.519633 21.8096 0.29293 22.0272 0.03125H41.6143Z"
+                    fill="url(#paint0_linear_369_112)"
+                  />
+                  <path
+                    d="M41.6378 0V0.0310914C34.9339 8.03695 26.7921 17.7606 26.4617 18.1803L26.4229 18.1453V18.1375L41.6145 0.0310914L41.6378 0Z"
+                    fill="url(#paint1_linear_369_112)"
+                  />
+                  <path
+                    d="M41.1324 36.6017H23.1348C22.2254 35.5369 21.5142 34.7052 21.1022 34.2C19.6954 32.4861 18.58 30.5857 17.7056 28.5181L17.7133 28.5104L26.4226 18.1455L26.4615 18.1805C26.4537 18.1805 26.4381 18.2038 26.4304 18.2038C26.5547 18.367 34.6422 28.5648 41.1324 36.6017Z"
+                    fill="url(#paint2_linear_369_112)"
+                  />
+                  <path
+                    d="M17.6163 7.18604C17.4971 7.4814 17.3818 7.78193 17.2704 8.08766C15.9413 11.7991 15.5138 15.7127 15.747 19.7545C15.9335 22.9646 16.6097 25.8832 17.7135 28.522L26.4188 18.1377L17.6163 7.18604Z"
+                    fill="url(#paint3_linear_369_112)"
+                  />
+                  <path
+                    d="M15.9874 0.03125C15.0702 3.9137 13.473 7.19378 11.3666 10.0386C9.0814 13.136 6.47367 15.4833 3.49286 16.9679C3.3944 17.0145 3.29983 17.0728 3.20915 17.1428C3.17806 17.1583 3.17029 17.2128 3.13531 17.271C3.14309 17.3021 3.15863 17.3177 3.1664 17.341H0.00292969V0.03125H15.9874Z"
+                    fill="#A92CEC"
+                  />
+                  <path
+                    d="M16.3999 36.602H0.00345452C0.00345452 30.1779 -0.00431814 23.7654 0.00345452 17.3413H3.16693C3.26409 17.625 3.48561 17.6483 3.66049 17.7377C5.02459 18.4645 6.32263 19.3505 7.55459 20.4387C10.2828 22.856 12.6379 25.8679 14.3829 29.7504C15.3415 31.9086 16.0138 34.1925 16.3999 36.602Z"
+                    fill="#A92CEC"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_369_112"
+                      x1="29.7112"
+                      y1="-20.7008"
+                      x2="55.4505"
+                      y2="58.5486"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#0882FA" />
+                      <stop offset="0.85" stop-color="#10DFA1" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint1_linear_369_112"
+                      x1="23.554"
+                      y1="-65.7071"
+                      x2="77.584"
+                      y2="100.648"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#0882FA" />
+                      <stop offset="0.85" stop-color="#10DFA1" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint2_linear_369_112"
+                      x1="25.1164"
+                      y1="-17.4953"
+                      x2="45.1471"
+                      y2="44.1786"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset="0.251" stop-color="#0882FA" />
+                      <stop offset="0.85" stop-color="#10DFA1" />
+                    </linearGradient>
+                    <linearGradient
+                      id="paint3_linear_369_112"
+                      x1="6.60439"
+                      y1="7.071"
+                      x2="30.2644"
+                      y2="6.66997"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#0882FA" />
+                      <stop offset="0.85" stop-color="#10DFA1" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
             </div>
+            <div class="mb-10 md:hidden">
+              <svg
+                width="193"
+                height="28"
+                viewBox="0 0 193 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M51.3727 21.7947L44.5658 14.6943V21.7947H41.6812V5.92188H44.5658V13.1616L51.3964 5.92188H55.0163L47.3733 13.8701L55.1438 21.7947H51.3727Z"
+                  fill="#090431"
+                />
+                <path
+                  d="M56.5625 21.7947L63.1648 5.92188H66.506L73.1351 21.7947H70.0488L64.8369 8.59601L59.5983 21.7947H56.5625Z"
+                  fill="#090431"
+                />
+                <path
+                  d="M87.1805 5.92188V8.04754H82.4993V21.7947H79.6147V8.04754H74.9067V5.92188H87.1805Z"
+                  fill="#090431"
+                />
+                <path
+                  d="M88.9502 21.7947L95.5555 5.92188H98.8967L105.526 21.7947H102.439L97.2276 8.59601L91.989 21.7947H88.9502Z"
+                  fill="#090431"
+                />
+                <path
+                  d="M111.091 19.6957H117.038V21.7947H108.207V5.92188H111.091V19.6957Z"
+                  fill="#090431"
+                />
+                <path
+                  d="M132.753 5.92188L126.933 16.0403V21.7947H124.048V16.0403L118.202 5.92188H121.416L125.489 13.71L129.563 5.92188H132.753Z"
+                  fill="#090431"
+                />
+                <path
+                  d="M137.915 21.391C136.97 21.0194 136.228 20.4907 135.688 19.8049C135.149 19.1191 134.879 18.3196 134.879 17.4065H137.965C138.032 18.0923 138.332 18.6556 138.863 19.0963C139.395 19.5391 140.141 19.7604 141.102 19.7604C142.098 19.7604 142.875 19.543 143.432 19.1082C143.987 18.6754 144.265 18.116 144.265 17.4302C144.265 16.8966 144.092 16.4627 143.746 16.1287C143.4 15.7927 142.971 15.5338 142.457 15.352C141.943 15.1701 141.23 14.9725 140.319 14.759C139.171 14.4843 138.239 14.2056 137.523 13.923C136.806 13.6424 136.194 13.2046 135.688 12.6097C135.182 12.0167 134.929 11.2252 134.929 10.235C134.929 9.32186 135.182 8.52239 135.688 7.83657C136.194 7.15272 136.903 6.62797 137.814 6.26233C138.725 5.89669 139.78 5.71387 140.977 5.71387C142.681 5.71387 144.076 6.09829 145.163 6.86712C146.252 7.63596 146.856 8.69039 146.975 10.0304H143.785C143.735 9.45131 143.432 8.95622 142.875 8.54512C142.317 8.13402 141.583 7.92847 140.672 7.92847C139.846 7.92847 139.171 8.11919 138.647 8.50065C138.125 8.8821 137.864 9.43057 137.864 10.146C137.864 10.6322 138.028 11.0315 138.356 11.3438C138.687 11.656 139.105 11.9031 139.611 12.0849C140.116 12.2687 140.808 12.4674 141.686 12.6808C142.85 12.9694 143.799 13.2579 144.532 13.5465C145.265 13.837 145.89 14.2827 146.406 14.8836C146.919 15.4844 147.176 16.2878 147.176 17.2938C147.176 18.1002 146.936 18.8611 146.456 19.5766C145.974 20.2921 145.273 20.8672 144.354 21.3021C143.435 21.7349 142.351 21.9513 141.102 21.9513C139.922 21.9513 138.859 21.7645 137.915 21.391Z"
+                  fill="#090431"
+                />
+                <path
+                  d="M162.23 5.92188V8.04754H157.549V21.7947H154.664V8.04754H149.959V5.92188H162.23Z"
+                  fill="#090431"
+                />
+                <path
+                  d="M170.86 21.7947L177.463 5.92188H180.804L187.433 21.7947H184.347L179.135 8.59601L173.896 21.7947H170.86Z"
+                  fill="#090431"
+                />
+                <path
+                  d="M193.001 5.92188V21.7947H190.116V5.92188H193.001Z"
+                  fill="#090431"
+                />
+                <path
+                  d="M31.7454 0.0297852L20.1564 13.8421L13.4385 5.48773C14.1974 3.62296 15.2054 2.01907 16.3765 0.548601C16.4951 0.402344 16.6374 0.229406 16.8034 0.0297852H31.7454Z"
+                  fill="url(#paint0_linear_508_224)"
+                />
+                <path
+                  d="M31.7596 0V0.0237178C26.6455 6.13092 20.4345 13.5485 20.1825 13.8687L20.1528 13.842V13.8361L31.7418 0.0237178L31.7596 0Z"
+                  fill="url(#paint1_linear_508_224)"
+                />
+                <path
+                  d="M31.3818 27.9171H17.6524C16.9587 27.1047 16.4161 26.4703 16.1019 26.0849C15.0287 24.7775 14.1778 23.3278 13.5107 21.7506L13.5167 21.7446L20.1605 13.8379L20.1902 13.8646C20.1842 13.8646 20.1724 13.8824 20.1664 13.8824C20.2613 14.0069 26.4308 21.7861 31.3818 27.9171Z"
+                  fill="url(#paint2_linear_508_224)"
+                />
+                <path
+                  d="M13.4399 5.47803C13.349 5.70334 13.261 5.9326 13.176 6.16582C12.1621 8.99707 11.836 11.9825 12.0139 15.0657C12.1562 17.5145 12.6721 19.741 13.514 21.754L20.1549 13.8324L13.4399 5.47803Z"
+                  fill="url(#paint3_linear_508_224)"
+                />
+                <path
+                  d="M12.1976 0.0297852C11.498 2.99148 10.2795 5.49366 8.67263 7.66379C6.9294 10.0266 4.9401 11.8173 2.66619 12.9498C2.59108 12.9854 2.51894 13.0298 2.44977 13.0832C2.42605 13.095 2.42012 13.1365 2.39344 13.181C2.39937 13.2047 2.41123 13.2166 2.41716 13.2344H0.00390625V0.0297852H12.1976Z"
+                  fill="#A92CEC"
+                />
+                <path
+                  d="M12.5106 27.9253H0.00263527C0.00263527 23.0247 -0.00329409 18.133 0.00263527 13.2324H2.41588C2.49 13.4488 2.65899 13.4666 2.7924 13.5348C3.833 14.0892 4.8232 14.7652 5.76301 15.5953C7.84421 17.4393 9.64081 19.7369 10.9719 22.6986C11.7032 24.345 12.2161 26.0872 12.5106 27.9253Z"
+                  fill="#A92CEC"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_508_224"
+                    x1="22.6652"
+                    y1="-15.7855"
+                    x2="42.3"
+                    y2="44.6694"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#0882FA" />
+                    <stop offset="0.85" stop-color="#10DFA1" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_508_224"
+                    x1="17.9643"
+                    y1="-50.1241"
+                    x2="59.1804"
+                    y2="76.7789"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#0882FA" />
+                    <stop offset="0.85" stop-color="#10DFA1" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_508_224"
+                    x1="19.1641"
+                    y1="-13.3504"
+                    x2="34.4443"
+                    y2="33.6971"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0.251" stop-color="#0882FA" />
+                    <stop offset="0.85" stop-color="#10DFA1" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint3_linear_508_224"
+                    x1="5.03949"
+                    y1="5.39027"
+                    x2="23.0885"
+                    y2="5.08435"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#0882FA" />
+                    <stop offset="0.85" stop-color="#10DFA1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div
+              class="flex flex-col lg:flex-row items-start lg:items-center justify-center font-dm-sans font-medium text-center gap-x-5.5 gap-y-2.5 text-black"
+            >
+              <div><a href="/"> Home</a></div>
+              <div class="flex items-center gap-5.5 font-medium text-nowrap">
+                <span
+                  class="w-1.5 h-1.5 bg-black rounded-full shrink-0 hidden lg:block"
+                ></span>
+                <span><a href="/product-portfolio">Products</a></span>
+              </div>
+              <div class="flex items-center gap-5.5 text-nowrap">
+                <span
+                  class="w-1.5 h-1.5 bg-black rounded-full shrink-0 hidden lg:block"
+                ></span>
+                <span><a href="/solutions">Solutions</a></span>
+              </div>
+              <div class="flex items-center gap-5.5 text-nowrap">
+                <span
+                  class="w-1.5 h-1.5 bg-black rounded-full shrink-0 hidden lg:block"
+                ></span>
+                <span><a href="/why-katalyst">Why Katalyst AI</a></span>
+              </div>
+              <div class="flex items-center gap-5.5 text-nowrap">
+                <span
+                  class="w-1.5 h-1.5 bg-black rounded-full shrink-0 hidden lg:block"
+                ></span>
+                <span><a href="/contact-us">Contact Us</a></span>
+              </div>
+            </div>
+
+            <div
+              class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-y-8 gap-x-1 mt-8 lg:mt-[169px]"
+            >
+              <div class="description flex-1 flex flex-col gap-2">
+                <div class="flex items-center gap-x-2.5">
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="shrink max-w-5 lg:max-w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.5" clip-path="url(#clip0_193_635)">
+                        <path
+                          d="M5 4H9L11 9L8.5 10.5C9.57096 12.6715 11.3285 14.429 13.5 15.5L15 13L20 15V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21C14.0993 20.763 10.4202 19.1065 7.65683 16.3432C4.8935 13.5798 3.23705 9.90074 3 6C3 5.46957 3.21071 4.96086 3.58579 4.58579C3.96086 4.21071 4.46957 4 5 4Z"
+                          fill="#0C0630"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_193_635">
+                          <rect width="24" height="24" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  03-5892 1175
+                </div>
+
+                <div class="lg:max-w-[355px]">
+                  <div class="flex gap-x-2.5 lg:max-w-[90%]">
+                    <span class="mt-1"
+                      ><svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        class="shrink max-w-5 lg:max-w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g opacity="0.5" clip-path="url(#clip0_193_647)">
+                          <path
+                            d="M18.3641 4.63606C20.0164 6.28819 20.9614 8.51817 20.9993 10.8545C21.0372 13.1908 20.1649 15.4502 18.5671 17.1551L18.3641 17.3651L14.1211 21.6071C13.5827 22.1451 12.8599 22.4584 12.0992 22.4834C11.3385 22.5085 10.5967 22.2435 10.0241 21.7421L9.88006 21.6071L5.63606 17.3641C3.94822 15.6762 3 13.387 3 11.0001C3 8.61309 3.94822 6.32389 5.63606 4.63606C7.32389 2.94822 9.61309 2 12.0001 2C14.387 2 16.6762 2.94822 18.3641 4.63606ZM12.0001 8.00006C11.6061 8.00006 11.216 8.07765 10.852 8.22842C10.488 8.37918 10.1573 8.60016 9.87873 8.87873C9.60016 9.15731 9.37918 9.48803 9.22842 9.85201C9.07765 10.216 9.00006 10.6061 9.00006 11.0001C9.00006 11.394 9.07765 11.7841 9.22842 12.1481C9.37918 12.5121 9.60016 12.8428 9.87873 13.1214C10.1573 13.4 10.488 13.6209 10.852 13.7717C11.216 13.9225 11.6061 14.0001 12.0001 14.0001C12.7957 14.0001 13.5588 13.684 14.1214 13.1214C14.684 12.5588 15.0001 11.7957 15.0001 11.0001C15.0001 10.2044 14.684 9.44134 14.1214 8.87873C13.5588 8.31613 12.7957 8.00006 12.0001 8.00006Z"
+                            fill="#0C0630"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_193_647">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </span>
+                    A201 & A202, Level 2, West Wing, Wisma Consplant 2, 7, Jalan
+                    SS 16/1, Ss 16, 47500 Subang Jaya, Selangor
+                  </div>
+                </div>
+              </div>
+              <div class="hidden lg:flex items-center justify-center gap-1.5">
+                <a
+                  href="https://www.linkedin.com/company/katalyst-talentintelligence"
+                  target="_blank"
+                  class="flex items-center justify-center gap-x-[6px] px-[13px] py-1 text-xs font-semibold leading-[28px] text-white bg-black rounded-[60px] tracking-[1%]"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_1788_34)">
+                      <g clip-path="url(#clip1_1788_34)">
+                        <path
+                          d="M0.799805 3.9998C0.799805 3.15111 1.13695 2.33718 1.73706 1.73706C2.33718 1.13695 3.15111 0.799805 3.9998 0.799805H11.9998C12.8485 0.799805 13.6624 1.13695 14.2625 1.73706C14.8627 2.33718 15.1998 3.15111 15.1998 3.9998V11.9998C15.1998 12.8485 14.8627 13.6624 14.2625 14.2625C13.6624 14.8627 12.8485 15.1998 11.9998 15.1998H3.9998C3.15111 15.1998 2.33718 14.8627 1.73706 14.2625C1.13695 13.6624 0.799805 12.8485 0.799805 11.9998V3.9998Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M4.7998 7.19971V11.1997"
+                          stroke="#0C0630"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M4.7998 4.7998V4.8078"
+                          stroke="#0C0630"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M8 11.1997V7.19971"
+                          stroke="#0C0630"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M11.2 11.1997V8.79971C11.2 8.37536 11.0314 7.96839 10.7314 7.66834C10.4313 7.36828 10.0243 7.19971 9.6 7.19971C9.17565 7.19971 8.76869 7.36828 8.46863 7.66834C8.16857 7.96839 8 8.37536 8 8.79971"
+                          stroke="#0C0630"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1788_34">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                      <clipPath id="clip1_1788_34">
+                        <rect
+                          width="19.2"
+                          height="19.2"
+                          fill="white"
+                          transform="translate(-1.6001 -1.6001)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  Linkedin
+                </a>
+              </div>
+              <div
+                class="flex-1 font-normal font-inter text-start lg:text-right"
+              >
+                <div
+                  class="text-sm lg:text-base text-black/70 mb-3 lg:mb-[17px] leading-[100%]"
+                >
+                  Terms & Conditions | Privacy Policy
+                </div>
+                <div
+                  class="text-[12px] lg:text-sm text-black/50 leading-[100%]"
+                >
+                  © KatalystAI 2025-26. All Rights Reserved.
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex lg:hidden items-center justify-center gap-1.5 mt-[40px]"
+            >
+              <a
+                href="https://www.linkedin.com/company/katalyst-talentintelligence"
+                target="_blank"
+                class="flex items-center justify-center gap-x-[6px] px-[13px] py-1 text-xs font-semibold leading-[28px] text-white bg-black rounded-[60px] tracking-[1%]"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1788_34)">
+                    <g clip-path="url(#clip1_1788_34)">
+                      <path
+                        d="M0.799805 3.9998C0.799805 3.15111 1.13695 2.33718 1.73706 1.73706C2.33718 1.13695 3.15111 0.799805 3.9998 0.799805H11.9998C12.8485 0.799805 13.6624 1.13695 14.2625 1.73706C14.8627 2.33718 15.1998 3.15111 15.1998 3.9998V11.9998C15.1998 12.8485 14.8627 13.6624 14.2625 14.2625C13.6624 14.8627 12.8485 15.1998 11.9998 15.1998H3.9998C3.15111 15.1998 2.33718 14.8627 1.73706 14.2625C1.13695 13.6624 0.799805 12.8485 0.799805 11.9998V3.9998Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M4.7998 7.19971V11.1997"
+                        stroke="#0C0630"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M4.7998 4.7998V4.8078"
+                        stroke="#0C0630"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M8 11.1997V7.19971"
+                        stroke="#0C0630"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.2 11.1997V8.79971C11.2 8.37536 11.0314 7.96839 10.7314 7.66834C10.4313 7.36828 10.0243 7.19971 9.6 7.19971C9.17565 7.19971 8.76869 7.36828 8.46863 7.66834C8.16857 7.96839 8 8.37536 8 8.79971"
+                        stroke="#0C0630"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1788_34">
+                      <rect width="16" height="16" fill="white" />
+                    </clipPath>
+                    <clipPath id="clip1_1788_34">
+                      <rect
+                        width="19.2"
+                        height="19.2"
+                        fill="white"
+                        transform="translate(-1.6001 -1.6001)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+                Linkedin
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="assets/js/main.js" defer></script>
-</body>
-
+  </body>
 </html>
