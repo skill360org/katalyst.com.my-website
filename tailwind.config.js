@@ -1,5 +1,5 @@
 export default {
-  content: ["./*.html", "./pages/**/*.html"],
+  content: ["./*.html", "./partials/**/*.html", "./assets/js/**/*.js"],
   theme: {
     extend: {
       fontFamily: {

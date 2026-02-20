@@ -5,19 +5,21 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
     "autoprefixer": "^10.4.23",
-    "postcss": "^8.5.6",
-    "postcss-cli": "^11.0.1",
-    "tailwindcss": "^4.1.18",
     "browser-sync": "^3.0.3",
     "concurrently": "^9.1.2",
+    "cssnano": "^7.1.1",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
     "prettier": "^3.6.2",
-    "sharp": "^0.34.3"
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.18"
   },
   "scripts": {
     "dev": "npm run sync:layout && concurrently -k \"npm run dev:css\" \"npm run dev:serve\"",
-    "dev:css": "postcss assets/css/input.css -o assets/css/output.css --watch",
+    "dev:css": "NODE_ENV=development postcss assets/css/input.css -o assets/css/output.css --watch",
     "dev:serve": "browser-sync start --server --files \"**/*.html,assets/css/output.css,assets/js/**/*.js\" --port 3000 --no-open",
-    "build": "npm run sync:layout && postcss assets/css/input.css -o assets/css/output.css",
+    "build": "npm run sync:layout && NODE_ENV=production postcss assets/css/input.css -o assets/css/output.css && npm run check:css-size",
+    "check:css-size": "node scripts/check-css-size.mjs",
     "format": "prettier --write \"*.html\" \"assets/js/**/*.js\" \"assets/css/**/*.css\" \"*.{json,mjs}\" \"scripts/**/*.mjs\"",
     "images:optimize": "node scripts/optimize-images.mjs",
     "test": "npm run sync:layout && npm run test:html",
