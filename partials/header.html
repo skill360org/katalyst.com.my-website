@@ -1,0 +1,241 @@
+<header class="site-header">
+      <!-----------------Navbar-------------------->
+      <nav
+        id="siteHeader"
+        class="px-5 fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-[998] w-full"
+      >
+        <div
+          class="bg-white/30 backdrop-blur-xl border border-white ps-5 sm:ps-8 pe-5 py-[13px] flex items-center justify-between gap-5 rounded-[78px] mx-auto max-w-[1054px] transition-all duration-200"
+        >
+          <!-- Logo -->
+          <a href="/" class="text-xl font-semibold">
+            <img
+              src="assets/images/Logo.webp"
+              alt="Katalyst AI Logo"
+              class="w-[85%] sm:w-full h-full"
+            />
+          </a>
+
+          <button
+            id="menuToggle"
+            class="flex items-center justify-center w-10 h-10 rounded-full lg:hidden bg-white/40 backdrop-blur-lg"
+            aria-label="Open menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="#000"
+            >
+              <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+          </button>
+
+          <!-- Menu -->
+          <ul
+            class="hidden lg:flex items-center gap-x-3 text-nowrap font-dm-sans font-normal text-black text-base tracking-[1%]"
+          >
+            <li>
+              <a
+                href="/"
+                class="nav-link px-[23px] py-[11px] rounded-[60px]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <div
+                id="productsToggle"
+                class="nav-link flex items-center gap-x-2 ps-4.5 pe-[15px] py-[11px] rounded-[60px] cursor-pointer"
+              >
+                Products
+
+                <svg
+                  id="productsArrow"
+                  width="9"
+                  height="6"
+                  viewBox="0 0 9 6"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.49136 5.19583L0.264596 1.67572C-0.323355 1.03432 0.131646 0 1.00175 0H7.45528C8.32539 0 8.78039 1.03432 8.19243 1.67573L4.96567 5.19583C4.56933 5.6282 3.8877 5.6282 3.49136 5.19583Z"
+                    fill="#A92CEC"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li>
+              <a
+                href="/solutions"
+                class="nav-link px-[23px] py-[11px] rounded-[60px]"
+                >Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                href="/why-katalyst"
+                class="nav-link px-[23px] py-[11px] rounded-[60px]"
+                >Why Katalyst AI</a
+              >
+            </li>
+          </ul>
+
+          <a
+            href="/contact-us"
+            class="hidden lg:block btn-primary !px-4 !py-[13.5px]"
+            >Contact Us</a
+          >
+        </div>
+      </nav>
+      <!------- Product DropDown -------->
+      <div
+        id="productsDropdown"
+        class="hidden lg:block px-5 fixed top-[120px] left-1/2 -translate-x-1/2 w-full opacity-0 invisible translate-y-2 transition-all duration-300 ease-out z-[997]"
+      >
+        <div
+          class="max-w-[1054px] mx-auto bg-white backdrop-blur-[74px] border border-[#BDD8FF] rounded-[16px]"
+        >
+          <div class="ps-[63px] pt-[29px] pe-[30px] pb-[36px]">
+            <div class="flex justify-between gap-7.5">
+              <div class=" ">
+                <div
+                  class="description font-dm-sans leading-[100%] flex flex-col gap-[29px] text-black mt-7.5"
+                >
+                  <a href="/product-portfolio" class="menu-link"
+                    >Explore All Products</a
+                  >
+                  <a href="/talent-intelligence" class="menu-link"
+                    >Talent Intelligence Platform</a
+                  >
+                  <a href="/talent-acquisition" class="menu-link"
+                    >Talent Acquisition</a
+                  >
+                  <a href="/talent-development" class="menu-link"
+                    >Talent Development</a
+                  >
+                  <a href="/succession-planning-agent" class="menu-link"
+                    >Succession Planning Agent</a
+                  >
+                  <a href="/performance-management-agent" class="menu-link"
+                    >Performance Management Agent</a
+                  >
+                </div>
+              </div>
+              <div class="max-w-[532px] w-full">
+                <div
+                  class="relative rounded-[10px] px-8 pt-8 pb-[35px] overflow-hidden bg-[#DFFDFF]"
+                >
+                  <img
+                    src="assets/images/products-card-bg.webp"
+                    class="absolute bottom-0 right-0 z-0"
+                  />
+                  <div class="relative z-10">
+                    <div class="heading-2 text-left">
+                      Let&rsquo;s ready get started?
+                    </div>
+                    <p class="mt-2.5">
+                      Your journey starts here. <br />Let&rsquo;s build something
+                      great together.
+                    </p>
+                    <div class="mt-[95px]">
+                      <a href="/contact-us" class="btn-primary-outline py-3"
+                        >Get in Touch</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!----------Mobile--------->
+      <div
+        id="mainNav"
+        class="block lg:hidden fixed top-0 end-0 w-full sm:w-[400px] h-screen bg-lavender transform translate-x-full transition-transform duration-300 z-[999]"
+      >
+        <div class="flex flex-col h-full max-h-[100dvh] p-5">
+          <button id="menuClose" class="pb-3 text-xl text-end">&#10005;</button>
+          <div class="flex flex-col justify-between h-full gap-5">
+            <div class="flex flex-col items-start gap-2 overflow-y-auto grow">
+              <a
+                href="/"
+                class="mobile-nav-link active py-2 px-3 rounded-[70px] font-dm-sans font-normal text-base leading-[100%] text-heading hover:text-primary focus-visible:text-primary transition-all duration-300 ease-in-out outline-0"
+              >
+                Home</a
+              >
+              <div id="mobileProducts" class="w-full">
+                <div
+                  id="mobileProductsToggle"
+                  class="mobile-nav-link py-2 px-3 flex items-center justify-between cursor-pointer"
+                >
+                  <div class="">Products</div>
+                  <svg
+                    id="mobileProductsArrow"
+                    width="9"
+                    height="6"
+                    viewBox="0 0 9 6"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.49136 5.19583L0.264596 1.67572C-0.323355 1.03432 0.131646 0 1.00175 0H7.45528C8.32539 0 8.78039 1.03432 8.19243 1.67573L4.96567 5.19583C4.56933 5.6282 3.8877 5.6282 3.49136 5.19583Z"
+                      fill="#A92CEC"
+                    />
+                  </svg>
+                </div>
+                <div
+                  id="mobileProductsDropdown"
+                  class="max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out will-change-[max-height]"
+                >
+                  <div
+                    class="ps-6 py-3 font-dm-sans text-sm flex flex-col gap-4 text-black"
+                  >
+                    <a href="/product-portfolio" class="menu-link"
+                      >Explore All Products</a
+                    >
+                    <a href="/talent-intelligence" class="menu-link"
+                      >Talent Intelligence Platform</a
+                    >
+                    <a href="/talent-acquisition" class="menu-link"
+                      >Talent Acquisition</a
+                    >
+                    <a href="/talent-development" class="menu-link"
+                      >Talent Development</a
+                    >
+                    <a href="/succession-planning-agent" class="menu-link"
+                      >Succession Planning Agent</a
+                    >
+                    <a href="/performance-management-agent" class="menu-link"
+                      >Performance Management Agent</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <a
+                href="/solutions"
+                class="mobile-nav-link py-2 px-3 rounded-[70px] font-dm-sans font-normal text-base leading-[100%] text-heading hover:text-primary focus-visible:text-primary transition-all duration-300 ease-in-out outline-0"
+              >
+                Solutions</a
+              >
+              <a
+                href="/why-katalyst"
+                class="mobile-nav-link py-2 px-3 rounded-[70px] font-dm-sans font-normal text-base leading-[100%] text-heading hover:text-primary focus-visible:text-primary transition-all duration-300 ease-in-out outline-0"
+                >Why Katalyst AI</a
+              >
+            </div>
+
+            <div class="pt-3">
+              <a href="/contact-us" class="btn-primary !px-4 !py-3"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="menuOverlay"
+        class="fixed inset-0 bg-black/40 opacity-0 invisible transition-all duration-300 z-[998]"
+      ></div>
+    </header>

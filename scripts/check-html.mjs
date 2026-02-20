@@ -1,10 +1,10 @@
-import fs from 'node:fs/promises';
+import fs from "node:fs/promises";
 
-const pages = (await fs.readdir('.')).filter((name) => name.endsWith('.html'));
+const pages = (await fs.readdir(".")).filter((name) => name.endsWith(".html"));
 let hasError = false;
 
 for (const page of pages) {
-  const content = await fs.readFile(page, 'utf8');
+  const content = await fs.readFile(page, "utf8");
 
   if (!/<meta\s+name=["']description["']/i.test(content)) {
     console.error(`${page}: missing meta description`);
@@ -13,7 +13,9 @@ for (const page of pages) {
 
   const htmlHrefMatches = [...content.matchAll(/href=["']([^"']+\.html)["']/g)];
   if (htmlHrefMatches.length > 0) {
-    console.error(`${page}: contains .html href(s): ${htmlHrefMatches.map((match) => match[1]).join(', ')}`);
+    console.error(
+      `${page}: contains .html href(s): ${htmlHrefMatches.map((match) => match[1]).join(", ")}`,
+    );
     hasError = true;
   }
 }
