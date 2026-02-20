@@ -14,19 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const pathName = normalizePath(window.location.pathname);
   const searchParams = new URLSearchParams(window.location.search);
 
-  const contactUsForm = document.getElementById("contactUsForm");
-  if (contactUsForm) {
-    contactUsForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const redirectParams = new URLSearchParams(window.location.search);
-      redirectParams.set("formSubmitted", "true");
-      const queryString = redirectParams.toString();
-      window.location.assign(
-        `${window.location.pathname}${queryString ? `?${queryString}` : ""}`,
-      );
-    });
-  }
-
   const formSuccessMessage = document.getElementById("formSuccessMessage");
   if (formSuccessMessage && searchParams.get("formSubmitted") === "true") {
     formSuccessMessage.classList.remove("hidden");
