@@ -12,10 +12,19 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const pathName = normalizePath(window.location.pathname);
+  const searchParams = new URLSearchParams(window.location.search);
+
+  const formSuccessMessage = document.getElementById("formSuccessMessage");
+  if (formSuccessMessage && searchParams.get("formSubmitted") === "true") {
+    formSuccessMessage.classList.remove("hidden");
+  }
+
   const isActivePath = (href) => normalizePath(href) === pathName;
 
   document
-    .querySelectorAll(".nav-link[href], .mobile-nav-link[href], .menu-link[href]")
+    .querySelectorAll(
+      ".nav-link[href], .mobile-nav-link[href], .menu-link[href]",
+    )
     .forEach((link) => {
       link.classList.toggle("active", isActivePath(link.getAttribute("href")));
     });

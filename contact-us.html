@@ -42,6 +42,18 @@
 
         <div class="relative z-20 px-5 sm:px-[30px] md:px-[60px] lg:px-[100px]">
           <div
+            id="formSuccessMessage"
+            class="hidden absolute left-1/2 z-30 w-[calc(100%-40px)] max-w-[1014px] -translate-x-1/2 top-[95px] sm:top-[110px]"
+            role="status"
+            aria-live="polite"
+          >
+            <div
+              class="rounded-xl border border-mint-green bg-mint-green/10 px-5 py-4 font-dm-sans text-sm font-medium text-black-soft"
+            >
+              Form submitted successfully. We will get in touch.
+            </div>
+          </div>
+          <div
             class="flex flex-col lg:flex-row justify-between gap-x-7.5 gap-y-20 w-full max-w-[1014px] pt-[155px] sm:pt-[173px] mx-auto"
           >
             <div>
@@ -65,24 +77,52 @@
               <div
                 class="px-[30px] pt-[30px] pb-[25px] w-full max-w-[700px] lg:max-w-[530px] mx-auto lg:mx-0 rounded-[20px] bg-white h-fit"
               >
-                <div class="flex flex-col gap-6">
+                <form
+                  id="contactUsForm"
+                  class="flex flex-col gap-6"
+                  action="https://api.web3forms.com/submit"
+                  method="POST"
+                >
+                  <input type="hidden" name="access_key" value="eca879e8-efdc-4b0f-a5ba-27bdc4d0aa19" />
+                  <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://www.katalyst.com.my/contact-us?formSubmitted=true"
+                  />
+
                   <div class="grid md:grid-cols-2 gap-x-4 gap-y-6">
                     <div class="input-group">
                       <label>First Name</label>
-                      <input type="text" placeholder="Enter First Name" />
+                      <input
+                        type="text"
+                        name="first_name"
+                        placeholder="Enter First Name"
+                      />
                     </div>
                     <div class="input-group">
                       <label>Last Name</label>
-                      <input type="text" placeholder="Enter Last Name" />
+                      <input
+                        type="text"
+                        name="last_name"
+                        placeholder="Enter Last Name"
+                      />
                     </div>
                   </div>
                   <div class="input-group">
                     <label>Email address</label>
-                    <input type="email" placeholder="Enter email address" />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter email address"
+                    />
                   </div>
                   <div class="input-group">
                     <label>Phone Number</label>
-                    <input type="tel" placeholder="Enter phone number" />
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Enter phone number"
+                    />
                   </div>
                   <div class="input-group custom-select">
                     <label>Subject</label>
@@ -101,10 +141,15 @@
                   </div>
                   <div class="input-group">
                     <label>Message</label>
-                    <textarea placeholder="Enter message"></textarea>
+                    <textarea
+                      name="message"
+                      placeholder="Enter message"
+                    ></textarea>
                   </div>
-                  <button class="py-3 btn-primary w-fit">Submit</button>
-                </div>
+                  <button type="submit" class="py-3 btn-primary w-fit">
+                    Submit
+                  </button>
+                </form>
               </div>
 
               <div
