@@ -14,6 +14,8 @@
 ## Shared layout expectations
 - Header and footer markup must stay consistent across all pages.
 - Active navigation state should be handled in JavaScript based on `window.location.pathname`.
+- Use class/id-based grouped-menu activation: JS should infer parent active state from active `.menu-link` items inside dropdown containers and match related `*Dropdown`/`*Toggle` elements.
+- For future nav dropdowns, prefer following existing class and id conventions over hardcoded route arrays or custom data attributes.
 
 ## SEO baseline for every page
 - `title`

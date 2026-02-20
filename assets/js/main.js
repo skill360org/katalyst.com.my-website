@@ -4,36 +4,34 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
   }
 
-  const pathName = window.location.pathname.replace(/\/$/, "") || "/";
-  const activePaths = new Map([
-    ["/", ["/"]],
-    ["/solutions", ["/solutions"]],
-    ["/why-katalyst", ["/why-katalyst"]],
-    [
-      "/product-portfolio",
-      [
-        "/product-portfolio",
-        "/talent-intelligence",
-        "/talent-acquisition",
-        "/talent-development",
-        "/succession-planning-agent",
-        "/performance-management-agent",
-      ],
-    ],
-    ["/contact-us", ["/contact-us"]],
-  ]);
+  const normalizePath = (path) => {
+    if (!path) return "/";
+    const cleanPath = path.split("?")[0].split("#")[0];
+    const withoutHtml = cleanPath.replace(/\.html$/, "");
+    return withoutHtml.replace(/\/$/, "") || "/";
+  };
 
-  const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-link");
-  navLinks.forEach((link) => {
-    const href = link.getAttribute("href");
-    if (!href || href.startsWith("#")) return;
+  const pathName = normalizePath(window.location.pathname);
+  const isActivePath = (href) => normalizePath(href) === pathName;
 
-    const normalizedHref = href.replace(/\/$/, "") || "/";
-    const isActive = [...activePaths.entries()].some(
-      ([groupPath, paths]) =>
-        normalizedHref === groupPath && paths.includes(pathName),
-    );
-    link.classList.toggle("active", isActive);
+  document
+    .querySelectorAll(".nav-link[href], .mobile-nav-link[href], .menu-link[href]")
+    .forEach((link) => {
+      link.classList.toggle("active", isActivePath(link.getAttribute("href")));
+    });
+
+  document
+    .querySelectorAll(".nav-link:not([href]), .mobile-nav-link:not([href])")
+    .forEach((toggle) => {
+      toggle.classList.remove("active");
+    });
+
+  document.querySelectorAll("[id$='Dropdown']").forEach((dropdown) => {
+    if (!dropdown.querySelector(".menu-link.active")) return;
+
+    const toggleId = dropdown.id.replace(/Dropdown$/, "Toggle");
+    const toggle = document.getElementById(toggleId);
+    toggle?.classList.add("active");
   });
 
   const currentYear = new Date().getFullYear();
