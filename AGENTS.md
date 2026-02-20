@@ -7,7 +7,7 @@
 
 ## Editing standards
 - Use semantic HTML and keep indentation consistent (2 spaces in HTML, 2 spaces in JS/CSS).
-- Reuse utility classes with shared component classes in `assets/css/input.css` when class lists become too long.
+- Prefer Tailwind utility classes directly in HTML instead of introducing shared component classes in `assets/css/input.css`.
 - Prefer lowercase URL slugs (`/contact-us`, `/solutions`, etc.).
 - Keep JavaScript in `assets/js/` and avoid inline scripts.
 
