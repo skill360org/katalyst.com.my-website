@@ -255,7 +255,7 @@
               <div class=" fade-in rounded-[20px] overflow-hidden bg-white bg-[url('/assets/images/Succession-Planning-Agent/card6-bg.webp')] bg-no-repeat bg-position-[right_center] rounded-[20px]">
                 <div
                   class="pt-[38px] pl-[33px] pr-[57px] pb-[33px] ">
-                  <div class="description sm:max-w-[274px] text-[18px] text-black-soft">
+                  <div class="description sm:max-w-[274px] font-medium text-[18px] text-black-soft">
                     Without a structured understanding of what a role truly requires, succession decisions become
                     subjective and fragile.
                   </div>
@@ -541,7 +541,7 @@
                     <div class="heading-3">
                       From Identification to Readiness
                     </div>
-                    <p class="text-black mt-[5px]">
+                    <p class="text-black description mt-[5px]">
                       Succession planning does not end with naming successors.
                     </p>
                     <div class="description font-semibold text-black/50 mt-4.5">
@@ -812,31 +812,6 @@
   {{> footer footerClass="bg-alice-blue" footerCardClass="bg-white/10 px-6 sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8
   sm:pb-[54px]"}}
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const steps = document.querySelectorAll(".step");
-      const contents = document.querySelectorAll(".step-content");
-
-      function activateStep(step) {
-        const stepNumber = step.dataset.step;
-
-        steps.forEach((s) => s.classList.remove("active"));
-        contents.forEach((c) => c.classList.add("hidden"));
-
-        step.classList.add("active");
-        document
-          .getElementById(`step-${stepNumber}`)
-          .classList.remove("hidden");
-      }
-
-      steps.forEach((step) => {
-        step.addEventListener("click", () => activateStep(step));
-      });
-
-      // Default active step
-      if (steps.length) activateStep(steps[0]);
-    });
-  </script>
 
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
