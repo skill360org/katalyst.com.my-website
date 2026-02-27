@@ -1,194 +1,311 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Katalyst AI &ndash; Home</title>
-    <meta
-      name="description"
-      content="Katalyst AI &ndash; Home | Katalyst AI helps enterprise teams make better workforce decisions with AI-powered talent intelligence."
-    />
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="https://www.katalyst.com.my/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Katalyst AI &ndash; Home" />
-    <meta
-      property="og:description"
-      content="Katalyst AI &ndash; Home | Katalyst AI helps enterprise teams make better workforce decisions with AI-powered talent intelligence."
-    />
-    <link rel="icon" type="image/webp" href="assets/images/favicon.webp" />
-    <link rel="stylesheet" href="assets/css/input.css" />
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katalyst AI &ndash; Home</title>
+  <meta name="description"
+    content="Katalyst AI &ndash; Home | Katalyst AI helps enterprise teams make better workforce decisions with AI-powered talent intelligence." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.katalyst.com.my/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Katalyst AI &ndash; Home" />
+  <meta property="og:description"
+    content="Katalyst AI &ndash; Home | Katalyst AI helps enterprise teams make better workforce decisions with AI-powered talent intelligence." />
+  <link rel="icon" type="image/webp" href="assets/images/favicon.webp" />
+  <link rel="stylesheet" href="assets/css/input.css" />
+</head>
+
+<body>
+  <div id="cursor"
+    class="hidden lg:block fixed z-[1] w-36 h-36 bg-purple rounded-full blur-3xl pointer-events-none opacity-0"></div>
+  {{> header}}
+
+  <section class="relative w-full h-full">
+    <img src="assets/images/Home-Page-image/bg-img-2.webp" class="absolute top-0 left-0 z-10 w-auto h-auto" />
+    <img src="assets/images/Home-Page-image/bg-img-5.webp"
+      class="absolute top-[24.5%] left-0 w-[clamp(20vh,20vw,321px)] h-fit z-10" />
+
     <div
-      id="cursor"
-      class="hidden lg:block fixed z-[1] w-36 h-36 bg-purple rounded-full blur-3xl pointer-events-none opacity-0"
-    ></div>
-    {{> header}}
+      class="relative h-full max-h-[799px] overflow-hidden bg-[linear-gradient(180deg,#EEDEFF_0%,#F5EBFF_31.11%,#FAFAFA_100%)]">
+      <!-- Top-center image -->
+      <img src="assets/images/Home-Page-image/bg-img-1.webp"
+        class="absolute top-0 z-10 w-auto h-auto transform -translate-x-1/2 left-1/2" />
 
-    <section class="relative w-full h-full">
-      <img
-        src="assets/images/Home-Page-image/bg-img-2.webp"
-        class="absolute top-0 left-0 z-10 w-auto h-auto"
-      />
-      <img
-        src="assets/images/Home-Page-image/bg-img-5.webp"
-        class="absolute top-[24.5%] left-0 w-[clamp(20vh,20vw,321px)] h-fit z-10"
-      />
+      <!-- Top-left image -->
+      <img src="assets/images/Home-Page-image/bg-img-3.webp"
+        class="absolute top-0 left-0 z-20 w-[clamp(25vh,31vw,447px)] h-auto" />
 
-      <div
-        class="relative h-full max-h-[799px] overflow-hidden bg-[linear-gradient(180deg,#EEDEFF_0%,#F5EBFF_31.11%,#FAFAFA_100%)]"
-      >
-        <!-- Top-center image -->
-        <img
-          src="assets/images/Home-Page-image/bg-img-1.webp"
-          class="absolute top-0 z-10 w-auto h-auto transform -translate-x-1/2 left-1/2"
-        />
+      <!-- Top-right image -->
+      <img src="assets/images/Home-Page-image/bg-img-4.webp"
+        class="absolute top-[20%] lg:top-0 right-0 z-30 w-[clamp(20vh,20vw,278px)] h-auto" />
 
-        <!-- Top-left image -->
-        <img
-          src="assets/images/Home-Page-image/bg-img-3.webp"
-          class="absolute top-0 left-0 z-20 w-[clamp(25vh,31vw,447px)] h-auto"
-        />
+      <div class="relative pt-[105px] pb-[194px] px-5 lg:px-0 z-[99]">
+        <div class="flex flex-col items-center justify-center max-w-[694px] mx-auto mt-10 sm:mt-[110px]">
+          <div id="heroBtn"
+            class="flex items-center gap-2 px-5 py-[11px] w-fit font-inter font-medium text-base sm:text-[18px] text-black bg-white/20 leading-[20px] text-nowrap rounded-[50px] border border-rose-pop shadow-[0px_9px_44px_0px_#EDCBFF]">
+            <span>
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.5357 10.9285C3.5357 10.9285 3.33983 12.7479 2.58145 13.51C1.82307 14.2683 0 14.4642 0 14.4642C0 14.4642 1.81934 14.6601 2.58145 15.4185C3.34355 16.1769 3.5357 17.9999 3.5357 17.9999C3.5357 17.9999 3.73157 16.1806 4.48995 15.4185C5.24833 14.6601 7.0714 14.4642 7.0714 14.4642C7.0714 14.4642 5.25206 14.2684 4.48995 13.51C3.73158 12.7516 3.5357 10.9285 3.5357 10.9285Z"
+                  fill="#A92CEC" />
+                <path
+                  d="M13.4773 5.27848C11.9217 3.72283 11.5236 0 11.5236 0C11.5236 0 11.1256 3.72534 9.56998 5.27848C8.01434 6.83412 4.2915 7.23214 4.2915 7.23214C4.2915 7.23214 8.01684 7.63017 9.56998 9.18581C11.1219 10.7415 11.5236 14.4643 11.5236 14.4643C11.5236 14.4643 11.9217 10.7389 13.4773 9.18581C15.033 7.63017 18.7558 7.23214 18.7558 7.23214C18.7558 7.23214 15.0304 6.83412 13.4773 5.27848Z"
+                  fill="#A92CEC" />
+              </svg>
+            </span>
+            AI-Powered
+            <span class="font-bold"> Talent Intelligence </span>
+          </div>
 
-        <!-- Top-right image -->
-        <img
-          src="assets/images/Home-Page-image/bg-img-4.webp"
-          class="absolute top-[20%] lg:top-0 right-0 z-30 w-[clamp(20vh,20vw,278px)] h-auto"
-        />
+          <div id="heroHeading" class="heading-1 mt-[33px]">
+            For Decisions That Shape the Future of Work
+          </div>
+          <div id="heroDec" class="description mt-[22px] text-center max-w-[611px]">
+            Workforces are becoming more complex. Skills evolve
+            faster than roles. Talent decisions carry higher
+            stakes than ever. KatalystAI applies
+            enterprise-grade AI to continuously understand
+            skills, potential and workforce dynamics so leaders
+            can act with clarity, speed and confidence. It is AI
+            designed for real workforce decisions.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-lavender px-5 md:px-10 xl:px-[85px] pb-10 md:pb-[83px] relative">
+      <div class="hero-card fade-in mt-[-75px] pt-20 pe-0 pb-8 lg:pb-15">
+        <div class="heading-2 px-6 md:px-[59px] mb-8">
+          Talent Intelligence, Re-Engineered with AI
+        </div>
+        <div class="flex flex-col items-center lg:flex-row gap-[42px] ps-6 pe-6 md:ps-[59px] md:pe-[59px] lg:pe-0">
+          <div class="flex-1">
+            <div class="w-full lg:max-w-[552px] md:min-w-[300px]">
+              <div class="description md:mt-6">
+                <div class="mb-5 lg:max-w-[460px]">
+                  KatalystAI combines a deep talent
+                  intelligence foundation with
+                  purpose-built AI to create a living
+                  understanding of your workforce. Not
+                  static profiles. Not fragmented systems.
+                </div>
+                <div>
+                  But an intelligence layer that learns as
+                  your organization grows.
+                </div>
+              </div>
+              <div class="mt-[37px]">
+                <div class="heading-5 font-dm-sans mb-[13px]">
+                  What this enables
+                </div>
+                <div class="feature-list description">
+                  <div class="flex gap-2 fade-li">
+                    <span class="my-2.5">
+                      <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                      </svg>
+                    </span>
+                    A single, trusted view of skills and
+                    capabilities
+                  </div>
+                  <div class="flex gap-2 fade-li">
+                    <span class="my-2.5">
+                      <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                      </svg>
+                    </span>
+                    Consistent, fair talent decisions
+                    across the enterprise
+                  </div>
+                  <div class="flex gap-2 fade-li">
+                    <span class="my-2.5">
+                      <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                      </svg>
+                    </span>
+                    Readiness for future roles and
+                    workforce demands
+                  </div>
+                </div>
+              </div>
 
-        <div class="relative pt-[105px] pb-[194px] px-5 lg:px-0 z-[99]">
-          <div
-            class="flex flex-col items-center justify-center max-w-[694px] mx-auto mt-10 sm:mt-[110px]"
-          >
-            <div
-              id="heroBtn"
-              class="flex items-center gap-2 px-5 py-[11px] w-fit font-inter font-medium text-base sm:text-[18px] text-black bg-white/20 leading-[20px] text-nowrap rounded-[50px] border border-rose-pop shadow-[0px_9px_44px_0px_#EDCBFF]"
-            >
-              <span>
-                <svg
-                  width="19"
-                  height="18"
-                  viewBox="0 0 19 18"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.5357 10.9285C3.5357 10.9285 3.33983 12.7479 2.58145 13.51C1.82307 14.2683 0 14.4642 0 14.4642C0 14.4642 1.81934 14.6601 2.58145 15.4185C3.34355 16.1769 3.5357 17.9999 3.5357 17.9999C3.5357 17.9999 3.73157 16.1806 4.48995 15.4185C5.24833 14.6601 7.0714 14.4642 7.0714 14.4642C7.0714 14.4642 5.25206 14.2684 4.48995 13.51C3.73158 12.7516 3.5357 10.9285 3.5357 10.9285Z"
-                    fill="#A92CEC"
-                  />
-                  <path
-                    d="M13.4773 5.27848C11.9217 3.72283 11.5236 0 11.5236 0C11.5236 0 11.1256 3.72534 9.56998 5.27848C8.01434 6.83412 4.2915 7.23214 4.2915 7.23214C4.2915 7.23214 8.01684 7.63017 9.56998 9.18581C11.1219 10.7415 11.5236 14.4643 11.5236 14.4643C11.5236 14.4643 11.9217 10.7389 13.4773 9.18581C15.033 7.63017 18.7558 7.23214 18.7558 7.23214C18.7558 7.23214 15.0304 6.83412 13.4773 5.27848Z"
-                    fill="#A92CEC"
-                  />
-                </svg>
-              </span>
-              AI-Powered <span class="font-bold"> Talent Intelligence </span>
+              <div
+                class="flex gap-3 justify-center lg:justify-start font-inter text-sm sm:text-base font-medium mt-[30px] sm:mt-[50px] mx-auto text-nowrap">
+                <a href="/contact-us" class="btn-primary">Book a Demo</a>
+                <a href="/contact-us" class="btn-primary-outline">
+                  Get in Touch
+                </a>
+              </div>
             </div>
-
-            <div id="heroHeading" class="heading-1 mt-[33px]">
-              For Decisions That Shape the Future of Work
-            </div>
-            <div
-              id="heroDec"
-              class="description mt-[22px] text-center max-w-[611px]"
-            >
-              Workforces are becoming more complex. Skills evolve faster than
-              roles. Talent decisions carry higher stakes than ever. KatalystAI
-              applies enterprise-grade AI to continuously understand skills,
-              potential and workforce dynamics so leaders can act with clarity,
-              speed and confidence. It is AI designed for real workforce
-              decisions.
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center justify-center mx-auto w-fit h-fit">
+              <img src="assets/images/Home-Page-image/talent.webp" loading="lazy" alt="talent" />
             </div>
           </div>
         </div>
       </div>
-      <div
-        class="bg-lavender px-5 md:px-10 xl:px-[85px] pb-10 md:pb-[83px] relative"
-      >
-        <div class="hero-card fade-in mt-[-75px] pt-20 pe-0 pb-8 lg:pb-15">
-          <div class="heading-2 px-6 md:px-[59px] mb-8">
-            Talent Intelligence, Re-Engineered with AI
-          </div>
-          <div
-            class="flex flex-col items-center lg:flex-row gap-[42px] ps-6 pe-6 md:ps-[59px] md:pe-[59px] lg:pe-0"
-          >
+    </div>
+  </section>
+
+  <section
+    class="bg-[linear-gradient(180deg,rgba(251,248,253,0.9)_0%,rgba(242,251,255,0.9)_53.56%)] relative bg-no-repeat bg-center bg-top bg-cover">
+    <img src="assets/images/Home-Page-image/Background.webp" loading="lazy"
+      class="absolute bottom-0 left-0 w-full h-full" alt="Background" />
+    <div class="max-w-[1440px] mx-auto">
+      <div class="px-5 md:px-10 xl:px-21 pt-[17px]">
+        <div class="fade-in">
+          <div class="flex flex-col lg:flex-row items-start gap-x-[30px] gap-y-[15px]">
+            <div class="flex-1 heading-2 text-left lg:max-w-[641px]">
+              AI That Works Where Talent Decisions Matter Most
+            </div>
             <div class="flex-1">
-              <div class="w-full lg:max-w-[552px] md:min-w-[300px]">
-                <div class="description md:mt-6">
-                  <div class="mb-5 lg:max-w-[460px]">
-                    KatalystAI combines a deep talent intelligence foundation
-                    with purpose-built AI to create a living understanding of
-                    your workforce. Not static profiles. Not fragmented systems.
-                  </div>
-                  <div>
-                    But an intelligence layer that learns as your organization
-                    grows.
-                  </div>
+              <div
+                class="p-0.5 mb-[17px] rounded-[50px] w-fit bg-[linear-gradient(127.43deg,var(--color-lilac)_8.26%,var(--color-pink-blush)_40.3%,var(--color-sky-indigo)_64.41%,var(--color-indigo-soft)_95%)]">
+                <div
+                  class="px-3.5 sm:px-5 py-2 sm:py-2.5 font-inter font-medium text-base sm:text-[18px] text-black rounded-[50px] bg-lavender leading-[20px]">
+                  Hire with Confidence
                 </div>
-                <div class="mt-[37px]">
-                  <div class="heading-5 font-dm-sans mb-[13px]">
-                    What this enables
-                  </div>
-                  <div class="feature-list description">
-                    <div class="flex gap-2 fade-li">
-                      <span class="my-2.5">
-                        <svg
-                          width="7"
-                          height="8"
-                          viewBox="0 0 7 8"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                            fill="#A92CEC"
-                          />
-                        </svg>
-                      </span>
-                      A single, trusted view of skills and capabilities
-                    </div>
-                    <div class="flex gap-2 fade-li">
-                      <span class="my-2.5">
-                        <svg
-                          width="7"
-                          height="8"
-                          viewBox="0 0 7 8"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                            fill="#A92CEC"
-                          />
-                        </svg>
-                      </span>
-                      Consistent, fair talent decisions across the enterprise
-                    </div>
-                    <div class="flex gap-2 fade-li">
-                      <span class="my-2.5">
-                        <svg
-                          width="7"
-                          height="8"
-                          viewBox="0 0 7 8"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                            fill="#A92CEC"
-                          />
-                        </svg>
-                      </span>
-                      Readiness for future roles and workforce demands
-                    </div>
-                  </div>
+              </div>
+              <div class="description lg:max-w-[531px]">
+                AI-assisted, structured interviews surface
+                skills, readiness, and potential at scale
+                and without bias amplification. Recruiters
+                focus on judgment. AI handles consistency
+                and speed.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-[52px] pb-[90px]">
+          <div class="grid md:grid-cols-2 gap-7.5">
+            <div class="fade-in px-8 pt-8 pb-10 rounded-[20px] bg-white">
+              <div class="flex items-center justify-center max-w-20 min-w-20 h-20 mb-[31px] bg-lavender rounded-[10px]">
+                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_193_266)">
+                    <mask id="mask0_193_266" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                      width="46" height="46">
+                      <path d="M46 0H0V46H46V0Z" fill="white" />
+                    </mask>
+                    <g mask="url(#mask0_193_266)">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M23.7229 0C24.231 0 24.6429 0.411898 24.6429 0.92V9.81523C24.6429 10.8264 26.0371 11.0974 26.416 10.1599L29.748 1.91235C29.9384 1.44124 30.4745 1.21364 30.9458 1.40398L32.2863 1.94555C32.7573 2.13589 32.985 2.67209 32.7946 3.1432L29.2422 11.9358C28.8666 12.8651 30.0369 13.6397 30.7457 12.931L37.4511 6.22539C37.8106 5.8661 38.393 5.8661 38.7522 6.22539L39.7746 7.24767C40.1339 7.60695 40.1339 8.18945 39.7746 8.54873L33.753 14.5704C33.0342 15.2892 33.8404 16.4709 34.7719 16.0639L42.5753 12.6545C43.041 12.4511 43.5834 12.6636 43.7867 13.1292L44.3656 14.454C44.5689 14.9196 44.3564 15.462 43.8909 15.6654L34.8988 19.5941C33.9853 19.9932 34.2702 21.3571 35.2671 21.3571H45.08C45.5881 21.3571 46 21.769 46 22.2771V23.7229C46 24.231 45.5881 24.6429 45.08 24.6429H35.2673C34.2702 24.6429 33.9855 26.0068 34.8988 26.4058L43.8909 30.3347C44.3564 30.538 44.5689 31.0804 44.3656 31.5459L43.7867 32.8707C43.5834 33.3364 43.041 33.549 42.5753 33.3454L34.7719 29.9361C33.8404 29.529 33.0342 30.7108 33.753 31.4297L39.7746 37.4511C40.1339 37.8106 40.1339 38.393 39.7746 38.7522L38.7522 39.7746C38.393 40.1339 37.8106 40.1339 37.4511 39.7746L30.7457 33.0689C30.0369 32.3603 28.8666 33.1349 29.2422 34.0641L32.7946 42.8568C32.985 43.3279 32.7573 43.864 32.2863 44.0544L30.9458 44.5961C30.4745 44.7863 29.9384 44.5588 29.748 44.0876L26.416 35.8402C26.0371 34.9025 24.6429 35.1737 24.6429 36.1847V45.08C24.6429 45.5881 24.231 46 23.7229 46H22.2771C21.769 46 21.3571 45.5881 21.3571 45.08V36.1847C21.3571 35.1737 19.9629 34.9025 19.5841 35.8402L16.2519 44.0876C16.0616 44.5588 15.5254 44.7863 15.0543 44.5961L13.7138 44.0544C13.2427 43.864 13.0151 43.3279 13.2055 42.8568L16.7579 34.0641C17.1334 33.1349 15.9631 32.3603 15.2544 33.0689L8.54875 39.7746C8.18947 40.1339 7.60695 40.1339 7.24769 39.7746L6.22541 38.7522C5.86613 38.393 5.86613 37.8106 6.22541 37.4511L12.247 31.4295C12.9659 30.7107 12.1597 29.529 11.2281 29.9361L3.42459 33.3454C2.959 33.549 2.41663 33.3364 2.21321 32.8707L1.6344 31.5459C1.43097 31.0804 1.64351 30.538 2.10911 30.3347L11.1011 26.4058C12.0146 26.0068 11.7297 24.6429 10.7328 24.6429H0.92C0.411898 24.6429 0 24.231 0 23.7229V22.2771C0 21.769 0.411898 21.3571 0.92 21.3571H10.7328C11.7297 21.3571 12.0146 19.9932 11.1012 19.5941L2.1091 15.6654C1.6435 15.462 1.43096 14.9196 1.63439 14.454L2.2132 13.1292C2.41663 12.6636 2.95897 12.4511 3.42459 12.6545L11.2281 16.0639C12.1597 16.471 12.9659 15.2892 12.247 14.5704L6.22541 8.54875C5.86613 8.18947 5.86613 7.60695 6.22541 7.24767L7.24767 6.22541C7.60695 5.86613 8.18947 5.86613 8.54875 6.22541L15.2544 12.931C15.963 13.6397 17.1333 12.8651 16.7579 11.9358L13.2055 3.1432C13.0151 2.67209 13.2427 2.13589 13.7138 1.94555L15.0543 1.40398C15.5254 1.21364 16.0616 1.44124 16.2519 1.91235L19.5841 10.1599C19.9629 11.0974 21.3571 10.8264 21.3571 9.81523V0.92C21.3571 0.411898 21.769 0 22.2771 0H23.7229ZM23 32.8571C28.4439 32.8571 32.8571 28.4439 32.8571 23C32.8571 17.5561 28.4439 13.1429 23 13.1429C17.5561 13.1429 13.1429 17.5561 13.1429 23C13.1429 28.4439 17.5561 32.8571 23 32.8571Z"
+                        fill="url(#paint0_linear_193_266)" />
+                    </g>
+                  </g>
+                  <defs>
+                    <linearGradient id="paint0_linear_193_266" x1="23" y1="0" x2="23" y2="46"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="0.0240385" stop-color="#A92CEC" />
+                      <stop offset="0.548077" stop-color="#5588C9" />
+                      <stop offset="0.975962" stop-color="#10D3AD" />
+                    </linearGradient>
+                    <clipPath id="clip0_193_266">
+                      <rect width="46" height="46" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div>
+                <div class="heading-4 mb-3.75">
+                  Develop with Precision
+                </div>
+                <p>
+                  Skills intelligence and AI-guided
+                  insights identify gaps early and
+                  recommend personalized growth paths
+                  aligned to business needs.
+                </p>
+              </div>
+            </div>
+            <div class="fade-in px-8 pt-8 pb-10 rounded-[20px] bg-white">
+              <div class="flex items-center justify-center max-w-20 min-w-20 h-20 mb-[31px] bg-lavender rounded-[10px]">
+                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M42.5451 18.4108C40.4716 20.629 37.0734 22.3169 33.6197 23C37.0734 23.6831 40.4716 25.3711 42.5449 27.5892L44.8987 30.1075L41.5142 30.7611C38.533 31.3368 34.7916 30.705 31.5959 29.2275C33.9884 31.8104 35.7456 35.1732 36.1194 38.1864L36.5435 41.6072L33.4212 40.147C30.6709 38.8606 28.0155 36.15 26.2986 33.0763C26.716 36.5721 26.1611 40.3257 24.692 42.9831L23.0245 46L21.357 42.9831C19.8881 40.3257 19.333 36.5721 19.7507 33.0763C18.0337 36.15 15.3783 38.8603 12.6279 40.147L9.5056 41.6072L9.92977 38.1864C10.3034 35.1732 12.0606 31.8104 14.4533 29.2275C11.2576 30.705 7.51615 31.337 4.53491 30.7611L1.15039 30.1075L3.5043 27.5892C5.57773 25.3708 8.97607 23.6831 12.4298 23C8.97596 22.3169 5.57773 20.629 3.5043 18.4108L1.15039 15.8926L4.53491 15.2388C7.51615 14.6631 11.2577 15.295 14.4533 16.7725C12.0606 14.1897 10.3034 10.8267 9.92977 7.81347L9.5056 4.39256L12.628 5.85313C15.3784 7.13952 18.0338 9.84998 19.7508 12.9237C19.3331 9.42786 19.8882 5.67426 21.3571 3.01684L23.0248 0L24.6923 3.01684C26.1613 5.67426 26.7163 9.42786 26.2986 12.9237C28.0158 9.84998 30.6711 7.13964 33.4215 5.85313L36.5439 4.39256L36.1196 7.81347C35.7461 10.8267 33.9889 14.1897 31.5962 16.7725C34.7918 15.295 38.5332 14.663 41.5145 15.2388L44.8992 15.8926L42.5451 18.4108ZM18.6889 27.3001C21.0529 29.664 24.8857 29.664 27.2496 27.3001C29.6136 24.9361 29.6136 21.1033 27.2496 18.7393C24.8857 16.3753 21.0529 16.3753 18.6889 18.7393C16.3249 21.1033 16.3249 24.9361 18.6889 27.3001Z"
+                    fill="url(#paint0_linear_193_278)" />
+                  <defs>
+                    <linearGradient id="paint0_linear_193_278" x1="23.0248" y1="0" x2="23.0248" y2="46"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="0.0240385" stop-color="#A92CEC" />
+                      <stop offset="0.548077" stop-color="#5588C9" />
+                      <stop offset="0.975962" stop-color="#10D3AD" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div>
+                <div class="heading-4 mb-3.75">
+                  Mobilize Talent Fairly
+                </div>
+                <p>
+                  AI matches people to internal roles,
+                  projects, and opportunities based on
+                  skills and potential supporting
+                  transparent, merit-based mobility.
+                </p>
+              </div>
+            </div>
+            <div class="fade-in px-8 pt-8 pb-10 rounded-[20px] bg-white">
+              <div class="flex items-center justify-center max-w-20 min-w-20 h-20 mb-[31px] bg-lavender rounded-[10px]">
+                <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_193_287)">
+                    <mask id="mask0_193_287" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                      width="46" height="46">
+                      <path d="M46 0H0V46H46V0Z" fill="white" />
+                    </mask>
+                    <g mask="url(#mask0_193_287)">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M23 46C35.7024 46 46 35.7024 46 23C46 10.2974 35.7024 0 23 0C10.2974 0 0 10.2974 0 23C0 35.7024 10.2974 46 23 46ZM23 43.24C34.1782 43.24 43.24 34.1782 43.24 23C43.24 11.8217 34.1782 2.76 23 2.76C11.8217 2.76 2.76 11.8217 2.76 23C2.76 34.1782 11.8217 43.24 23 43.24ZM23 40.48C32.654 40.48 40.48 32.654 40.48 23C40.48 13.3461 32.654 5.52 23 5.52C13.3461 5.52 5.52 13.3461 5.52 23C5.52 32.654 13.3461 40.48 23 40.48ZM23 37.72C31.1296 37.72 37.72 31.1296 37.72 23C37.72 14.8704 31.1296 8.28 23 8.28C14.8704 8.28 8.28 14.8704 8.28 23C8.28 31.1296 14.8704 37.72 23 37.72ZM34.96 23C34.96 29.6054 29.6054 34.96 23 34.96C16.3947 34.96 11.04 29.6054 11.04 23C11.04 16.3947 16.3947 11.04 23 11.04C29.6054 11.04 34.96 16.3947 34.96 23ZM32.2 23C32.2 28.0809 28.0809 32.2 23 32.2C17.919 32.2 13.8 28.0809 13.8 23C13.8 17.919 17.919 13.8 23 13.8C28.0809 13.8 32.2 17.919 32.2 23Z"
+                        fill="url(#paint0_linear_193_287)" />
+                    </g>
+                  </g>
+                  <defs>
+                    <linearGradient id="paint0_linear_193_287" x1="23" y1="0" x2="23" y2="46"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="0.0240385" stop-color="#A92CEC" />
+                      <stop offset="0.548077" stop-color="#5588C9" />
+                      <stop offset="0.975962" stop-color="#10D3AD" />
+                    </linearGradient>
+                    <clipPath id="clip0_193_287">
+                      <rect width="46" height="46" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div>
+                <div class="heading-4 mb-3.75">
+                  Plan the Workforce Ahead
+                </div>
+                <p>
+                  Predictive intelligence helps leaders
+                  anticipate skill demand, succession risk
+                  and capacity needs before they become
+                  constraints.
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative fade-in px-8 pt-8 pb-10 rounded-[20px] border-[1.5px] bg-teal-light border-dashed border-teal backdrop-blur-[36px] shadow-[20px_4px_44px_0px_#0000000D]">
+              <div class="absolute bottom-0 end-0">
+                <img src="assets/images/Home-Page-image/frame 117.webp" loading="lazy" alt="Card-bg"
+                  class="w-full h-full" />
+              </div>
+
+              <div class="relative z-10">
+                <div class="heading-2 text-left mb-2.5">
+                  Let&rsquo;s get started?
                 </div>
 
-                <div
-                  class="flex gap-3 justify-center lg:justify-start font-inter text-sm sm:text-base font-medium mt-[30px] sm:mt-[50px] mx-auto text-nowrap"
-                >
+                <p class="mb-7 sm:mb-[45px]">
+                  Your journey starts here. <br />
+                  Let&rsquo;s build something great
+                  together.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 font-inter">
                   <a href="/contact-us" class="btn-primary">Book a Demo</a>
                   <a href="/contact-us" class="btn-primary-outline">
                     Get in Touch
@@ -196,674 +313,277 @@
                 </div>
               </div>
             </div>
-            <div class="flex-1">
-              <div class="flex items-center justify-center mx-auto w-fit h-fit">
-                <img
-                  src="assets/images/Home-Page-image/talent.webp"
-                  loading="lazy"
-                  alt="talent"
-                />
-              </div>
-            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="bg-[linear-gradient(180deg,rgba(251,248,253,0.9)_0%,rgba(242,251,255,0.9)_53.56%)] relative bg-no-repeat bg-center bg-top bg-cover"
-    >
-      <img
-        src="assets/images/Home-Page-image/Background.webp"
-        loading="lazy"
-        class="absolute bottom-0 left-0 w-full h-full"
-        alt="Background"
-      />
-      <div class="max-w-[1440px] mx-auto">
-        <div class="px-5 md:px-10 xl:px-21 pt-[17px]">
-          <div class="fade-in">
-            <div
-              class="flex flex-col lg:flex-row items-start gap-x-[30px] gap-y-[15px]"
-            >
-              <div class="flex-1 heading-2 text-left lg:max-w-[641px]">
-                AI That Works Where Talent Decisions Matter Most
-              </div>
-              <div class="flex-1">
-                <div
-                  class="p-0.5 mb-[17px] rounded-[50px] w-fit bg-[linear-gradient(127.43deg,var(--color-lilac)_8.26%,var(--color-pink-blush)_40.3%,var(--color-sky-indigo)_64.41%,var(--color-indigo-soft)_95%)]"
-                >
-                  <div
-                    class="px-3.5 sm:px-5 py-2 sm:py-2.5 font-inter font-medium text-base sm:text-[18px] text-black rounded-[50px] bg-lavender leading-[20px]"
-                  >
-                    Hire with Confidence
-                  </div>
-                </div>
-                <div class="description lg:max-w-[531px]">
-                  AI-assisted, structured interviews surface skills, readiness,
-                  and potential at scale and without bias amplification.
-                  Recruiters focus on judgment. AI handles consistency and
-                  speed.
-                </div>
-              </div>
+          <div class="mt-[60px] md:mt-[112px]">
+            <div class="fade-in heading-2 mb-8 md:mb-[50px]">
+              Purpose-Built AI. Always Human-Led.
             </div>
-          </div>
-
-          <div class="mt-[52px] pb-[90px]">
-            <div class="grid md:grid-cols-2 gap-7.5">
-              <div class="fade-in px-8 pt-8 pb-10 rounded-[20px] bg-white">
-                <div
-                  class="flex items-center justify-center max-w-20 min-w-20 h-20 mb-[31px] bg-lavender rounded-[10px]"
-                >
-                  <svg
-                    width="46"
-                    height="46"
-                    viewBox="0 0 46 46"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_193_266)">
-                      <mask
-                        id="mask0_193_266"
-                        style="mask-type: luminance"
-                        maskUnits="userSpaceOnUse"
-                        x="0"
-                        y="0"
-                        width="46"
-                        height="46"
-                      >
-                        <path d="M46 0H0V46H46V0Z" fill="white" />
-                      </mask>
-                      <g mask="url(#mask0_193_266)">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M23.7229 0C24.231 0 24.6429 0.411898 24.6429 0.92V9.81523C24.6429 10.8264 26.0371 11.0974 26.416 10.1599L29.748 1.91235C29.9384 1.44124 30.4745 1.21364 30.9458 1.40398L32.2863 1.94555C32.7573 2.13589 32.985 2.67209 32.7946 3.1432L29.2422 11.9358C28.8666 12.8651 30.0369 13.6397 30.7457 12.931L37.4511 6.22539C37.8106 5.8661 38.393 5.8661 38.7522 6.22539L39.7746 7.24767C40.1339 7.60695 40.1339 8.18945 39.7746 8.54873L33.753 14.5704C33.0342 15.2892 33.8404 16.4709 34.7719 16.0639L42.5753 12.6545C43.041 12.4511 43.5834 12.6636 43.7867 13.1292L44.3656 14.454C44.5689 14.9196 44.3564 15.462 43.8909 15.6654L34.8988 19.5941C33.9853 19.9932 34.2702 21.3571 35.2671 21.3571H45.08C45.5881 21.3571 46 21.769 46 22.2771V23.7229C46 24.231 45.5881 24.6429 45.08 24.6429H35.2673C34.2702 24.6429 33.9855 26.0068 34.8988 26.4058L43.8909 30.3347C44.3564 30.538 44.5689 31.0804 44.3656 31.5459L43.7867 32.8707C43.5834 33.3364 43.041 33.549 42.5753 33.3454L34.7719 29.9361C33.8404 29.529 33.0342 30.7108 33.753 31.4297L39.7746 37.4511C40.1339 37.8106 40.1339 38.393 39.7746 38.7522L38.7522 39.7746C38.393 40.1339 37.8106 40.1339 37.4511 39.7746L30.7457 33.0689C30.0369 32.3603 28.8666 33.1349 29.2422 34.0641L32.7946 42.8568C32.985 43.3279 32.7573 43.864 32.2863 44.0544L30.9458 44.5961C30.4745 44.7863 29.9384 44.5588 29.748 44.0876L26.416 35.8402C26.0371 34.9025 24.6429 35.1737 24.6429 36.1847V45.08C24.6429 45.5881 24.231 46 23.7229 46H22.2771C21.769 46 21.3571 45.5881 21.3571 45.08V36.1847C21.3571 35.1737 19.9629 34.9025 19.5841 35.8402L16.2519 44.0876C16.0616 44.5588 15.5254 44.7863 15.0543 44.5961L13.7138 44.0544C13.2427 43.864 13.0151 43.3279 13.2055 42.8568L16.7579 34.0641C17.1334 33.1349 15.9631 32.3603 15.2544 33.0689L8.54875 39.7746C8.18947 40.1339 7.60695 40.1339 7.24769 39.7746L6.22541 38.7522C5.86613 38.393 5.86613 37.8106 6.22541 37.4511L12.247 31.4295C12.9659 30.7107 12.1597 29.529 11.2281 29.9361L3.42459 33.3454C2.959 33.549 2.41663 33.3364 2.21321 32.8707L1.6344 31.5459C1.43097 31.0804 1.64351 30.538 2.10911 30.3347L11.1011 26.4058C12.0146 26.0068 11.7297 24.6429 10.7328 24.6429H0.92C0.411898 24.6429 0 24.231 0 23.7229V22.2771C0 21.769 0.411898 21.3571 0.92 21.3571H10.7328C11.7297 21.3571 12.0146 19.9932 11.1012 19.5941L2.1091 15.6654C1.6435 15.462 1.43096 14.9196 1.63439 14.454L2.2132 13.1292C2.41663 12.6636 2.95897 12.4511 3.42459 12.6545L11.2281 16.0639C12.1597 16.471 12.9659 15.2892 12.247 14.5704L6.22541 8.54875C5.86613 8.18947 5.86613 7.60695 6.22541 7.24767L7.24767 6.22541C7.60695 5.86613 8.18947 5.86613 8.54875 6.22541L15.2544 12.931C15.963 13.6397 17.1333 12.8651 16.7579 11.9358L13.2055 3.1432C13.0151 2.67209 13.2427 2.13589 13.7138 1.94555L15.0543 1.40398C15.5254 1.21364 16.0616 1.44124 16.2519 1.91235L19.5841 10.1599C19.9629 11.0974 21.3571 10.8264 21.3571 9.81523V0.92C21.3571 0.411898 21.769 0 22.2771 0H23.7229ZM23 32.8571C28.4439 32.8571 32.8571 28.4439 32.8571 23C32.8571 17.5561 28.4439 13.1429 23 13.1429C17.5561 13.1429 13.1429 17.5561 13.1429 23C13.1429 28.4439 17.5561 32.8571 23 32.8571Z"
-                          fill="url(#paint0_linear_193_266)"
-                        />
-                      </g>
-                    </g>
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_193_266"
-                        x1="23"
-                        y1="0"
-                        x2="23"
-                        y2="46"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0.0240385" stop-color="#A92CEC" />
-                        <stop offset="0.548077" stop-color="#5588C9" />
-                        <stop offset="0.975962" stop-color="#10D3AD" />
-                      </linearGradient>
-                      <clipPath id="clip0_193_266">
-                        <rect width="46" height="46" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
+            <div class="fade-in section-card px-6 md:px-[70px] py-[30px] md:py-[61px">
+              <div class="flex flex-col lg:flex-row items-center lg:gap-[75px] gap-5">
+                <div class="fade-in">
+                  <img src="assets/images/Home-Page-image/card-img-2.webp" loading="lazy" alt="Cards-stack"
+                    class="h-auto max-w-full" />
                 </div>
-                <div>
-                  <div class="heading-4 mb-3.75">Develop with Precision</div>
-                  <p>
-                    Skills intelligence and AI-guided insights identify gaps
-                    early and recommend personalized growth paths aligned to
-                    business needs.
-                  </p>
-                </div>
-              </div>
-              <div class="fade-in px-8 pt-8 pb-10 rounded-[20px] bg-white">
-                <div
-                  class="flex items-center justify-center max-w-20 min-w-20 h-20 mb-[31px] bg-lavender rounded-[10px]"
-                >
-                  <svg
-                    width="46"
-                    height="46"
-                    viewBox="0 0 46 46"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M42.5451 18.4108C40.4716 20.629 37.0734 22.3169 33.6197 23C37.0734 23.6831 40.4716 25.3711 42.5449 27.5892L44.8987 30.1075L41.5142 30.7611C38.533 31.3368 34.7916 30.705 31.5959 29.2275C33.9884 31.8104 35.7456 35.1732 36.1194 38.1864L36.5435 41.6072L33.4212 40.147C30.6709 38.8606 28.0155 36.15 26.2986 33.0763C26.716 36.5721 26.1611 40.3257 24.692 42.9831L23.0245 46L21.357 42.9831C19.8881 40.3257 19.333 36.5721 19.7507 33.0763C18.0337 36.15 15.3783 38.8603 12.6279 40.147L9.5056 41.6072L9.92977 38.1864C10.3034 35.1732 12.0606 31.8104 14.4533 29.2275C11.2576 30.705 7.51615 31.337 4.53491 30.7611L1.15039 30.1075L3.5043 27.5892C5.57773 25.3708 8.97607 23.6831 12.4298 23C8.97596 22.3169 5.57773 20.629 3.5043 18.4108L1.15039 15.8926L4.53491 15.2388C7.51615 14.6631 11.2577 15.295 14.4533 16.7725C12.0606 14.1897 10.3034 10.8267 9.92977 7.81347L9.5056 4.39256L12.628 5.85313C15.3784 7.13952 18.0338 9.84998 19.7508 12.9237C19.3331 9.42786 19.8882 5.67426 21.3571 3.01684L23.0248 0L24.6923 3.01684C26.1613 5.67426 26.7163 9.42786 26.2986 12.9237C28.0158 9.84998 30.6711 7.13964 33.4215 5.85313L36.5439 4.39256L36.1196 7.81347C35.7461 10.8267 33.9889 14.1897 31.5962 16.7725C34.7918 15.295 38.5332 14.663 41.5145 15.2388L44.8992 15.8926L42.5451 18.4108ZM18.6889 27.3001C21.0529 29.664 24.8857 29.664 27.2496 27.3001C29.6136 24.9361 29.6136 21.1033 27.2496 18.7393C24.8857 16.3753 21.0529 16.3753 18.6889 18.7393C16.3249 21.1033 16.3249 24.9361 18.6889 27.3001Z"
-                      fill="url(#paint0_linear_193_278)"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_193_278"
-                        x1="23.0248"
-                        y1="0"
-                        x2="23.0248"
-                        y2="46"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0.0240385" stop-color="#A92CEC" />
-                        <stop offset="0.548077" stop-color="#5588C9" />
-                        <stop offset="0.975962" stop-color="#10D3AD" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-                <div>
-                  <div class="heading-4 mb-3.75">Mobilize Talent Fairly</div>
-                  <p>
-                    AI matches people to internal roles, projects, and
-                    opportunities based on skills and potential supporting
-                    transparent, merit-based mobility.
-                  </p>
-                </div>
-              </div>
-              <div class="fade-in px-8 pt-8 pb-10 rounded-[20px] bg-white">
-                <div
-                  class="flex items-center justify-center max-w-20 min-w-20 h-20 mb-[31px] bg-lavender rounded-[10px]"
-                >
-                  <svg
-                    width="46"
-                    height="46"
-                    viewBox="0 0 46 46"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_193_287)">
-                      <mask
-                        id="mask0_193_287"
-                        style="mask-type: luminance"
-                        maskUnits="userSpaceOnUse"
-                        x="0"
-                        y="0"
-                        width="46"
-                        height="46"
-                      >
-                        <path d="M46 0H0V46H46V0Z" fill="white" />
-                      </mask>
-                      <g mask="url(#mask0_193_287)">
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M23 46C35.7024 46 46 35.7024 46 23C46 10.2974 35.7024 0 23 0C10.2974 0 0 10.2974 0 23C0 35.7024 10.2974 46 23 46ZM23 43.24C34.1782 43.24 43.24 34.1782 43.24 23C43.24 11.8217 34.1782 2.76 23 2.76C11.8217 2.76 2.76 11.8217 2.76 23C2.76 34.1782 11.8217 43.24 23 43.24ZM23 40.48C32.654 40.48 40.48 32.654 40.48 23C40.48 13.3461 32.654 5.52 23 5.52C13.3461 5.52 5.52 13.3461 5.52 23C5.52 32.654 13.3461 40.48 23 40.48ZM23 37.72C31.1296 37.72 37.72 31.1296 37.72 23C37.72 14.8704 31.1296 8.28 23 8.28C14.8704 8.28 8.28 14.8704 8.28 23C8.28 31.1296 14.8704 37.72 23 37.72ZM34.96 23C34.96 29.6054 29.6054 34.96 23 34.96C16.3947 34.96 11.04 29.6054 11.04 23C11.04 16.3947 16.3947 11.04 23 11.04C29.6054 11.04 34.96 16.3947 34.96 23ZM32.2 23C32.2 28.0809 28.0809 32.2 23 32.2C17.919 32.2 13.8 28.0809 13.8 23C13.8 17.919 17.919 13.8 23 13.8C28.0809 13.8 32.2 17.919 32.2 23Z"
-                          fill="url(#paint0_linear_193_287)"
-                        />
-                      </g>
-                    </g>
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_193_287"
-                        x1="23"
-                        y1="0"
-                        x2="23"
-                        y2="46"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0.0240385" stop-color="#A92CEC" />
-                        <stop offset="0.548077" stop-color="#5588C9" />
-                        <stop offset="0.975962" stop-color="#10D3AD" />
-                      </linearGradient>
-                      <clipPath id="clip0_193_287">
-                        <rect width="46" height="46" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-                <div>
-                  <div class="heading-4 mb-3.75">Plan the Workforce Ahead</div>
-                  <p>
-                    Predictive intelligence helps leaders anticipate skill
-                    demand, succession risk and capacity needs before they
-                    become constraints.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="relative fade-in px-8 pt-8 pb-10 rounded-[20px] border-[1.5px] bg-teal-light border-dashed border-teal backdrop-blur-[36px] shadow-[20px_4px_44px_0px_#0000000D]"
-              >
-                <div class="absolute bottom-0 end-0">
-                  <img
-                    src="assets/images/Home-Page-image/frame 117.webp"
-                    loading="lazy"
-                    alt="Card-bg"
-                    class="w-full h-full"
-                  />
-                </div>
-
-                <div class="relative z-10">
-                  <div class="heading-2 text-left mb-2.5">
-                    Let&rsquo;s get started?
-                  </div>
-
-                  <p class="mb-7 sm:mb-[45px]">
-                    Your journey starts here. <br />
-                    Let&rsquo;s build something great together.
-                  </p>
-
-                  <div class="flex flex-wrap items-center gap-4 font-inter">
-                    <a href="/contact-us" class="btn-primary">Book a Demo</a>
-                    <a href="/contact-us" class="btn-primary-outline">
-                      Get in Touch
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="mt-[60px] md:mt-[112px]">
-              <div class="fade-in heading-2 mb-8 md:mb-[50px]">
-                Purpose-Built AI. Always Human-Led.
-              </div>
-              <div
-                class="fade-in section-card px-6 md:px-[70px] py-[30px] md:py-[61px"
-              >
-                <div
-                  class="flex flex-col lg:flex-row items-center lg:gap-[75px] gap-5"
-                >
-                  <div class="fade-in">
-                    <img
-                      src="assets/images/Home-Page-image/card-img-2.webp"
-                      loading="lazy"
-                      alt="Cards-stack"
-                      class="h-auto max-w-full"
-                    />
-                  </div>
-                  <div class="mt-6 lg:mb-[73px]">
-                    <div class="mb-7.5 text-black">
-                      <div class="description lg:max-w-[504px]">
-                        KatalystAI is designed with a clear boundary: <br />
-                        AI informs decisions. Humans make them.
-                      </div>
-                    </div>
-
-                    <div>
-                      <div class="heading-5 mb-[13px]">
-                        Our AI capabilities are:
-                      </div>
-                      <div class="feature-list description">
-                        <div class="flex gap-2 fade-li">
-                          <span class="my-2.5">
-                            <svg
-                              width="7"
-                              height="8"
-                              viewBox="0 0 7 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                                fill="#A92CEC"
-                              />
-                            </svg>
-                          </span>
-                          Explainable by design
-                        </div>
-                        <div class="flex gap-2 fade-li">
-                          <span class="my-2.5">
-                            <svg
-                              width="7"
-                              height="8"
-                              viewBox="0 0 7 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                                fill="#A92CEC"
-                              />
-                            </svg>
-                          </span>
-                          Auditable for enterprise governance
-                        </div>
-                        <div class="flex gap-2 fade-li">
-                          <span class="my-2.5">
-                            <svg
-                              width="7"
-                              height="8"
-                              viewBox="0 0 7 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                                fill="#A92CEC"
-                              />
-                            </svg>
-                          </span>
-                          Bias-aware and continuously monitored
-                        </div>
-                        <div class="flex gap-2 fade-li">
-                          <span class="my-2.5">
-                            <svg
-                              width="7"
-                              height="8"
-                              viewBox="0 0 7 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                                fill="#A92CEC"
-                              />
-                            </svg>
-                          </span>
-                          Fully accountable to human oversight
-                        </div>
-                      </div>
-                      <div class="description lg:max-w-[504px] mt-7.5">
-                        Every recommendation is traceable. Every outcome remains
-                        human-owned.
-                      </div>
+                <div class="mt-6 lg:mb-[73px]">
+                  <div class="mb-7.5 text-black">
+                    <div class="description lg:max-w-[504px]">
+                      KatalystAI is designed with a
+                      clear boundary: <br />
+                      AI informs decisions. Humans
+                      make them.
                     </div>
                   </div>
-                </div>
-              </div>
 
-              <div
-                class="fade-in section-card py-[30px] md:py-[53px] pe-6 md:pe-[53px] ps-6 md:ps-[67px] mt-[58px]"
-              >
-                <div
-                  class="flex flex-col items-center justify-between gap-5 lg:flex-row"
-                >
                   <div>
-                    <div class="mb-6 md:mb-[51px] text-black">
-                      <div class="heading-3 mb-[13px]">
-                        Built for Enterprise and Public-Sector Trust
+                    <div class="heading-5 mb-[13px]">
+                      Our AI capabilities are:
+                    </div>
+                    <div class="feature-list description">
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                          </svg>
+                        </span>
+                        Explainable by design
                       </div>
-                      <div class="description lg:max-w-[504px]">
-                        Talent intelligence requires more than innovation it
-                        demands responsibility.
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                          </svg>
+                        </span>
+                        Auditable for enterprise
+                        governance
+                      </div>
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                          </svg>
+                        </span>
+                        Bias-aware and continuously
+                        monitored
+                      </div>
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                          </svg>
+                        </span>
+                        Fully accountable to human
+                        oversight
                       </div>
                     </div>
-                    <div class="">
-                      <div class="heading-5 font-dm-sans mb-[13px]">
-                        KatalystAI is enterprise-ready from day one
-                      </div>
-                      <div class="feature-list description">
-                        <div class="flex gap-2 fade-li">
-                          <span class="my-2.5">
-                            <svg
-                              width="7"
-                              height="8"
-                              viewBox="0 0 7 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                                fill="#A92CEC"
-                              />
-                            </svg>
-                          </span>
-                          Secure, isolated data architecture
-                        </div>
-                        <div class="flex gap-2 fade-li">
-                          <span class="my-2.5">
-                            <svg
-                              width="7"
-                              height="8"
-                              viewBox="0 0 7 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                                fill="#A92CEC"
-                              />
-                            </svg>
-                          </span>
-                          Compliance-ready for regulated environments
-                        </div>
-                        <div class="flex gap-2 fade-li">
-                          <span class="my-2.5">
-                            <svg
-                              width="7"
-                              height="8"
-                              viewBox="0 0 7 8"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                                fill="#A92CEC"
-                              />
-                            </svg>
-                          </span>
-                          Designed for scale across geographies and institutions
-                        </div>
-                      </div>
-                      <div class="description mt-7.5">
-                        This is AI you can stand behind with confidence.
-                      </div>
+                    <div class="description lg:max-w-[504px] mt-7.5">
+                      Every recommendation is
+                      traceable. Every outcome remains
+                      human-owned.
                     </div>
                   </div>
-                  <div class="fade-in">
-                    <img
-                      src="assets/images/Home-Page-image/card-img-3.webp"
-                      loading="lazy"
-                      alt="Card Image"
-                      class="max-w-full h-auto"
-                    />
+                </div>
+              </div>
+            </div>
+
+            <div class="fade-in section-card py-[30px] md:py-[53px] pe-6 md:pe-[53px] ps-6 md:ps-[67px] mt-[58px]">
+              <div class="flex flex-col items-center justify-between gap-5 lg:flex-row">
+                <div>
+                  <div class="mb-6 md:mb-[51px] text-black">
+                    <div class="heading-3 mb-[13px]">
+                      Built for Enterprise and
+                      Public-Sector Trust
+                    </div>
+                    <div class="description lg:max-w-[504px]">
+                      Talent intelligence requires
+                      more than innovation it demands
+                      responsibility.
+                    </div>
                   </div>
+                  <div class="">
+                    <div class="heading-5 font-dm-sans mb-[13px]">
+                      KatalystAI is enterprise-ready
+                      from day one
+                    </div>
+                    <div class="feature-list description">
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                          </svg>
+                        </span>
+                        Secure, isolated data
+                        architecture
+                      </div>
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                          </svg>
+                        </span>
+                        Compliance-ready for
+                        regulated environments
+                      </div>
+                      <div class="flex gap-2 fade-li">
+                        <span class="my-2.5">
+                          <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                          </svg>
+                        </span>
+                        Designed for scale across
+                        geographies and institutions
+                      </div>
+                    </div>
+                    <div class="description mt-7.5">
+                      This is AI you can stand behind
+                      with confidence.
+                    </div>
+                  </div>
+                </div>
+                <div class="fade-in">
+                  <img src="assets/images/Home-Page-image/card-img-3.webp" loading="lazy" alt="Card Image"
+                    class="h-auto max-w-full" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="bg-alice-blue">
-      <div class="bg-black build">
-        <div
-          class="h-[600px] sm:h-[640px] relative lg:h-[741px] max-w-[1440px] mx-auto px-6 md:px-0 flex justify-center text-center text-white bg-cover bg-center"
-        >
-          <img
-            src="assets/images/Home-Page-image/workforce-Bg-3.webp"
-            loading="lazy"
-            class="absolute w-full h-full"
-            alt="workforce-BG"
-          />
-          <div class="max-w-[607px] mt-[139px]">
-            <div class="mb-8 fade-in">
-              <div class="heading-main">Build a Workforce</div>
-              <div
-                class="font-dm-sans font-medium text-[24px] md:text-[32px] tracking-[1%]"
-              >
-                Ready for What&rsquo;s Next
-              </div>
-            </div>
-            <div class="fade-in description text-white/80">
-              The future of work belongs to organizations that understand their
-              people deeply, continuously and responsibly. KatalystAI helps you
-              lead that future.
-            </div>
-            <div
-              class="fade-in mt-[43px] flex items-center justify-center flex-wrap gap-3"
-            >
-              <a
-                href="/product-portfolio"
-                class="flex items-center gap-x-2.5 py-2 sm:py-3 px-3 sm:px-6 font-inter font-medium text-sm sm:text-base border-2 border-purple rounded-[60px] text-black bg-white text-nowrap"
-              >
-                <span>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_193_331)">
-                      <path
-                        d="M3 10C3 10.9193 3.18106 11.8295 3.53284 12.6788C3.88463 13.5281 4.40024 14.2997 5.05025 14.9497C5.70026 15.5998 6.47194 16.1154 7.32122 16.4672C8.1705 16.8189 9.08075 17 10 17C10.9193 17 11.8295 16.8189 12.6788 16.4672C13.5281 16.1154 14.2997 15.5998 14.9497 14.9497C15.5998 14.2997 16.1154 13.5281 16.4672 12.6788C16.8189 11.8295 17 10.9193 17 10C17 9.08075 16.8189 8.1705 16.4672 7.32122C16.1154 6.47194 15.5998 5.70026 14.9497 5.05025C14.2997 4.40024 13.5281 3.88463 12.6788 3.53284C11.8295 3.18106 10.9193 3 10 3C9.08075 3 8.1705 3.18106 7.32122 3.53284C6.47194 3.88463 5.70026 4.40024 5.05025 5.05025C4.40024 5.70026 3.88463 6.47194 3.53284 7.32122C3.18106 8.1705 3 9.08075 3 10Z"
-                        stroke="#A92CEC"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M21 21L15 15"
-                        stroke="#A92CEC"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_193_331">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </span>
-                Explore the Platform</a
-              >
-              <a
-                href="/contact-us"
-                class="flex items-center gap-x-2.5 py-2 sm:py-3 px-5 sm:px-[37px] font-inter font-medium text-sm sm:text-base border-2 border-mint-green rounded-[60px] text-black bg-white text-nowrap"
-              >
-                <span>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g clip-path="url(#clip0_193_337)">
-                      <path
-                        d="M4 15C4 14.4696 4.21071 13.9609 4.58579 13.5858C4.96086 13.2107 5.46957 13 6 13H7C7.53043 13 8.03914 13.2107 8.41421 13.5858C8.78929 13.9609 9 14.4696 9 15V18C9 18.5304 8.78929 19.0391 8.41421 19.4142C8.03914 19.7893 7.53043 20 7 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18V15Z"
-                        stroke="#10D3AD"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M15 15C15 14.4696 15.2107 13.9609 15.5858 13.5858C15.9609 13.2107 16.4696 13 17 13H18C18.5304 13 19.0391 13.2107 19.4142 13.5858C19.7893 13.9609 20 14.4696 20 15V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H17C16.4696 20 15.9609 19.7893 15.5858 19.4142C15.2107 19.0391 15 18.5304 15 18V15Z"
-                        stroke="#10D3AD"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M4 15V12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84285 9.87827 4 12 4C14.1217 4 16.1566 4.84285 17.6569 6.34315C19.1571 7.84344 20 9.87827 20 12V15"
-                        stroke="#10D3AD"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_193_337">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </span>
-                Talk to Our Team</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
+  <section class="bg-alice-blue">
+    <div class="bg-black build">
       <div
-        class="fade-in mt-[-15%] lg:mt-[-220px] px-5 md:px-10 lg:px-[85px] mx-auto w-fit h-full"
-      >
-        <img
-          src="assets/images/Home-Page-image/workforce-BG-2.webp"
-          loading="lazy"
-          alt="worksforce-BG"
-          class="w-full h-auto"
-        />
-      </div>
-    </section>
-
-    <section class="pt-[58px] pb-10 md:pb-[84px] bg-alice-blue">
-      <div class="mx-auto max-w-[1440px] px-5 sm:px-8 md:px-[97px]">
-        <div class="">
-          <div class="fade-in heading-2">
-            Designed in Asia. Trusted Globally
+        class="h-[600px] sm:h-[640px] relative lg:h-[741px] max-w-[1440px] mx-auto px-6 md:px-0 flex justify-center text-center text-white bg-cover bg-center">
+        <img src="assets/images/Home-Page-image/workforce-Bg-3.webp" loading="lazy" class="absolute w-full h-full"
+          alt="workforce-BG" />
+        <div class="max-w-[607px] mt-[139px]">
+          <div class="mb-8 fade-in">
+            <div class="heading-main">Build a Workforce</div>
+            <div class="font-dm-sans font-medium text-[24px] md:text-[32px] tracking-[1%]">
+              Ready for What&rsquo;s Next
+            </div>
           </div>
-          <div
-            class="flex flex-col lg:flex-row justify-between items-center gap-x-1 gap-y-4 mt-[39px] text-black"
-          >
-            <div>
-              <div class="description lg:max-w-[418px] mb-10">
-                Headquartered in Malaysia, KatalystAI reflects the realities of
-                diverse, dynamic workforces while meeting global enterprise
-                standards.
-              </div>
-              <div>
-                <div class="heading-5 font-dm-sans mb-[13px]">
-                  We work with organizations that value:
-                </div>
-                <div class="feature-list description">
-                  <div class="flex gap-2 fade-li">
-                    <span class="my-2.5">
-                      <svg
-                        width="7"
-                        height="8"
-                        viewBox="0 0 7 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                          fill="#A92CEC"
-                        />
-                      </svg>
-                    </span>
-                    Fairness over shortcuts
-                  </div>
-                  <div class="flex gap-2 fade-li">
-                    <span class="my-2.5">
-                      <svg
-                        width="7"
-                        height="8"
-                        viewBox="0 0 7 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                          fill="#A92CEC"
-                        />
-                      </svg>
-                    </span>
-                    Intelligence over automation
-                  </div>
-                  <div class="flex gap-2 fade-li">
-                    <span class="my-2.5">
-                      <svg
-                        width="7"
-                        height="8"
-                        viewBox="0 0 7 8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z"
-                          fill="#A92CEC"
-                        />
-                      </svg>
-                    </span>
-                    Long-term workforce resilience
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="fade-in">
-              <img
-                src="assets/images/Home-Page-image/card-img-4.webp"
-                loading="lazy"
-                alt="Card Image"
-              />
-            </div>
+          <div class="fade-in description text-white/80">
+            The future of work belongs to organizations that
+            understand their people deeply, continuously and
+            responsibly. KatalystAI helps you lead that future.
+          </div>
+          <div class="fade-in mt-[43px] flex items-center justify-center flex-wrap gap-3">
+            <a href="/product-portfolio"
+              class="flex items-center gap-x-2.5 py-2 sm:py-3 px-3 sm:px-6 font-inter font-medium text-sm sm:text-base border-2 border-purple rounded-[60px] text-black bg-white text-nowrap">
+              <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_193_331)">
+                    <path
+                      d="M3 10C3 10.9193 3.18106 11.8295 3.53284 12.6788C3.88463 13.5281 4.40024 14.2997 5.05025 14.9497C5.70026 15.5998 6.47194 16.1154 7.32122 16.4672C8.1705 16.8189 9.08075 17 10 17C10.9193 17 11.8295 16.8189 12.6788 16.4672C13.5281 16.1154 14.2997 15.5998 14.9497 14.9497C15.5998 14.2997 16.1154 13.5281 16.4672 12.6788C16.8189 11.8295 17 10.9193 17 10C17 9.08075 16.8189 8.1705 16.4672 7.32122C16.1154 6.47194 15.5998 5.70026 14.9497 5.05025C14.2997 4.40024 13.5281 3.88463 12.6788 3.53284C11.8295 3.18106 10.9193 3 10 3C9.08075 3 8.1705 3.18106 7.32122 3.53284C6.47194 3.88463 5.70026 4.40024 5.05025 5.05025C4.40024 5.70026 3.88463 6.47194 3.53284 7.32122C3.18106 8.1705 3 9.08075 3 10Z"
+                      stroke="#A92CEC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M21 21L15 15" stroke="#A92CEC" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_193_331">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              Explore the Platform</a>
+            <a href="/contact-us"
+              class="flex items-center gap-x-2.5 py-2 sm:py-3 px-5 sm:px-[37px] font-inter font-medium text-sm sm:text-base border-2 border-mint-green rounded-[60px] text-black bg-white text-nowrap">
+              <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_193_337)">
+                    <path
+                      d="M4 15C4 14.4696 4.21071 13.9609 4.58579 13.5858C4.96086 13.2107 5.46957 13 6 13H7C7.53043 13 8.03914 13.2107 8.41421 13.5858C8.78929 13.9609 9 14.4696 9 15V18C9 18.5304 8.78929 19.0391 8.41421 19.4142C8.03914 19.7893 7.53043 20 7 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18V15Z"
+                      stroke="#10D3AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M15 15C15 14.4696 15.2107 13.9609 15.5858 13.5858C15.9609 13.2107 16.4696 13 17 13H18C18.5304 13 19.0391 13.2107 19.4142 13.5858C19.7893 13.9609 20 14.4696 20 15V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H17C16.4696 20 15.9609 19.7893 15.5858 19.4142C15.2107 19.0391 15 18.5304 15 18V15Z"
+                      stroke="#10D3AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M4 15V12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84285 9.87827 4 12 4C14.1217 4 16.1566 4.84285 17.6569 6.34315C19.1571 7.84344 20 9.87827 20 12V15"
+                      stroke="#10D3AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_193_337">
+                      <rect width="24" height="24" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              Talk to Our Team</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!------------------ Footer ------------------>
-    {{> footer footerClass="bg-alice-blue" footerCardClass="bg-white/10 px-6 sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8 sm:pb-[54px]"}}
+    <div class="fade-in mt-[-15%] lg:mt-[-220px] px-5 md:px-10 lg:px-[85px] mx-auto w-fit h-full">
+      <img src="assets/images/Home-Page-image/workforce-BG-2.webp" loading="lazy" alt="worksforce-BG"
+        class="w-full h-auto" />
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script type="module" src="assets/js/main.js"></script>
-  </body>
+  <section class="pt-[58px] pb-10 md:pb-[84px] bg-alice-blue">
+    <div class="mx-auto max-w-[1440px] px-5 sm:px-8 md:px-[97px]">
+      <div class="">
+        <div class="fade-in heading-2">
+          Designed in Asia. Trusted Globally.
+        </div>
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-x-1 gap-y-4 mt-[39px] text-black">
+          <div>
+            <div class="description lg:max-w-[418px] mb-10">
+              Headquartered in Malaysia, KatalystAI reflects
+              the realities of diverse, dynamic workforces
+              while meeting global enterprise standards.
+            </div>
+            <div>
+              <div class="heading-5 font-dm-sans mb-[13px]">
+                We work with organizations that value:
+              </div>
+              <div class="feature-list description">
+                <div class="flex gap-2 fade-li">
+                  <span class="my-2.5">
+                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                    </svg>
+                  </span>
+                  Fairness over shortcuts
+                </div>
+                <div class="flex gap-2 fade-li">
+                  <span class="my-2.5">
+                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                    </svg>
+                  </span>
+                  Intelligence over automation
+                </div>
+                <div class="flex gap-2 fade-li">
+                  <span class="my-2.5">
+                    <svg width="7" height="8" viewBox="0 0 7 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.4 4L0 8L-3.49691e-07 0L6.4 4Z" fill="#A92CEC" />
+                    </svg>
+                  </span>
+                  Long-term workforce resilience
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fade-in">
+            <img src="assets/images/Home-Page-image/card-img-4.webp" loading="lazy" alt="Card Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!------------------ Footer ------------------>
+  {{> footer footerClass="bg-alice-blue" footerCardClass="bg-white/10 px-6
+  sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8 sm:pb-[54px]"}}
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
 </html>
