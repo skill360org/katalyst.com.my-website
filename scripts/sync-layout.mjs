@@ -1,22 +1,13 @@
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-const htmlFiles = readdirSync(resolve(".")).filter((name) =>
-  name.endsWith(".html"),
-);
+const htmlFiles = readdirSync(resolve(".")).filter((name) => name.endsWith(".html"));
 
 const defaultFooterClass = "bg-alice-blue";
-const defaultFooterCardClass =
-  "bg-white/10 px-6 sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8 sm:pb-[54px]";
+const defaultFooterCardClass = "bg-white/10 px-6 sm:px-12.5 pt-[50px] sm:pt-16.75 pb-8 sm:pb-[54px]";
 
-const headerTemplate = readFileSync(
-  resolve("partials/header.html"),
-  "utf8",
-).trim();
-const footerTemplate = readFileSync(
-  resolve("partials/footer.html"),
-  "utf8",
-).trim();
+const headerTemplate = readFileSync(resolve("partials/header.html"), "utf8").trim();
+const footerTemplate = readFileSync(resolve("partials/footer.html"), "utf8").trim();
 
 for (const file of htmlFiles) {
   const filePath = resolve(file);

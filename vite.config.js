@@ -5,12 +5,7 @@ import { glob } from "glob";
 
 // Auto-discover all HTML pages in the root directory
 const htmlFiles = glob.sync("*.html", { cwd: __dirname });
-const input = Object.fromEntries(
-  htmlFiles.map((file) => [
-    file.replace(".html", ""),
-    path.resolve(__dirname, file),
-  ]),
-);
+const input = Object.fromEntries(htmlFiles.map((file) => [file.replace(".html", ""), path.resolve(__dirname, file)]));
 
 export default defineConfig({
   plugins: [

@@ -13,9 +13,7 @@ for (const page of pages) {
 
   const htmlHrefMatches = [...content.matchAll(/href=["']([^"']+\.html)["']/g)];
   if (htmlHrefMatches.length > 0) {
-    console.error(
-      `${page}: contains .html href(s): ${htmlHrefMatches.map((match) => match[1]).join(", ")}`,
-    );
+    console.error(`${page}: contains .html href(s): ${htmlHrefMatches.map((match) => match[1]).join(", ")}`);
     hasError = true;
   }
 }

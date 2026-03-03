@@ -17,7 +17,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "format": "prettier --write \"*.html\" \"assets/js/**/*.js\" \"assets/css/**/*.css\" \"*.{json,mjs,js}\" \"scripts/**/*.mjs\"",
+    "format": "prettier --write \"*.html\" \"partials/*.html\" \"assets/js/**/*.js\" \"assets/css/**/*.css\" \"*.{json,mjs,js}\" \"scripts/**/*.mjs\"",
     "images:optimize": "node scripts/optimize-images.mjs",
     "test": "npm run test:html",
     "test:html": "node scripts/check-html.mjs",
