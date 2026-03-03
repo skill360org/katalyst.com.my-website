@@ -33,6 +33,4 @@ if (hasError) {
   process.exit(1);
 }
 
-console.log(
-  `Checked internal links across ${pages.length} HTML files. All valid.`,
-);
+console.log(`Checked internal links across ${pages.length} HTML files. All valid.`);

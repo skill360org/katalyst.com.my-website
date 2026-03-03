@@ -5,5 +5,4 @@ export const normalizePath = (path) => {
   return withoutHtml.replace(/\/$/, "") || "/";
 };
 
-export const isActivePath = (href, currentPath) =>
-  normalizePath(href) === currentPath;
+export const isActivePath = (href, currentPath) => normalizePath(href) === currentPath;

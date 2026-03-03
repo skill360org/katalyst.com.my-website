@@ -13,9 +13,7 @@ for (const page of pages) {
 
   const htmlHrefMatches = [...content.matchAll(/href=["']([^"']+\.html)["']/g)];
   if (htmlHrefMatches.length > 0) {
-    console.error(
-      `${page}: contains .html href(s): ${htmlHrefMatches.map((match) => match[1]).join(", ")}`,
-    );
+    console.error(`${page}: contains .html href(s): ${htmlHrefMatches.map((match) => match[1]).join(", ")}`);
     hasError = true;
   }
 
@@ -33,9 +31,7 @@ for (const page of pages) {
   } else {
     const canonicalHref = canonicalMatch[1] || canonicalMatch[2];
     if (canonicalHref.endsWith(".html")) {
-      console.error(
-        `${page}: canonical href ends with .html: ${canonicalHref}`,
-      );
+      console.error(`${page}: canonical href ends with .html: ${canonicalHref}`);
       hasError = true;
     }
   }

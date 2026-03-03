@@ -10,19 +10,19 @@ describe("normalizePath", () => {
     expect(normalizePath("/solutions")).toBe("/solutions");
   });
 
-  it('strips .html extension', () => {
+  it("strips .html extension", () => {
     expect(normalizePath("/solutions.html")).toBe("/solutions");
   });
 
-  it('strips trailing slash', () => {
+  it("strips trailing slash", () => {
     expect(normalizePath("/solutions/")).toBe("/solutions");
   });
 
-  it('strips query string', () => {
+  it("strips query string", () => {
     expect(normalizePath("/solutions?foo=bar")).toBe("/solutions");
   });
 
-  it('strips hash fragment', () => {
+  it("strips hash fragment", () => {
     expect(normalizePath("/solutions#anchor")).toBe("/solutions");
   });
 

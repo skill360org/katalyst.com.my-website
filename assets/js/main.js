@@ -16,19 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const isActivePath = (href) => isActivePathUtil(href, pathName);
 
-  document
-    .querySelectorAll(
-      ".nav-link[href], .mobile-nav-link[href], .menu-link[href]",
-    )
-    .forEach((link) => {
-      link.classList.toggle("active", isActivePath(link.getAttribute("href")));
-    });
+  document.querySelectorAll(".nav-link[href], .mobile-nav-link[href], .menu-link[href]").forEach((link) => {
+    link.classList.toggle("active", isActivePath(link.getAttribute("href")));
+  });
 
-  document
-    .querySelectorAll(".nav-link:not([href]), .mobile-nav-link:not([href])")
-    .forEach((toggle) => {
-      toggle.classList.remove("active");
-    });
+  document.querySelectorAll(".nav-link:not([href]), .mobile-nav-link:not([href])").forEach((toggle) => {
+    toggle.classList.remove("active");
+  });
 
   document.querySelectorAll("[id$='Dropdown']").forEach((dropdown) => {
     if (!dropdown.querySelector(".menu-link.active")) return;
@@ -91,38 +85,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const desktopArrow = header.querySelector("#productsArrow");
 
     function openDesktop() {
-      desktopDropdown.classList.remove(
-        "opacity-0",
-        "invisible",
-        "translate-y-2",
-      );
+      desktopDropdown.classList.remove("opacity-0", "invisible", "translate-y-2");
       desktopDropdown.classList.add("opacity-100", "visible", "translate-y-0");
       desktopArrow.classList.add("rotate-180");
     }
 
     function closeDesktop() {
       desktopDropdown.classList.add("opacity-0", "invisible", "translate-y-2");
-      desktopDropdown.classList.remove(
-        "opacity-100",
-        "visible",
-        "translate-y-0",
-      );
+      desktopDropdown.classList.remove("opacity-100", "visible", "translate-y-0");
       desktopArrow.classList.remove("rotate-180");
     }
 
     if (desktopToggle && desktopDropdown && desktopArrow) {
       desktopToggle.addEventListener("click", (e) => {
         e.stopPropagation();
-        desktopDropdown.classList.contains("invisible")
-          ? openDesktop()
-          : closeDesktop();
+        desktopDropdown.classList.contains("invisible") ? openDesktop() : closeDesktop();
       });
 
       document.addEventListener("click", (e) => {
-        if (
-          !desktopDropdown.contains(e.target) &&
-          !desktopToggle.contains(e.target)
-        ) {
+        if (!desktopDropdown.contains(e.target) && !desktopToggle.contains(e.target)) {
           closeDesktop();
         }
       });
@@ -166,9 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
   smoothScroll();
   if (
     hasGsap &&
-    (document.querySelector("#heroHeading") ||
-      document.querySelector("#heroDec") ||
-      document.querySelector("#heroBtn"))
+    (document.querySelector("#heroHeading") || document.querySelector("#heroDec") || document.querySelector("#heroBtn"))
   ) {
     const heroTl = gsap.timeline();
     heroTl
@@ -297,9 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   // Get the CSS variable value
-  const color = getComputedStyle(document.documentElement)
-    .getPropertyValue("--color-purple")
-    .trim(); // trim to remove extra spaces
+  const color = getComputedStyle(document.documentElement).getPropertyValue("--color-purple").trim(); // trim to remove extra spaces
   // Sections ==================================
   attachCursorEffect(document.querySelector(".build"), color, 1);
 
@@ -353,24 +330,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Setup for Talent Acquisition
-  setupTalentCarousel(
-    "talentScrollLeft",
-    "talentScrollRight",
-    "talentCardsContainer",
-  );
+  setupTalentCarousel("talentScrollLeft", "talentScrollRight", "talentCardsContainer");
   // Setup for Talent Development
-  setupTalentCarousel(
-    "talentDevScrollLeft",
-    "talentDevScrollRight",
-    "talentDevCardsContainer",
-  );
+  setupTalentCarousel("talentDevScrollLeft", "talentDevScrollRight", "talentDevCardsContainer");
 
   // Setup for Second Talent Cards Carousel (lower section)
-  setupTalentCarousel(
-    "talentScrollLeft2",
-    "talentScrollRight2",
-    "talentCardsContainer2",
-  );
+  setupTalentCarousel("talentScrollLeft2", "talentScrollRight2", "talentCardsContainer2");
 
   // --------------- custome Selecter----------
 
@@ -417,9 +382,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger.querySelector(".select-text").textContent = option.text;
 
         // update active item
-        dropdown
-          .querySelectorAll("li")
-          .forEach((i) => i.classList.remove("active"));
+        dropdown.querySelectorAll("li").forEach((i) => i.classList.remove("active"));
         li.classList.add("active");
 
         wrapper.classList.remove("open");
@@ -464,10 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetId = step.getAttribute("data-target");
       const targetEl = document.getElementById(targetId);
 
-      const y =
-        targetEl.getBoundingClientRect().top +
-        window.pageYOffset -
-        headerOffset;
+      const y = targetEl.getBoundingClientRect().top + window.pageYOffset - headerOffset;
 
       window.scrollTo({ top: y, behavior: "smooth" });
     });
@@ -478,11 +438,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let current = sections[0].id; // default first
 
     sections.forEach((section) => {
-      const sectionTop =
-        section.getBoundingClientRect().top +
-        window.pageYOffset -
-        headerOffset -
-        5;
+      const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - headerOffset - 5;
 
       if (window.pageYOffset >= sectionTop) {
         current = section.id;
@@ -490,10 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     steps.forEach((step) => {
-      step.classList.toggle(
-        "active",
-        step.getAttribute("data-target") === current,
-      );
+      step.classList.toggle("active", step.getAttribute("data-target") === current);
     });
   }
 

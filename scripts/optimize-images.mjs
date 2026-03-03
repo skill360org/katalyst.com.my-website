@@ -67,9 +67,7 @@ async function main() {
     );
   });
 
-  console.log(
-    `Optimized ${results.length} images. Total savings: ${Math.max(totalSavings, 0)} bytes.`,
-  );
+  console.log(`Optimized ${results.length} images. Total savings: ${Math.max(totalSavings, 0)} bytes.`);
 }
 
 main().catch((error) => {
